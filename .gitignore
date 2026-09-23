@@ -24,6 +24,7 @@
 !/LICENSE
 !/LICENSE-DATA
 !/CITATION.cff
+!/.zenodo.json
 
 # ---- analysis and simulation code ----
 !/scripts/**/*.py

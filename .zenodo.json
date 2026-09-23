@@ -1,0 +1,29 @@
+{
+  "title": "Biological Pauli Holes: analysis code and numerical results",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Dong, Liang",
+      "affiliation": "Department of Electrical & Computer Engineering, Baylor University, Waco, TX 76798, USA; Department of Radiology, UT Southwestern Medical Center, Dallas, TX 75390, USA"
+    },
+    {
+      "name": "You, Jun-Han",
+      "affiliation": "Department of Astronomy, Shanghai Jiao Tong University, Shanghai 200240, China"
+    }
+  ],
+  "description": "<p>Analysis code and numerical results for a study of whether Pauli confinement of a transferring hydrogen can contribute to enzyme catalysis, tested in soybean lipoxygenase.</p><p>Contains the analysis code (the confined-hydrogen solver, the SAPT exchange-curvature campaigns, the range-weight budget, the transverse proton Hessian, and the sensitivity analyses) together with the numerical results that every claim in the associated manuscript is checked against, and two verification suites that tie those claims to named fields of named result files.</p><p>Large primary data (molecular-dynamics trajectories, Amber topologies and restarts, and ORCA wavefunctions and outputs) are deposited separately. Published literature, third-party software and third-party benchmark sets are not redistributed here.</p><p>Code is released under the MIT License; the numerical results are released under CC BY 4.0.</p>",
+  "keywords": [
+    "quantum biology",
+    "enzyme catalysis",
+    "hydrogen transfer",
+    "proton-coupled electron transfer",
+    "kinetic isotope effect",
+    "soybean lipoxygenase",
+    "symmetry-adapted perturbation theory",
+    "Pauli exclusion",
+    "reproducible research"
+  ],
+  "language": "eng"
+}
