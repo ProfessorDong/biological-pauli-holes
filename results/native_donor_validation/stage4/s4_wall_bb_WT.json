@@ -1,0 +1,32 @@
+{
+  "label": "s4_wall_bb_WT",
+  "method": "sapt0",
+  "basis": "jun-cc-pVDZ",
+  "donor": "native",
+  "wall": "backbone",
+  "n_donor": 13,
+  "n_wall": 21,
+  "half": 0.15,
+  "n_per_axis": 5,
+  "n_points": 25,
+  "K_perp_exch_eigs": [
+    -0.1379589921118802,
+    0.08875380562034797
+  ],
+  "K_perp_exch_grad_kcal_per_A": [
+    -0.06917508327069789,
+    -0.12288566178404106
+  ],
+  "K_perp_exch_grad_norm": 0.1410180060049415,
+  "K_perp_exch_rms_kcal": 0.00014619832131102943,
+  "K_perp_int_eigs": [
+    -0.12836979719890923,
+    -0.0007732868944744717
+  ],
+  "K_perp_int_grad_kcal_per_A": [
+    -0.03900298336716959,
+    0.02212306660078637
+  ],
+  "K_perp_int_grad_norm": 0.04484041466537232,
+  "K_perp_int_rms_kcal": 0.00011332625860710092
+}

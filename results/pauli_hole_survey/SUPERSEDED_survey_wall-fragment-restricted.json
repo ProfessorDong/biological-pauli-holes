@@ -1,0 +1,306 @@
+[
+ {
+  "label": "[NiFe] hydrogenase 4U9H",
+  "note": "Ni-R(UH) subatomic X-ray, bridging hydride",
+  "flag": "metal",
+  "xi0_A": 2.378757869140951,
+  "xi0_over_a0": 4.495200889474784,
+  "nearest_free": "NWN601 C1",
+  "bonded_heavy": [],
+  "bonded_metal": [
+   "NWN601 NI 1.58A",
+   "NWN601 FE 1.78A"
+  ],
+  "P_ea0": 0.28361376952472744,
+  "I_eV": 12.374027352190655,
+  "dE_eV": 1.2316657708033443,
+  "E_MVcm": 26.066753924383555,
+  "pct_KSI": 17.377835949589038
+ },
+ {
+  "label": "[NiFe] hydrogenase 4U9I",
+  "note": "Ni-R(H) subatomic X-ray, bridging hydride",
+  "flag": "metal",
+  "xi0_A": 2.4259913437603187,
+  "xi0_over_a0": 4.584459220419852,
+  "nearest_free": "NWN601 C1",
+  "bonded_heavy": [],
+  "bonded_metal": [
+   "NWN601 NI 1.57A",
+   "NWN601 FE 1.72A"
+  ],
+  "P_ea0": 0.27107594977010385,
+  "I_eV": 12.46321382911048,
+  "dE_eV": 1.14247929388352,
+  "E_MVcm": 24.914411205481983,
+  "pct_KSI": 16.609607470321322
+ },
+ {
+  "label": "SLO WT (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 4.595734745859386,
+  "xi0_over_a0": 8.684680011100857,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.02655160499648186,
+  "I_eV": 13.570763870795142,
+  "dE_eV": 0.03492925219885734,
+  "E_MVcm": 2.4403404492685685,
+  "pct_KSI": 1.6268936328457124
+ },
+ {
+  "label": "SLO WT (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.593898433793451,
+  "xi0_over_a0": 6.791483759591124,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.0838099056730783,
+  "I_eV": 13.427638135937043,
+  "dE_eV": 0.17805498705695655,
+  "E_MVcm": 7.702912983621749,
+  "pct_KSI": 5.1352753224145
+ },
+ {
+  "label": "SLO I553A (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 4.440490717057983,
+  "xi0_over_a0": 8.39131131418269,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.03202055058106621,
+  "I_eV": 13.56060418997018,
+  "dE_eV": 0.04508893302381978,
+  "E_MVcm": 2.9429876198135614,
+  "pct_KSI": 1.9619917465423744
+ },
+ {
+  "label": "SLO I553A (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.787057821646632,
+  "xi0_over_a0": 7.156502101034001,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.06789926070309539,
+  "I_eV": 13.475188025908832,
+  "dE_eV": 0.13050509708516778,
+  "E_MVcm": 6.2405761305635075,
+  "pct_KSI": 4.160384087042338
+ },
+ {
+  "label": "SLO I552A (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 4.759258117509518,
+  "xi0_over_a0": 8.993694398495,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.021723181077978968,
+  "I_eV": 13.579031448323603,
+  "dE_eV": 0.026661674670396707,
+  "E_MVcm": 1.9965632012980703,
+  "pct_KSI": 1.3310421341987135
+ },
+ {
+  "label": "SLO I552A (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.4377900840332174,
+  "xi0_over_a0": 6.496481732776993,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.09897128742192005,
+  "I_eV": 13.377050598296371,
+  "dE_eV": 0.22864252469762825,
+  "E_MVcm": 9.09638554972098,
+  "pct_KSI": 6.06425703314732
+ },
+ {
+  "label": "SLO L546A (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 4.8372750306173256,
+  "xi0_over_a0": 9.141124997357483,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.01971566610453266,
+  "I_eV": 13.582264781104147,
+  "dE_eV": 0.023428341889852433,
+  "E_MVcm": 1.812053828216387,
+  "pct_KSI": 1.2080358854775912
+ },
+ {
+  "label": "SLO L546A (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.937552465149513,
+  "xi0_over_a0": 7.440895760477637,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.057414087359134995,
+  "I_eV": 13.503353006573903,
+  "dE_eV": 0.10234011642009655,
+  "E_MVcm": 5.276890785280256,
+  "pct_KSI": 3.517927190186837
+ },
+ {
+  "label": "SLO L754A (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.3904504515343192,
+  "xi0_over_a0": 6.407022792513642,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.10402008549398406,
+  "I_eV": 13.359078087113904,
+  "dE_eV": 0.2466150358800956,
+  "E_MVcm": 9.560417240350587,
+  "pct_KSI": 6.373611493567058
+ },
+ {
+  "label": "SLO L754A (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 4.157427420390979,
+  "xi0_over_a0": 7.856399207548358,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.04467409327748775,
+  "I_eV": 13.534074649030813,
+  "dE_eV": 0.07161847396318599,
+  "E_MVcm": 4.105966357736031,
+  "pct_KSI": 2.737310905157354
+ },
+ {
+  "label": "SLO V750A (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.9611937858936273,
+  "xi0_over_a0": 7.485571381908447,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.055904469394597964,
+  "I_eV": 13.507196357175633,
+  "dE_eV": 0.09849676581836597,
+  "E_MVcm": 5.13814279688971,
+  "pct_KSI": 3.425428531259807
+ },
+ {
+  "label": "SLO V750A (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.700794761848276,
+  "xi0_over_a0": 6.9934885433428935,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.0746420114745947,
+  "I_eV": 13.45573735697579,
+  "dE_eV": 0.14995576601820915,
+  "E_MVcm": 6.86029789311635,
+  "pct_KSI": 4.5735319287442335
+ },
+ {
+  "label": "SLO I538A (reactive)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 4.452730494309742,
+  "xi0_over_a0": 8.41444114101494,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.03155491455900163,
+  "I_eV": 13.561500980741974,
+  "dE_eV": 0.044192142252025945,
+  "E_MVcm": 2.9001913210801606,
+  "pct_KSI": 1.933460880720107
+ },
+ {
+  "label": "SLO I538A (reference)",
+  "note": "transferring H, MD ensemble",
+  "flag": "bonded",
+  "xi0_A": 3.797696716411643,
+  "xi0_over_a0": 7.176606698408587,
+  "nearest_free": "side-chain wall",
+  "bonded_heavy": [
+   "donor C ~1.09A"
+  ],
+  "bonded_metal": [],
+  "P_ea0": 0.06710606198112912,
+  "I_eV": 13.477407753267066,
+  "dE_eV": 0.1282853697269335,
+  "E_MVcm": 6.167673760790421,
+  "pct_KSI": 4.111782507193613
+ },
+ {
+  "label": "Pd(110) rhomboid hole",
+  "note": "surface Pauli hole",
+  "flag": "free",
+  "xi0_A": 1.37,
+  "xi0_over_a0": 2.5889247907373054,
+  "nearest_free": "lattice",
+  "bonded_heavy": [],
+  "bonded_metal": [],
+  "P_ea0": 0.843989551898567,
+  "I_eV": 7.331681149760382,
+  "dE_eV": 6.274011973233617,
+  "E_MVcm": 77.57052135006643,
+  "pct_KSI": 51.71368090004429
+ },
+ {
+  "label": "NaCl square hole",
+  "note": "surface Pauli hole",
+  "flag": "free",
+  "xi0_A": 1.85,
+  "xi0_over_a0": 3.495993330557675,
+  "nearest_free": "lattice",
+  "bonded_heavy": [],
+  "bonded_metal": [],
+  "P_ea0": 0.476046441306311,
+  "I_eV": 10.730453034398954,
+  "dE_eV": 2.8752400885950458,
+  "E_MVcm": 43.75311347860424,
+  "pct_KSI": 29.168742319069498
+ }
+]

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the paper below."
+title: "Biological Pauli Holes: analysis code and numerical results"
+abstract: >-
+  Analysis code and numerical results for a study of whether Pauli confinement
+  of a transferring hydrogen can contribute to enzyme catalysis, tested in
+  soybean lipoxygenase.
+type: software
+authors:
+  - family-names: "Dong"
+    given-names: "Liang"
+    email: "Liang_Dong@baylor.edu"
+    affiliation: >-
+      Department of Electrical & Computer Engineering, Baylor University,
+      Waco, TX 76798, USA; and Department of Radiology, UT Southwestern,
+      Dallas, TX 75390, USA
+  - family-names: "You"
+    given-names: "Jun-Han"
+    affiliation: >-
+      Department of Astronomy, Shanghai Jiao Tong University,
+      Shanghai 200240, China
+license: MIT
+repository-code: "https://github.com/ProfessorDong/biological-pauli-holes"
+keywords:
+  - quantum biology
+  - enzyme catalysis
+  - hydrogen transfer
+  - kinetic isotope effect
+  - soybean lipoxygenase
+  - symmetry-adapted perturbation theory

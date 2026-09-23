@@ -1,0 +1,32 @@
+{
+  "label": "VAL_wt_jundz",
+  "method": "sapt0",
+  "basis": "jun-cc-pVDZ",
+  "donor": "native",
+  "wall": "sidechain",
+  "n_donor": 13,
+  "n_wall": 14,
+  "half": 0.15,
+  "n_per_axis": 5,
+  "n_points": 25,
+  "K_perp_exch_eigs": [
+    -0.13901293210971247,
+    0.0866254210034619
+  ],
+  "K_perp_exch_grad_kcal_per_A": [
+    -0.06979330058470207,
+    -0.12191743141559372
+  ],
+  "K_perp_exch_grad_norm": 0.14048119051845542,
+  "K_perp_exch_rms_kcal": 0.00014413879645388704,
+  "K_perp_int_eigs": [
+    -0.2163519116761411,
+    -0.10012806102846544
+  ],
+  "K_perp_int_grad_kcal_per_A": [
+    -0.07780051462469972,
+    -0.06724773824754161
+  ],
+  "K_perp_int_grad_norm": 0.10283568629263865,
+  "K_perp_int_rms_kcal": 0.00013732431302529598
+}

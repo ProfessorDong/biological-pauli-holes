@@ -1,0 +1,30 @@
+{
+ "models": {
+  "benzene ring of six C, aperture 1.306 A": {
+   "xi0_over_a0": 2.464,
+   "wall_r_ang": 1.306,
+   "I_eV": 6.625449137165903,
+   "P_ea0": 0.9349484797397568,
+   "E_MV_cm": 639.6468510909388
+  },
+  "SLO measured, closest approach 2.4 A": {
+   "xi0_over_a0": 9.070685398203697,
+   "wall_r_ang": 2.4,
+   "I_eV": 13.580771203525362,
+   "P_ea0": 0.020652536503308533,
+   "E_MV_cm": 2.2767837894731753
+  },
+  "SLO measured, closest approach 3.0 A": {
+   "xi0_over_a0": 11.338356747754622,
+   "wall_r_ang": 3.0,
+   "I_eV": 13.602380174902832,
+   "P_ea0": 0.004280032741025224,
+   "E_MV_cm": 0.24158248507389005
+  }
+ },
+ "you_table1_I_eV": 6.76,
+ "solver_deviation_percent": 1.990397379202612,
+ "dipole_ratio": 45.27039473286868,
+ "field_ratio": 280.9431681867985,
+ "conclusion": "identical physics and numerics; the discrepancy is entirely the assumed pocket radius, which is measurable and is 2.4 to 3.0 A in soybean lipoxygenase, not 1.31 A"
+}

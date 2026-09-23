@@ -1,0 +1,61 @@
+{
+  "r_DA": 3.407419324326415,
+  "spin_target": 1.0,
+  "n_substrate": 12,
+  "charge": 1,
+  "mult": 6,
+  "cluster": {
+    "C": 25,
+    "H": 43,
+    "N": 7,
+    "O": 4,
+    "Fe": 1
+  },
+  "points": [
+    {
+      "E_unconstrained": -2924.803452663265,
+      "E_diabat": -2924.8034521851,
+      "E_diabat_formally_converged": false,
+      "cdft_converged": false,
+      "multiplier": -0.1009406598,
+      "S2": 8.7592,
+      "n_iter": 51,
+      "idx": 0,
+      "alpha": 0.2,
+      "r_H": 0.681483864865283,
+      "wall_s": 8727.098690032959,
+      "rc": 255,
+      "spin_target": 1.0
+    },
+    {
+      "E_unconstrained": -2924.995753771741,
+      "E_diabat": -2924.995753296,
+      "E_diabat_formally_converged": false,
+      "cdft_converged": false,
+      "multiplier": -0.0996554974,
+      "S2": 8.7592,
+      "n_iter": 37,
+      "idx": 1,
+      "alpha": 0.24285714285714288,
+      "r_H": 0.8275161216221294,
+      "wall_s": 6192.271333694458,
+      "rc": 255,
+      "spin_target": 1.0
+    },
+    {
+      "E_unconstrained": -2925.065288122385,
+      "E_diabat": -2925.0652876548,
+      "E_diabat_formally_converged": false,
+      "cdft_converged": false,
+      "multiplier": -0.0972491944,
+      "S2": 8.7592,
+      "n_iter": 33,
+      "idx": 2,
+      "alpha": 0.28571428571428575,
+      "r_H": 0.9735483783789759,
+      "wall_s": 5887.120237350464,
+      "rc": 255,
+      "spin_target": 1.0
+    }
+  ]
+}

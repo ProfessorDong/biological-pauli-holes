@@ -1,0 +1,4 @@
+source leaprc.protein.ff19SB
+prot = loadpdb prot_hid.pdb
+savepdb prot prot_H.pdb
+quit

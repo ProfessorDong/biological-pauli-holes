@@ -1,0 +1,97 @@
+{
+  "campaign_scale": {
+    "r335_reps_per_condition": 6,
+    "r360_reps_per_condition": 3,
+    "total_trajectories": 36,
+    "ps_prod_per_trajectory": 15.0,
+    "nbeads": 8,
+    "samples_per_condition": 21600,
+    "block_bootstrap": {
+      "block_frames": 30,
+      "n_boot": 5000,
+      "ns_prod_pooled": 135.0
+    },
+    "histogram_bins": 24,
+    "r_HO_range_A": [
+      2.3843894004821777,
+      3.812896490097046
+    ],
+    "theta_range_deg": [
+      105.2572021484375,
+      176.37905883789062
+    ]
+  },
+  "per_condition_point": {
+    "I553A_H": {
+      "S_shannon_nats": 5.3630959070137525,
+      "N_eff": 213.38454360215218,
+      "r_HO_mean_A": 2.765138864517212,
+      "r_HO_std_A": 0.2609952390193939,
+      "theta_mean_deg": 151.34317016601562,
+      "theta_std_deg": 17.384370803833008
+    },
+    "I553A_D": {
+      "S_shannon_nats": 5.317981948160037,
+      "N_eff": 203.97184062411233,
+      "r_HO_mean_A": 2.766989231109619,
+      "r_HO_std_A": 0.25110432505607605,
+      "theta_mean_deg": 151.78909301757812,
+      "theta_std_deg": 17.245832443237305
+    },
+    "I552A_H": {
+      "S_shannon_nats": 5.503206782008036,
+      "N_eff": 245.47786543478358,
+      "r_HO_mean_A": 3.295966148376465,
+      "r_HO_std_A": 0.26880979537963867,
+      "theta_mean_deg": 137.27244567871094,
+      "theta_std_deg": 16.434688568115234
+    },
+    "I552A_D": {
+      "S_shannon_nats": 5.47908290532832,
+      "N_eff": 239.6268460691278,
+      "r_HO_mean_A": 3.2431323528289795,
+      "r_HO_std_A": 0.2672801911830902,
+      "theta_mean_deg": 138.93455505371094,
+      "theta_std_deg": 15.363255500793457
+    }
+  },
+  "per_system": {
+    "I553A": {
+      "ln_N_eff_H_over_D_point": 0.045113958853715275,
+      "ln_N_eff_H_over_D_bootstrap": {
+        "mean": 0.04555749816497537,
+        "sem": 0.07375228947448458,
+        "ci95_lo": -0.09743698189277836,
+        "ci95_hi": 0.18998992233640477,
+        "p_positive": 0.7296
+      },
+      "KIE": 148,
+      "ln_KIE": 4.997212273764115
+    },
+    "I552A": {
+      "ln_N_eff_H_over_D_point": 0.024123876679715828,
+      "ln_N_eff_H_over_D_bootstrap": {
+        "mean": 0.020742589958072422,
+        "sem": 0.044188445246675506,
+        "ci95_lo": -0.06980444644544129,
+        "ci95_hi": 0.10533911399384678,
+        "p_positive": 0.6898
+      },
+      "KIE": 66,
+      "ln_KIE": 4.189654742026425
+    }
+  },
+  "between_systems_verdict": {
+    "point_delta_ln_N_eff_isotope_ratio_I553A_minus_I552A": 0.020990082173999447,
+    "bootstrap": {
+      "mean": 0.024814908206902946,
+      "sem": 0.08620472393034855,
+      "ci95_lo": -0.14323771525941856,
+      "ci95_hi": 0.1925407868715682,
+      "p_positive": 0.6116
+    },
+    "experimental_delta_ln_KIE_I553A_minus_I552A": 0.8075575317376895,
+    "sign_matches": true,
+    "path_multiplicity_fraction_of_experimental_ladder": 0.025992057963763054
+  }
+}

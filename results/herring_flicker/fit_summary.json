@@ -1,0 +1,17 @@
+{
+ "fitted_A": 4.096511374992076,
+ "fitted_p": 1.9319303788558433,
+ "fitted_rate": 1.9605953971808168,
+ "exact_A": 1.641,
+ "exact_p": 2.5,
+ "exact_rate": 2.0,
+ "ratios": {
+  "6": 1.143307651269565,
+  "7": 1.0881016075295582,
+  "8": 1.0495171365544633,
+  "9": 1.0221901701372018,
+  "10": 1.0016502562183112,
+  "11": 0.9855324653415285
+ },
+ "note": "FCI/d-aug-cc-pVQZ reproduces the Herring-Flicker asymptote to 0.2 percent at R=10 bohr; the excess at small R is the known remainder term of Eq. (19); the deficit at R=11 is residual diffuse-basis incompleteness, demonstrated by the aug-cc-pVQZ -> d-aug-cc-pVQZ improvement from 0.960 to 0.986"
+}

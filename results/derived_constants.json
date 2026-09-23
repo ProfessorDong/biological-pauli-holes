@@ -1,0 +1,15 @@
+{
+ "confinement_curve_decade_spans": {
+  "paraboloid": 6.428730193370127,
+  "sphere": 5.926065156590569
+ },
+ "coulomb_constant_N_m2_C-2": 8987551792.3,
+ "coulomb_constant_note": "quoted as 8.98755e9 in the induced-field appendix; CODATA 2018 exact-derived value, not a computed result",
+ "dipole_atomic_unit_Cm": 8.478353625540766e-30,
+ "axial_field_constant_V_per_m": 152399284645.9642,
+ "axial_field_constant_MV_per_cm": 1523.9928464596421,
+ "axial_field_note": "E[MV/cm] = 1523.99 * P[e a0] / r[A]^3. The figures use 1523.98, which agrees to five significant figures. An earlier appendix value of 1.5242e11 V/m was a slip.",
+ "curvature_kcalmolA2_to_Nm": 0.6947695457055375,
+ "kT_283p15K_eV": 0.02439997913176407,
+ "kT_283p15K_kcal_per_mol": 0.5626768858341514
+}

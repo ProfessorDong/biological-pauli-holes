@@ -1,0 +1,71 @@
+# =====================================================================
+#  Allowlist .gitignore: DENY EVERYTHING, then admit code and data only.
+#
+#  Written this way on purpose. A denylist would have to anticipate every
+#  new manuscript draft, cover-letter revision and LaTeX aux file; this
+#  cannot leak one by omission. To add something, add an explicit rule.
+#
+#  Three classes are excluded permanently and must never be added:
+#    1. references/        69 publisher PDFs, third-party copyright
+#    2. orca_*.tar.xz      ORCA binary, redistribution prohibited by licence
+#    3. manuscript sources main.tex/appendices.tex/PDFs/cover letters/
+#                          response documents/figures, per the author
+#  Large primary data (trajectories, prmtop, .gbw, .rst7, .npy) goes to
+#  Zenodo, not here: the repo would exceed GitHub's limits.
+# =====================================================================
+
+# ---- default deny, but still descend into directories ----
+*
+!*/
+
+# ---- repository metadata ----
+!/.gitignore
+!/README.md
+!/LICENSE
+!/LICENSE-DATA
+!/CITATION.cff
+
+# ---- analysis and simulation code ----
+!/scripts/**/*.py
+!/scripts/**/*.sh
+!/setup/**/*.sh
+!/setup/**/*.md
+
+# ---- MD build inputs (text only; topologies and trajectories go to Zenodo) ----
+!/md/**/*.py
+!/md/**/*.sh
+!/md/**/*.in
+!/md/**/*.leap
+!/md/**/*.frcmod
+!/md/**/*.mol2
+
+# ---- the numeric results the paper's claims are checked against ----
+!/results/**/*.json
+
+# ---- re-deny: runs the project has formally invalidated ----
+#  Recursive: these directories occur nested (e.g. results/ensemble_fluctuation/
+#  _INVALID_V750A_wrong_atoms_2026-09-17/), not only at the top level.
+#  The SCRIPTS that produced them are deliberately kept, because the paper names
+#  these runs as superseded and the code is part of that audit trail; only the
+#  invalidated numbers are withheld, so nobody mistakes them for current results.
+**/_INVALID*/
+/results/pcet_B34/
+/results/pcet_B34_dense/
+/results/pcet_pilot/
+**/*.PUBLISHED.json
+
+# ---- re-deny: never, under any rule above ----
+/references/
+*.tar.xz
+/pauli_data/fields/tupa/
+**/.git/
+
+# ---- re-deny: third-party inputs and vendored upstream repositories ----
+#  pauli_data/ holds PDB structures (fetch from RCSB), the GMTKN55 benchmark
+#  set and a vendored copy of i-pi. All are other people's code and data
+#  under their own licences; none is ours to redistribute.
+/pauli_data/
+/md/mcpb/ModSeminario_Py/
+
+# ---- re-deny: internal working notes, not paper code or data ----
+/setup/claude_memory_backup/

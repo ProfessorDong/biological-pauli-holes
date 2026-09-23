@@ -1,0 +1,522 @@
+{
+ "DHFR": {
+  "pdb": "pauli_data/dhfr/4PDJ_neutron.pdb",
+  "method": "joint X-ray / neutron",
+  "note": "hydride transfer, NADPH C4N to dihydrofolate C6",
+  "r_DA_A": 3.340203736301125,
+  "placements": {
+   "observed": {
+    "total": 0.0010478294206055514,
+    "categories": {
+     "protein": {
+      "fraction": 0.058337543965700796,
+      "d_min_A": 2.621888822967137
+     },
+     "acceptor group": {
+      "fraction": 0.11983981628097794,
+      "d_min_A": 2.4709034784871715
+     },
+     "donor framework": {
+      "fraction": 0.8218202456280942,
+      "d_min_A": 2.069293116018126
+     },
+     "water": {
+      "fraction": 2.3941252271542144e-06,
+      "d_min_A": 5.2397920760274435
+     }
+    },
+    "cumulative": {
+     "2.0": 0.0,
+     "2.5": 0.8057167825957761,
+     "3.0": 0.9775858439712988,
+     "3.5": 0.9937698393938083,
+     "4.0": 0.9993655123352088,
+     "5.0": 0.9999675570579777
+    },
+    "top": [
+     {
+      "atom": "NDP204:C5N",
+      "d_A": 2.069293116018126,
+      "fraction": 0.382984772619127,
+      "category": "donor framework"
+     },
+     {
+      "atom": "NDP204:C3N",
+      "d_A": 2.1017357112634287,
+      "fraction": 0.33878984559329434,
+      "category": "donor framework"
+     },
+     {
+      "atom": "DHF203:C7",
+      "d_A": 2.4709034784871715,
+      "fraction": 0.08394216438335474,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "NDP204:O7N",
+      "d_A": 2.5699278199980657,
+      "fraction": 0.057735386641128254,
+      "category": "donor framework"
+     },
+     {
+      "atom": "TYR100:OH",
+      "d_A": 2.621888822967137,
+      "fraction": 0.04744096721520451,
+      "category": "protein"
+     },
+     {
+      "atom": "NDP204:C7N",
+      "d_A": 2.7033934230888397,
+      "fraction": 0.03486360325704619,
+      "category": "donor framework"
+     },
+     {
+      "atom": "DHF203:N8",
+      "d_A": 2.869053676737332,
+      "fraction": 0.01864053256891074,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "DHF203:C6",
+      "d_A": 2.9605980814693513,
+      "fraction": 0.013188571693232953,
+      "category": "acceptor group"
+     }
+    ],
+    "tail_beyond_8A": 7.688017702584338e-10
+   },
+   "on-axis": {
+    "total": 0.00185989472933308,
+    "categories": {
+     "protein": {
+      "fraction": 0.002335828090672436,
+      "d_min_A": 3.3501414456487013
+     },
+     "acceptor group": {
+      "fraction": 0.2400680749585634,
+      "d_min_A": 2.250203736301125
+     },
+     "donor framework": {
+      "fraction": 0.7575357769400141,
+      "d_min_A": 1.8411322550773395
+     },
+     "water": {
+      "fraction": 6.032001075011935e-05,
+      "d_min_A": 4.234233447814482
+     }
+    },
+    "cumulative": {
+     "2.0": 0.5110764697929505,
+     "2.5": 0.9280493370006615,
+     "3.0": 0.9791709721474053,
+     "3.5": 0.9974877112108357,
+     "4.0": 0.9997290313564065,
+     "5.0": 0.99998498776424
+    },
+    "top": [
+     {
+      "atom": "NDP204:C5N",
+      "d_A": 1.8411322550773395,
+      "fraction": 0.5110764697929505,
+      "category": "donor framework"
+     },
+     {
+      "atom": "NDP204:C3N",
+      "d_A": 2.066925745550928,
+      "fraction": 0.21770556071130426,
+      "category": "donor framework"
+     },
+     {
+      "atom": "DHF203:C6",
+      "d_A": 2.250203736301125,
+      "fraction": 0.10890251198140356,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "DHF203:C7",
+      "d_A": 2.2995755325005733,
+      "fraction": 0.0903647945150032,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "DHF203:C9",
+      "d_A": 2.6280960509093045,
+      "fraction": 0.026107617712293255,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "NDP204:C7N",
+      "d_A": 2.8812445688219768,
+      "fraction": 0.010028834588950392,
+      "category": "donor framework"
+     },
+     {
+      "atom": "DHF203:N5",
+      "d_A": 2.9583776612499237,
+      "fraction": 0.007492807519627386,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "NDP204:C6N",
+      "d_A": 2.958392923465144,
+      "fraction": 0.007492375325872771,
+      "category": "donor framework"
+     }
+    ],
+    "tail_beyond_8A": 3.774978067472317e-10
+   }
+  }
+ },
+ "KSI-A": {
+  "pdb": "pauli_data/ksi/2PZV.pdb",
+  "method": "X-ray",
+  "note": "oxyanion-hole O-H...O; phenol is a ground-state analog and the proton position is not determined by X-ray, so only the on-axis construction is available",
+  "r_DA_A": 2.603810092921525,
+  "placements": {
+   "on-axis": {
+    "total": 0.002520044650649134,
+    "categories": {
+     "protein": {
+      "fraction": 0.016181581808845942,
+      "d_min_A": 2.7992984258089697
+     },
+     "acceptor group": {
+      "fraction": 0.8701855454986959,
+      "d_min_A": 1.633810092921525
+     },
+     "donor framework": {
+      "fraction": 0.11363287269244393,
+      "d_min_A": 2.182948330405853
+     },
+     "water": {
+      "fraction": 1.4256666349213505e-14,
+      "d_min_A": 10.059891260190174
+     }
+    },
+    "cumulative": {
+     "2.0": 0.8257786071784701,
+     "2.5": 0.9615054762734052,
+     "3.0": 0.9919853823410444,
+     "3.5": 0.9994482115134099,
+     "4.0": 0.9997746804607074,
+     "5.0": 0.9999931147646459
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.633810092921525,
+      "fraction": 0.8257786071784701,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH401:C1",
+      "d_A": 2.182948330405853,
+      "fraction": 0.10363602082275152,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.4931292758151145,
+      "fraction": 0.032090848272183635,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.750180428269282,
+      "fraction": 0.012146709773961059,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.7992984258089697,
+      "fraction": 0.010088732492804531,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH401:C2",
+      "d_A": 2.852712855301258,
+      "fraction": 0.008244463800873687,
+      "category": "donor framework"
+     },
+     {
+      "atom": "MET116:CE",
+      "d_A": 3.263718179668709,
+      "fraction": 0.001743974882268872,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH401:C6",
+      "d_A": 3.273213929830374,
+      "fraction": 0.001682495635887905,
+      "category": "donor framework"
+     }
+    ],
+    "tail_beyond_8A": 3.0744497802839643e-10
+   }
+  }
+ },
+ "KSI-B": {
+  "pdb": "pauli_data/ksi/2PZV.pdb",
+  "method": "X-ray",
+  "note": "oxyanion-hole O-H...O; phenol is a ground-state analog and the proton position is not determined by X-ray, so only the on-axis construction is available",
+  "r_DA_A": 2.5688913951352634,
+  "placements": {
+   "on-axis": {
+    "total": 0.002806245594753091,
+    "categories": {
+     "protein": {
+      "fraction": 0.012416134767538726,
+      "d_min_A": 2.831827053116906
+     },
+     "acceptor group": {
+      "fraction": 0.8855315149100069,
+      "d_min_A": 1.5988913951352635
+     },
+     "donor framework": {
+      "fraction": 0.1020523503224425,
+      "d_min_A": 2.180181135439341
+     },
+     "water": {
+      "fraction": 1.1806232982350134e-14,
+      "d_min_A": 10.111760640045427
+     }
+    },
+    "cumulative": {
+     "2.0": 0.8461776921914056,
+     "2.5": 0.9687097824314456,
+     "3.0": 0.9937212289498284,
+     "3.5": 0.9989251850900198,
+     "4.0": 0.9997800415313819,
+     "5.0": 0.9999923158781643
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.5988913951352635,
+      "fraction": 0.8461776921914056,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH402:C1",
+      "d_A": 2.180181135439341,
+      "fraction": 0.09404492175654594,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.496184281698996,
+      "fraction": 0.028487168483493974,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.7550341539998677,
+      "fraction": 0.010709626663364114,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.831827053116906,
+      "fraction": 0.00801173971083611,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH402:C2",
+      "d_A": 2.895840063932093,
+      "fraction": 0.006290080144182691,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.2332296841272985,
+      "fraction": 0.0017573831451283466,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH402:C6",
+      "d_A": 3.2482810575919796,
+      "fraction": 0.0016602030363418163,
+      "category": "donor framework"
+     }
+    ],
+    "tail_beyond_8A": 2.66801101773082e-10
+   }
+  }
+ },
+ "KSI-C": {
+  "pdb": "pauli_data/ksi/2PZV.pdb",
+  "method": "X-ray",
+  "note": "oxyanion-hole O-H...O; phenol is a ground-state analog and the proton position is not determined by X-ray, so only the on-axis construction is available",
+  "r_DA_A": 2.636759753940429,
+  "placements": {
+   "on-axis": {
+    "total": 0.002248009377916566,
+    "categories": {
+     "protein": {
+      "fraction": 0.01612721466605432,
+      "d_min_A": 2.8317578665217367
+     },
+     "acceptor group": {
+      "fraction": 0.8640420794025854,
+      "d_min_A": 1.666759753940432
+     },
+     "donor framework": {
+      "fraction": 0.1198307059313498,
+      "d_min_A": 2.195088124049487
+     },
+     "water": {
+      "fraction": 1.0519549950981073e-14,
+      "d_min_A": 10.196336046540246
+     }
+    },
+    "cumulative": {
+     "2.0": 0.817316614861376,
+     "2.5": 0.9282838197857499,
+     "3.0": 0.991770626382023,
+     "3.5": 0.9993992746611535,
+     "4.0": 0.9997554850639365,
+     "5.0": 0.9999924888400865
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.666759753940432,
+      "fraction": 0.817316614861376,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH403:C1",
+      "d_A": 2.195088124049487,
+      "fraction": 0.11096720492437392,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.5105341251162234,
+      "fraction": 0.03368395490084108,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.7655826890801163,
+      "fraction": 0.0128465814321087,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.8317578665217367,
+      "fraction": 0.010003867981021947,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH403:C6",
+      "d_A": 2.928037575942261,
+      "fraction": 0.006952402282301331,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.2721705466795243,
+      "fraction": 0.0018935495219744838,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH403:C2",
+      "d_A": 3.278772591432877,
+      "fraction": 0.001846886057611421,
+      "category": "donor framework"
+     }
+    ],
+    "tail_beyond_8A": 4.5901446497222083e-10
+   }
+  }
+ },
+ "KSI-D": {
+  "pdb": "pauli_data/ksi/2PZV.pdb",
+  "method": "X-ray",
+  "note": "oxyanion-hole O-H...O; phenol is a ground-state analog and the proton position is not determined by X-ray, so only the on-axis construction is available",
+  "r_DA_A": 2.6247291288816834,
+  "placements": {
+   "on-axis": {
+    "total": 0.0023594567291046475,
+    "categories": {
+     "protein": {
+      "fraction": 0.017060468383876943,
+      "d_min_A": 2.7910260548836896
+     },
+     "acceptor group": {
+      "fraction": 0.8569036175900303,
+      "d_min_A": 1.6547291288816834
+     },
+     "donor framework": {
+      "fraction": 0.12603591402608302,
+      "d_min_A": 2.1724908291087504
+     },
+     "water": {
+      "fraction": 9.791785801644242e-15,
+      "d_min_A": 10.24186427002154
+     }
+    },
+    "cumulative": {
+     "2.0": 0.8149358813084072,
+     "2.5": 0.9300879756916087,
+     "3.0": 0.9922478353931529,
+     "3.5": 0.9993907307502727,
+     "4.0": 0.9997639359284864,
+     "5.0": 0.9999901933909913
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.6547291288816834,
+      "fraction": 0.8149358813084072,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH404:C1",
+      "d_A": 2.1724908291087504,
+      "fraction": 0.11515209438320151,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.517430827162905,
+      "fraction": 0.031267198065647525,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.7910260548836896,
+      "fraction": 0.0111176002881528,
+      "category": "protein"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.805311003333565,
+      "fraction": 0.010533284370666687,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH404:C6",
+      "d_A": 2.8399207812147966,
+      "fraction": 0.009241776977077199,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.2404815603821695,
+      "fraction": 0.002033653324662371,
+      "category": "protein"
+     },
+     {
+      "atom": "TYR16:CE2",
+      "d_A": 3.3079022493639414,
+      "fraction": 0.0015762058025679069,
+      "category": "protein"
+     }
+    ],
+    "tail_beyond_8A": 3.479641232691746e-10
+   }
+  }
+ }
+}

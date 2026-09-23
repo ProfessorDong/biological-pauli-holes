@@ -1,0 +1,80 @@
+{
+  "per_run_result": {
+    "I553A_H": {
+      "n_replicas": 3,
+      "n_samples": 7200,
+      "sigma_bead_mean_A": 0.13758660852909088,
+      "sigma_bead_sem_A": 0.00016564956623799754,
+      "r_HO_mean_A": 2.660935878753662,
+      "r_HO_std_A": 0.15915627777576447,
+      "theta_mean_deg": 159.2367706298828,
+      "theta_std_deg": 10.46547794342041,
+      "S_shannon_nats": 4.869771686918389,
+      "S_diff_nats": 3.120931265810234,
+      "N_eff": 130.29116632267565
+    },
+    "I553A_D": {
+      "n_replicas": 3,
+      "n_samples": 7200,
+      "sigma_bead_mean_A": 0.10846531142791112,
+      "sigma_bead_sem_A": 0.0002856427615604835,
+      "r_HO_mean_A": 2.666121482849121,
+      "r_HO_std_A": 0.15412537753582,
+      "theta_mean_deg": 159.5142822265625,
+      "theta_std_deg": 10.09184741973877,
+      "S_shannon_nats": 4.837675734587502,
+      "S_diff_nats": 3.088835313479347,
+      "N_eff": 126.1757447326192
+    },
+    "I552A_H": {
+      "n_replicas": 3,
+      "n_samples": 7200,
+      "sigma_bead_mean_A": 0.13722333312034607,
+      "sigma_bead_sem_A": 0.00035262393730618665,
+      "r_HO_mean_A": 3.382237434387207,
+      "r_HO_std_A": 0.23477759957313538,
+      "theta_mean_deg": 130.39439392089844,
+      "theta_std_deg": 12.637906074523926,
+      "S_shannon_nats": 5.178917570142168,
+      "S_diff_nats": 3.4300771490340134,
+      "N_eff": 177.4905858673981
+    },
+    "I552A_D": {
+      "n_replicas": 3,
+      "n_samples": 7200,
+      "sigma_bead_mean_A": 0.10828271508216858,
+      "sigma_bead_sem_A": 0.000434366508414626,
+      "r_HO_mean_A": 3.3474371433258057,
+      "r_HO_std_A": 0.22604858875274658,
+      "theta_mean_deg": 131.8396759033203,
+      "theta_std_deg": 12.191888809204102,
+      "S_shannon_nats": 5.192172477940829,
+      "S_diff_nats": 3.4433320568326744,
+      "N_eff": 179.85886822632006
+    }
+  },
+  "per_system": {
+    "I553A": {
+      "N_eff_H": 130.29116632267565,
+      "N_eff_D": 126.1757447326192,
+      "ln_N_eff_H_over_D": 0.03209595233088702,
+      "sigma_bead_H_over_D": 1.268484889019422,
+      "KIE_experimental": 148,
+      "ln_KIE_experimental": 4.997212273764115
+    },
+    "I552A": {
+      "N_eff_H": 177.4905858673981,
+      "N_eff_D": 179.85886822632006,
+      "ln_N_eff_H_over_D": -0.013254907798661009,
+      "sigma_bead_H_over_D": 1.267269046737666,
+      "KIE_experimental": 66,
+      "ln_KIE_experimental": 4.189654742026425
+    }
+  },
+  "verdict": {
+    "Delta_ln_KIE_I553A_minus_I552A": 0.8075575317376895,
+    "Delta_ln_N_eff_isotope_ratio_I553A_minus_I552A": 0.04535086012954803,
+    "Delta_sigma_bead_isotope_ratio_I553A_minus_I552A_A": 0.0012158422817560854,
+    "sign_matches_KIE": true
+  }
+}

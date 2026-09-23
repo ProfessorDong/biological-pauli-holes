@@ -1,0 +1,50 @@
+{
+ "TAG": "L546A",
+ "prm": "SLO_L546A_sub_solv",
+ "donor_C": 12993,
+ "xferH": 13022,
+ "carbons": [
+  12993,
+  12992,
+  12989,
+  12996,
+  12994
+ ],
+ "hydrogens": [
+  {
+   "idx": 13022,
+   "transferring": true
+  },
+  {
+   "idx": 13023,
+   "transferring": false
+  },
+  {
+   "idx": 13021,
+   "transferring": false
+  },
+  {
+   "idx": 13016,
+   "transferring": false
+  },
+  {
+   "idx": 13025,
+   "transferring": false
+  },
+  {
+   "idx": 13024,
+   "transferring": false
+  }
+ ],
+ "caps": [
+  {
+   "host": 12989,
+   "beyond": 12985
+  },
+  {
+   "host": 12994,
+   "beyond": 12990
+  }
+ ],
+ "formula": "C5H8"
+}

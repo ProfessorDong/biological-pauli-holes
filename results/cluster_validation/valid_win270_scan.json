@@ -1,0 +1,46 @@
+{
+  "r_DA": 3.407419324326415,
+  "alpha_grid": [
+    0.32
+  ],
+  "q_along_A_grid": [
+    1.090374183784453
+  ],
+  "n_cluster_atoms": 80,
+  "mode": "small",
+  "cluster_report": {
+    "n_atoms": 80,
+    "n_caps": 7,
+    "composition": {
+      "C": 25,
+      "H": 43,
+      "N": 7,
+      "O": 4,
+      "Fe": 1
+    },
+    "sum_Z": 300,
+    "charge": 1,
+    "n_electrons": 299,
+    "mult": 6,
+    "S2_expected": 8.75
+  },
+  "charge": 1,
+  "mult": 6,
+  "points": [
+    {
+      "point": 0,
+      "alpha": 0.32,
+      "q_along_A": 1.090374183784453,
+      "xferH_position": [
+        55.157730656,
+        59.694522664,
+        40.875070072
+      ],
+      "E_hartree": -2923.972344048772,
+      "S2": 8.759196,
+      "S2_expected": 8.75,
+      "scf_converged": true,
+      "spin_contamination": 0.0092
+    }
+  ]
+}

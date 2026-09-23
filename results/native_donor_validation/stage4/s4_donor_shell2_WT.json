@@ -1,0 +1,32 @@
+{
+  "label": "s4_donor_shell2_WT",
+  "method": "sapt0",
+  "basis": "jun-cc-pVDZ",
+  "donor": "shell2",
+  "wall": "sidechain",
+  "n_donor": 19,
+  "n_wall": 14,
+  "half": 0.15,
+  "n_per_axis": 5,
+  "n_points": 25,
+  "K_perp_exch_eigs": [
+    -0.17744907487285266,
+    0.199579172471974
+  ],
+  "K_perp_exch_grad_kcal_per_A": [
+    -0.05981069760373958,
+    -0.22873277635909564
+  ],
+  "K_perp_exch_grad_norm": 0.236423354448722,
+  "K_perp_exch_rms_kcal": 0.0002349279368461744,
+  "K_perp_int_eigs": [
+    -0.23802826245687259,
+    -0.04503147866489901
+  ],
+  "K_perp_int_grad_kcal_per_A": [
+    -0.07779137415255488,
+    -0.12422726208745491
+  ],
+  "K_perp_int_grad_norm": 0.14657390810880358,
+  "K_perp_int_rms_kcal": 0.00016387467936438557
+}

@@ -1,0 +1,138 @@
+{
+ "WT": {
+  "prmtop": "SLO_sub_solv",
+  "n_atoms": 106349,
+  "donor_C": 13002,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12985,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12984,
+  "H_on_donor": [
+   13031,
+   13032
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "I553A": {
+  "prmtop": "SLO_I553A_sub_solv",
+  "n_atoms": 106340,
+  "donor_C": 12993,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12976,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12975,
+  "H_on_donor": [
+   13022,
+   13023
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "I552A": {
+  "prmtop": "SLO_I552A_sub_solv",
+  "n_atoms": 106340,
+  "donor_C": 12993,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12976,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12975,
+  "H_on_donor": [
+   13022,
+   13023
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "L754A": {
+  "prmtop": "SLO_L754A_sub_solv",
+  "n_atoms": 106340,
+  "donor_C": 12993,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12976,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12975,
+  "H_on_donor": [
+   13022,
+   13023
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "V750A": {
+  "prmtop": "SLO_V750A_sub_solv",
+  "n_atoms": 106343,
+  "donor_C": 12996,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12979,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12978,
+  "H_on_donor": [
+   13025,
+   13026
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "I538A": {
+  "prmtop": "SLO_I538A_sub_solv",
+  "n_atoms": 106340,
+  "donor_C": 12993,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12976,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12975,
+  "H_on_donor": [
+   13022,
+   13023
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "L546A": {
+  "prmtop": "SLO_L546A_sub_solv",
+  "n_atoms": 106340,
+  "donor_C": 12993,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12976,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12975,
+  "H_on_donor": [
+   13022,
+   13023
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ },
+ "DM": {
+  "prmtop": "SLO_DM_sub_solv",
+  "n_atoms": 106331,
+  "donor_C": 12984,
+  "donor_C_label": "LIG820:C14",
+  "acceptor_O": 12967,
+  "acceptor_label": "OH1819:O",
+  "Fe": 12966,
+  "H_on_donor": [
+   13013,
+   13014
+  ],
+  "H_labels": [
+   "H25",
+   "H26"
+  ]
+ }
+}

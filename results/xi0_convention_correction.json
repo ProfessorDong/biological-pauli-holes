@@ -1,0 +1,56 @@
+{
+ "geometry": "wall xi=xi0 has closest approach xi0/2 and aperture radius xi0",
+ "placements": {
+  "SLO tight end": {
+   "old_convention_xi0_eq_d": {
+    "xi0_A": 2.4,
+    "xi0_over_a0": 4.535342699101848,
+    "nu1": 0.04685706428298766,
+    "P_ea0": 0.27790530771735883,
+    "energy_raised_eV": 1.1907168150804022,
+    "field_at_2p55_MVcm": 25.5420392371019
+   },
+   "corrected_xi0_eq_2d": {
+    "xi0_A": 4.8,
+    "xi0_over_a0": 9.070685398203697,
+    "nu1": 0.0009171237807843217,
+    "P_ea0": 0.02065253650330781,
+    "energy_raised_eV": 0.024921919468637317,
+    "field_at_2p55_MVcm": 1.898156973128648
+   },
+   "overestimate_factor_P": 13.456231280494197
+  },
+  "SLO loose end": {
+   "old_convention_xi0_eq_d": {
+    "xi0_A": 3.0,
+    "xi0_over_a0": 5.66917837387731,
+    "nu1": 0.017317195680370392,
+    "P_ea0": 0.1550514037205554,
+    "energy_raised_eV": 0.459261093186977,
+    "field_at_2p55_MVcm": 14.250641954726433
+   },
+   "corrected_xi0_eq_2d": {
+    "xi0_A": 6.0,
+    "xi0_over_a0": 11.33835674775462,
+    "nu1": 0.00012177083534510837,
+    "P_ea0": 0.004280032740962787,
+    "energy_raised_eV": 0.003312948091107124,
+    "field_at_2p55_MVcm": 0.393374150007009
+   },
+   "overestimate_factor_P": 36.22668636073957
+  }
+ },
+ "domain": {
+  "xi0_over_a0_floor": 1.445797091847177,
+  "bessel_limit": 1.4457964907366965,
+  "note": "dipole diverges at the floor because the state ionizes along the open eta direction; no maximum dipole is claimed"
+ },
+ "thermal_comparison": {
+  "kT_283K_eV": 0.0244,
+  "kT_283K_kcal": 0.5626762000000001,
+  "ratios": {
+   "SLO tight end": 1.021390142157267,
+   "SLO loose end": 0.13577656111094769
+  }
+ }
+}

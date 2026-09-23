@@ -1,0 +1,44 @@
+{
+ "v_thermal_cm_s": {
+  "T300": 272484.9698757396,
+  "T283": 264722.10492978565
+ },
+ "pockets": {
+  "six-carbon ring, aperture 1.306 A": {
+   "xi0_over_a0": 2.464,
+   "dE_eV": 6.98,
+   "v_cm_s": 3655759.033095808,
+   "ratio_thermal": 13.416369478151148
+  },
+  "SLO measured, closest approach 2.4 A": {
+   "xi0_over_a0": 9.071,
+   "dE_eV": 0.0249,
+   "v_cm_s": 218348.15371503404,
+   "ratio_thermal": 0.8013218263547036
+  },
+  "SLO measured, closest approach 3.0 A": {
+   "xi0_over_a0": 11.338,
+   "dE_eV": 0.0033,
+   "v_cm_s": 79488.96100811397,
+   "ratio_thermal": 0.2917186993629889
+  }
+ },
+ "slo_ratio_range": [
+  0.2917186993629889,
+  0.8013218263547036
+ ],
+ "force_100MVcm": {
+  "bare_proton_N": 1.6021766339999998e-09,
+  "neutral_H": {
+   "1A": {
+    "F_polarization_N": 7.419497734621289e-11,
+    "ratio_to_eE": 21.594138731572496
+   },
+   "3A": {
+    "F_polarization_N": 2.4731659115404297e-11,
+    "ratio_to_eE": 64.7824161947175
+   }
+  }
+ },
+ "note": "kinetic restatement of dE/kT; the released-hydrogen speed at the measured geometry is sub-thermal, and the force on a neutral H is not eE"
+}

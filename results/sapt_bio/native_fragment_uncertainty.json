@@ -1,0 +1,104 @@
+{
+ "series": "native_fragment",
+ "n_boot": 5000,
+ "seed": 20260803,
+ "method": "parametric residual bootstrap, quadratic on 5 points, ddof=3",
+ "caveat": "fit precision only; excludes basis-set, SAPT0-truncation, snapshot and fragment-choice error. sigma_k is close to proportional to k, so exclusion of zero is near-automatic and is not a significance test.",
+ "rel_sigma_range": [
+  0.07170137636872223,
+  0.089419123382564
+ ],
+ "systems": {
+  "L754A": {
+   "k_exch_Nm": 0.004010242007693474,
+   "sigma_k_Nm": 0.0003585923248798839,
+   "rel_sigma": 0.089419123382564,
+   "ci95": [
+    0.003324579156326102,
+    0.004725991977728946
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 6.100320363898136e-06,
+   "r_HW_A": 4.812186494624851,
+   "wall_residue": "ASN672"
+  },
+  "I552A": {
+   "k_exch_Nm": 4.93216738278846,
+   "sigma_k_Nm": 0.37540472128028357,
+   "rel_sigma": 0.07611354038598017,
+   "ci95": [
+    4.186784948674682,
+    5.66769205935717
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 0.006460479937767263,
+   "r_HW_A": 3.722505762903454,
+   "wall_residue": "LEU732"
+  },
+  "I538A": {
+   "k_exch_Nm": 6.5346613021886775,
+   "sigma_k_Nm": 0.46854420947035486,
+   "rel_sigma": 0.07170137636872223,
+   "ci95": [
+    5.602212862597313,
+    7.437890512911297
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 0.007991488531610344,
+   "r_HW_A": 3.434016660929606,
+   "wall_residue": "LEU732"
+  },
+  "V750A": {
+   "k_exch_Nm": 7.709938634298975,
+   "sigma_k_Nm": 0.6020988369794782,
+   "rel_sigma": 0.0780938559356282,
+   "ci95": [
+    6.5552966574002784,
+    8.936674508997235
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 0.010312265630785552,
+   "r_HW_A": 3.500290344663815,
+   "wall_residue": "LEU732"
+  },
+  "WT": {
+   "k_exch_Nm": 7.885168333088997,
+   "sigma_k_Nm": 0.6221772476952775,
+   "rel_sigma": 0.0789047514793563,
+   "ci95": [
+    6.668940784779061,
+    9.11414261531974
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 0.010452375999920304,
+   "r_HW_A": 3.3941823094325456,
+   "wall_residue": "LEU732"
+  },
+  "I553A": {
+   "k_exch_Nm": 13.960768090117613,
+   "sigma_k_Nm": 1.0626758577738449,
+   "rel_sigma": 0.07611872433624046,
+   "ci95": [
+    11.853792132477041,
+    15.991123919876369
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 0.01785246928708221,
+   "r_HW_A": 3.383939914332447,
+   "wall_residue": "LEU732"
+  },
+  "L546A": {
+   "k_exch_Nm": 16.380725090120542,
+   "sigma_k_Nm": 1.2033176405956625,
+   "rel_sigma": 0.07345936361030814,
+   "ci95": [
+    13.91794706112939,
+    18.71876482279484
+   ],
+   "excludes_zero": true,
+   "RMS_residual_kcal": 0.02045479243884161,
+   "r_HW_A": 4.387017012707674,
+   "wall_residue": "LEU732"
+  }
+ }
+}

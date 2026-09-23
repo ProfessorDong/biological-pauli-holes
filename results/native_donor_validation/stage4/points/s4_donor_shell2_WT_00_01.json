@@ -1,0 +1,1 @@
+{"label": "s4_donor_shell2_WT", "i": 0, "j": 1, "d1": -0.15, "d2": -0.075, "exch": 3.883120673359846, "total": -1.0219583007734747, "method": "sapt0", "basis": "jun-cc-pVDZ", "donor": "shell2", "wall": "sidechain", "n_donor": 19, "n_wall": 14}

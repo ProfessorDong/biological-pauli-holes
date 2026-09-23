@@ -1,0 +1,66 @@
+{
+ "near_far_ratios": {
+  "2.1_vs_3.5": {
+   "paraboloid": 112.41838661830744,
+   "sphere": 65.70300801251983,
+   "geometry_factor": 1.7110082174150367,
+   "shared_exponential": 198.5881632646933
+  },
+  "2.1_vs_4.5": {
+   "paraboloid": 3745.5708320148074,
+   "sphere": 1671.4165738010304,
+   "geometry_factor": 2.240955899759248,
+   "shared_exponential": 8696.582385426242
+  }
+ },
+ "kT_283K_eV": 0.0244,
+ "d_angstrom": [
+  "2.4",
+  "3.0"
+ ],
+ "by_distance": {
+  "2.4": {
+   "paraboloid": {
+    "dE_hartree": 0.0009158636477886807,
+    "dE_eV": 0.024921919468637303,
+    "dE_kcal": 0.5747131159373454,
+    "dE_over_kT": 1.0213901421572664
+   },
+   "sphere": {
+    "dE_hartree": 0.007381386915042408,
+    "dE_eV": 0.20085777037630076,
+    "dE_kcal": 4.631890220914172,
+    "dE_over_kT": 8.231875835094293
+   },
+   "sphere_over_paraboloid": 8.059482361664312
+  },
+  "3.0": {
+   "paraboloid": {
+    "dE_hartree": 0.0001217485967513168,
+    "dE_eV": 0.0033129480911071214,
+    "dE_kcal": 0.07639839791533369,
+    "dE_over_kT": 0.1357765611109476
+   },
+   "sphere": {
+    "dE_hartree": 0.0012359119591313658,
+    "dE_eV": 0.03363087768595933,
+    "dE_kcal": 0.7755464634627623,
+    "dE_over_kT": 1.3783146592606281
+   },
+   "sphere_over_paraboloid": 10.151344591312492
+  }
+ },
+ "paraboloid_kT_range": [
+  0.1357765611109476,
+  1.0213901421572664
+ ],
+ "sphere_kT_range": [
+  1.3783146592606281,
+  8.231875835094293
+ ],
+ "combined_envelope_kT": [
+  0.1357765611109476,
+  8.231875835094293
+ ],
+ "note": "energy is geometry-dependent and both solved geometries are reported; the induced dipole and its field are paraboloidal only, because a hydrogen atom centered in a hard sphere has no induced dipole"
+}

@@ -1,0 +1,50 @@
+{
+ "TAG": "V750A",
+ "prm": "SLO_V750A_sub_solv",
+ "donor_C": 12996,
+ "xferH": 13025,
+ "carbons": [
+  12996,
+  12995,
+  12992,
+  12999,
+  12997
+ ],
+ "hydrogens": [
+  {
+   "idx": 13025,
+   "transferring": true
+  },
+  {
+   "idx": 13026,
+   "transferring": false
+  },
+  {
+   "idx": 13024,
+   "transferring": false
+  },
+  {
+   "idx": 13019,
+   "transferring": false
+  },
+  {
+   "idx": 13028,
+   "transferring": false
+  },
+  {
+   "idx": 13027,
+   "transferring": false
+  }
+ ],
+ "caps": [
+  {
+   "host": 12992,
+   "beyond": 12988
+  },
+  {
+   "host": 12997,
+   "beyond": 12993
+  }
+ ],
+ "formula": "C5H8"
+}

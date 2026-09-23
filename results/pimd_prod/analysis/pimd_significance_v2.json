@@ -1,0 +1,44 @@
+{
+  "BLOCK": 30,
+  "N_BOOT": 5000,
+  "NB": 24,
+  "r_HO_range": [
+    2.3635969161987305,
+    3.818571090698242
+  ],
+  "theta_range_deg": [
+    107.70712280273438,
+    176.58114624023438
+  ],
+  "point_estimate": {
+    "S_I553A_H": 4.869771686918389,
+    "S_I553A_D": 4.837675734587502,
+    "S_I552A_H": 5.178917570142168,
+    "S_I552A_D": 5.192172477940829,
+    "N_eff_I553A_H": 130.29116632267565,
+    "N_eff_I553A_D": 126.1757447326192,
+    "N_eff_I552A_H": 177.4905858673981,
+    "N_eff_I552A_D": 179.85886822632006,
+    "delta_ln_N_eff_I553A_point": 0.03209595233088702,
+    "delta_ln_N_eff_I552A_point": -0.013254907798661009,
+    "between_systems_point": 0.04535086012954803
+  },
+  "bootstrap": {
+    "delta_ln_N_eff_I553A_mean": 0.0369223265269752,
+    "delta_ln_N_eff_I553A_sem": 0.03885728472597324,
+    "delta_ln_N_eff_I553A_ci95_lo": -0.03779979652400047,
+    "delta_ln_N_eff_I553A_ci95_hi": 0.11379519018718082,
+    "delta_ln_N_eff_I552A_mean": -0.00234610280578094,
+    "delta_ln_N_eff_I552A_sem": 0.07968379963469163,
+    "delta_ln_N_eff_I552A_ci95_lo": -0.16073205606887106,
+    "delta_ln_N_eff_I552A_ci95_hi": 0.14915543021686692,
+    "DD_I553A_minus_I552A_mean": 0.039268429332756136,
+    "DD_I553A_minus_I552A_sem": 0.08770897358867882,
+    "DD_I553A_minus_I552A_ci95_lo": -0.13020904052502696,
+    "DD_I553A_minus_I552A_ci95_hi": 0.20805654727680556,
+    "P_delta_I553A_positive": 0.8258,
+    "P_delta_I552A_positive": 0.4928,
+    "P_DD_positive": 0.6644
+  },
+  "experimental_delta_ln_KIE_I553A_minus_I552A": 0.8075575317376895
+}

@@ -1,0 +1,137 @@
+{
+ "source": "Ley-Koo and Garcia-Castelan, J. Phys. A 24, 1481 (1991)",
+ "table1_nu1": [
+  {
+   "xi0": 11.5565,
+   "nu1_published": 0.0001,
+   "nu1_ours": 0.00010000344036052441,
+   "dnu1_dxi0": -9.03794442103056e-05,
+   "tol_from_xi0_rounding": 5e-09,
+   "residual": 3.440360524405422e-09,
+   "agrees": true
+  },
+  {
+   "xi0": 3.8345,
+   "nu1_published": 0.09,
+   "nu1_ours": 0.0899997205064219,
+   "dnu1_dxi0": -0.08717945132161466,
+   "tol_from_xi0_rounding": 4.5e-06,
+   "residual": 2.794935781008645e-07,
+   "agrees": true
+  },
+  {
+   "xi0": 2.0475,
+   "nu1_published": 0.9,
+   "nu1_ours": 0.9000011841696097,
+   "dnu1_dxi0": -1.9345241624061136,
+   "tol_from_xi0_rounding": 9.672620812030568e-05,
+   "residual": 1.184169609702579e-06,
+   "agrees": true
+  },
+  {
+   "xi0": 1.8678,
+   "nu1_published": 1.4,
+   "nu1_ours": 1.4001323095573197,
+   "dnu1_dxi0": -3.993771849937046,
+   "tol_from_xi0_rounding": 0.0001996885924968523,
+   "residual": 0.00013230955731979854,
+   "agrees": true
+  },
+  {
+   "xi0": 1.5381,
+   "nu1_published": 7.5,
+   "nu1_ours": 7.496172840905567,
+   "dnu1_dxi0": -84.77539398255152,
+   "tol_from_xi0_rounding": 0.004238769699127576,
+   "residual": 0.003827159094432986,
+   "agrees": true
+  }
+ ],
+ "energies": [
+  {
+   "xi0": 11.5565,
+   "E_hartree": -0.49990001155867175,
+   "E_rydberg": -0.9998000231173435
+  },
+  {
+   "xi0": 3.8345,
+   "E_hartree": -0.4208402124536869,
+   "E_rydberg": -0.8416804249073738
+  },
+  {
+   "xi0": 2.0475,
+   "E_hartree": -0.13850398248017162,
+   "E_rydberg": -0.27700796496034324
+  },
+  {
+   "xi0": 1.8678,
+   "E_hartree": -0.08679598534309989,
+   "E_rydberg": -0.17359197068619978
+  },
+  {
+   "xi0": 1.5381,
+   "E_hartree": -0.0069266513257686246,
+   "E_rydberg": -0.013853302651537249
+  }
+ ],
+ "table2_dipole": [
+  {
+   "xi0": 10.01,
+   "P_published": 0.0041,
+   "P_ours": 0.010967672533778006,
+   "ratio": 2.6750420814092695,
+   "agrees": false
+  },
+  {
+   "xi0": 6.4312,
+   "P_published": 0.1026,
+   "P_ours": 0.10263384216959455,
+   "ratio": 1.0003298457075493,
+   "agrees": true
+  },
+  {
+   "xi0": 3.8345,
+   "P_published": 0.3976,
+   "P_ours": 0.3975662825099641,
+   "ratio": 0.9999151974596683,
+   "agrees": true
+  },
+  {
+   "xi0": 1.8678,
+   "P_published": 2.0051,
+   "P_ours": 2.005193115006104,
+   "ratio": 1.0000464390833892,
+   "agrees": true
+  },
+  {
+   "xi0": 1.7871,
+   "P_published": 2.4199,
+   "P_ours": 2.4196939627851095,
+   "ratio": 0.9999148571367037,
+   "agrees": true
+  },
+  {
+   "xi0": 1.6631,
+   "P_published": 3.643,
+   "P_ours": 3.6429963168865958,
+   "ratio": 0.9999989889889092,
+   "agrees": true
+  },
+  {
+   "xi0": 1.5548,
+   "P_published": 6.9636,
+   "P_ours": 6.961137524980933,
+   "ratio": 0.9996463790253509,
+   "agrees": true
+  },
+  {
+   "xi0": 1.5381,
+   "P_published": 8.16685,
+   "P_ours": 8.163012819366973,
+   "ratio": 0.9995301516945913,
+   "agrees": true
+  }
+ ],
+ "dipole_rows_agreeing": 7,
+ "dipole_rows_total": 8
+}

@@ -1,0 +1,67 @@
+{
+ "d_bond_A": 2.1542360608668445,
+ "d_vdW_contact_A": 2.9,
+ "ratio_per_atom_at_contact": 0.05969069119236045,
+ "ratio_per_atom_at_3p5": 0.006181152435146319,
+ "bound_vs_dpack": [
+  {
+   "d_pack_A": 2.9,
+   "n_max": 10,
+   "cavity_fraction": 0.11078075831038302
+  },
+  {
+   "d_pack_A": 3.0,
+   "n_max": 11,
+   "cavity_fraction": 0.0858474349938937
+  },
+  {
+   "d_pack_A": 3.2,
+   "n_max": 13,
+   "cavity_fraction": 0.049535457367640305
+  },
+  {
+   "d_pack_A": 3.4,
+   "n_max": 14,
+   "cavity_fraction": 0.025679567186862883
+  },
+  {
+   "d_pack_A": 3.6,
+   "n_max": 16,
+   "cavity_fraction": 0.01394757769408163
+  },
+  {
+   "d_pack_A": 3.8,
+   "n_max": 18,
+   "cavity_fraction": 0.007417183247142923
+  },
+  {
+   "d_pack_A": 4.0,
+   "n_max": 21,
+   "cavity_fraction": 0.004077234163281132
+  },
+  {
+   "d_pack_A": 4.5,
+   "n_max": 26,
+   "cavity_fraction": 0.0007653567239991239
+  }
+ ],
+ "worst_case": {
+  "d_pack_A": 2.9,
+  "n_max": 10,
+  "cavity_fraction": 0.11078075831038302
+ },
+ "observed_percent": {
+  "SLO (14 MD geometries, JBC cavity positions)": [
+   0.0006,
+   4.75
+  ],
+  "DHFR 4PDJ (protein, both H placements)": [
+   0.23,
+   5.83
+  ],
+  "KSI 2PZV (protein, 4 chains)": [
+   1.24,
+   1.71
+  ]
+ }
+}

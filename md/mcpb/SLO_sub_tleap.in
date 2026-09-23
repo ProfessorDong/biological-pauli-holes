@@ -1,0 +1,36 @@
+source leaprc.protein.ff19SB
+source leaprc.water.opc
+source leaprc.gaff2
+HD1 = loadmol2 HD1.mol2
+HD2 = loadmol2 HD2.mol2
+HD3 = loadmol2 HD3.mol2
+IE1 = loadmol2 IE1.mol2
+FE1 = loadmol2 FE1.mol2
+OH1 = loadmol2 OH1.mol2
+LIG = loadmol2 ../substrate/LIG_final.mol2
+loadamberparams frcmod.ionslm_126_opc
+loadamberparams SLO_mcpbpy.frcmod
+loadamberparams ../substrate/LIG_final.frcmod
+mol = loadpdb SLO_mcpbpy_capped.pdb
+bond mol.478.NE2 mol.819.FE
+bond mol.483.NE2 mol.819.FE
+bond mol.669.NE2 mol.819.FE
+bond mol.818.OXT mol.819.FE
+bond mol.819.FE mol.820.O
+bond mol.477.C mol.478.N
+bond mol.478.C mol.479.N
+bond mol.482.C mol.483.N
+bond mol.483.C mol.484.N
+bond mol.668.C mol.669.N
+bond mol.669.C mol.670.N
+bond mol.817.C mol.818.N
+lig = loadpdb ../substrate/linoleate_docked.pdb
+complex = combine {mol lig}
+savepdb complex SLO_sub_dry.pdb
+saveamberparm complex SLO_sub_dry.prmtop SLO_sub_dry.inpcrd
+solvatebox complex OPCBOX 10.0
+addions complex Na+ 0
+addions complex Cl- 0
+savepdb complex SLO_sub_solv.pdb
+saveamberparm complex SLO_sub_solv.prmtop SLO_sub_solv.inpcrd
+quit

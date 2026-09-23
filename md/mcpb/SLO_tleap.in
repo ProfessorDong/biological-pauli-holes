@@ -1,0 +1,41 @@
+source leaprc.protein.ff19SB
+source leaprc.water.opc
+source leaprc.gaff2
+addAtomTypes {
+        { "M1"  "Fe" "sp3" }
+        { "Y1"  "N" "sp3" }
+        { "Y2"  "N" "sp3" }
+        { "Y3"  "N" "sp3" }
+        { "Y4"  "O" "sp3" }
+        { "Y5"  "O" "sp3" }
+}
+HD1 = loadmol2 HD1.mol2
+HD2 = loadmol2 HD2.mol2
+HD3 = loadmol2 HD3.mol2
+IE1 = loadmol2 IE1.mol2
+FE1 = loadmol2 FE1.mol2
+OH1 = loadmol2 OH1.mol2
+loadamberparams frcmod.ionslm_126_opc
+loadamberparams SLO_mcpbpy.frcmod
+mol = loadpdb SLO_mcpbpy.pdb
+bond mol.478.NE2 mol.819.FE
+bond mol.483.NE2 mol.819.FE
+bond mol.669.NE2 mol.819.FE
+bond mol.818.OXT mol.819.FE
+bond mol.819.FE mol.820.O
+bond mol.477.C mol.478.N
+bond mol.478.C mol.479.N
+bond mol.482.C mol.483.N
+bond mol.483.C mol.484.N
+bond mol.668.C mol.669.N
+bond mol.669.C mol.670.N
+bond mol.817.C mol.818.N
+savepdb mol SLO_dry.pdb
+saveamberparm mol SLO_dry.prmtop SLO_dry.inpcrd
+solvatebox mol OPCBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+savepdb mol SLO_solv.pdb
+saveamberparm mol SLO_solv.prmtop SLO_solv.inpcrd
+quit
+ 

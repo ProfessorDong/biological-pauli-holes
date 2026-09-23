@@ -1,0 +1,67 @@
+{
+  "r_DA": 3.407419324326415,
+  "spin_target": 0.0,
+  "n_substrate": 12,
+  "charge": 1,
+  "mult": 6,
+  "start": 0.629,
+  "target": 0.714,
+  "points": [
+    {
+      "E_unconstrained": -2925.021521169398,
+      "E_diabat": -2924.97896045438,
+      "cdft_converged": true,
+      "fragment_spin": -0.06,
+      "collapsed_to_adiabatic": false,
+      "multiplier": 0.0599314948,
+      "valid": true,
+      "alpha": 0.6504,
+      "r_H": 2.2161855285419003,
+      "step": 0.0214,
+      "wall_s": 3912.9085648059845,
+      "rc": 0
+    },
+    {
+      "E_unconstrained": -2925.031956983612,
+      "E_diabat": null,
+      "cdft_converged": false,
+      "fragment_spin": null,
+      "collapsed_to_adiabatic": false,
+      "multiplier": 0.0785855151,
+      "valid": false,
+      "alpha": 0.6718,
+      "r_H": 2.2891043020824853,
+      "step": 0.0214,
+      "wall_s": 1642.6903927326202,
+      "rc": 255
+    },
+    {
+      "E_unconstrained": -2925.026849630156,
+      "E_diabat": null,
+      "cdft_converged": false,
+      "fragment_spin": null,
+      "collapsed_to_adiabatic": false,
+      "multiplier": 0.1017780884,
+      "valid": false,
+      "alpha": 0.6611,
+      "r_H": 2.2526449153121932,
+      "step": 0.0107,
+      "wall_s": 2504.272876024246,
+      "rc": 255
+    },
+    {
+      "E_unconstrained": -2925.024196743656,
+      "E_diabat": null,
+      "cdft_converged": false,
+      "fragment_spin": null,
+      "collapsed_to_adiabatic": false,
+      "multiplier": 0.0975128456,
+      "valid": false,
+      "alpha": 0.6557499999999999,
+      "r_H": 2.2344152219270463,
+      "step": 0.00535,
+      "wall_s": 2514.4703850746155,
+      "rc": 255
+    }
+  ]
+}

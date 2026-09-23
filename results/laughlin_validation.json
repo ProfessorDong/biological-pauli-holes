@@ -1,0 +1,33 @@
+{
+ "source": "Laughlin, Burrows & Cohen, J. Phys. B 35, 701 (2002), Table 2, 1s row",
+ "comparison": {
+  "8": {
+   "laughlin_E": -0.499975100446,
+   "laughlin_dE": 2.4899553999979673e-05,
+   "our_dE": 2.489955425940451e-05,
+   "rel_diff": 1.0418854745331495e-08,
+   "within_printed_precision": true
+  },
+  "10": {
+   "laughlin_E": -0.499999263282,
+   "laughlin_dE": 7.367179999939744e-07,
+   "our_dE": 7.367184745474573e-07,
+   "rel_diff": 6.441453621452995e-07,
+   "within_printed_precision": true
+  },
+  "12": {
+   "laughlin_E": -0.499999980159,
+   "laughlin_dE": 1.9841000009623855e-08,
+   "our_dE": 1.9840504939534023e-08,
+   "rel_diff": 2.495187186085243e-05,
+   "within_printed_precision": true
+  }
+ },
+ "local_power_from_their_data": {
+  "8_10": 2.1492891602560933,
+  "10_12": 2.1146447211803476
+ },
+ "our_fitted_power_4_to_12": 2.1740878023215653,
+ "our_fitted_rate": 2.001695179971578,
+ "note": "our spherical solver reproduces the published precise numerical energies to the precision at which they are printed; the fitted power is a LOCAL effective exponent over d/a0 = 4-12, and their own data show it drifting downward with R, so it is not the asymptotic limit"
+}

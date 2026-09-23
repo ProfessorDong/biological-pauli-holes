@@ -1,0 +1,1 @@
+{"label": "s4_wall_bb_L754A", "i": 2, "j": 3, "d1": 0.0, "d2": 0.07499999999999998, "exch": 0.04613444859424823, "total": -0.796500650935583, "method": "sapt0", "basis": "jun-cc-pVDZ", "donor": "native", "wall": "backbone", "n_donor": 13, "n_wall": 16}

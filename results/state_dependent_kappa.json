@@ -1,0 +1,27 @@
+{
+ "source": "Ortiz, J. Chem. Phys. 153, 070902 (2020): Dyson orbital ~ R^B exp(-sqrt(2 omega) R)",
+ "hartree_eV": 27.211386245988,
+ "states": {
+  "hydrogen atom": {
+   "IE_eV": 13.6057,
+   "kappa_per_a0": 1.0000002527252772,
+   "B": -2.5272521331221043e-07,
+   "rel_reach_at_3p5A": 1.0,
+   "near_far_ratio_2p1_3p5": 198.5884288225956
+  },
+  "typical organic sigma C-H": {
+   "IE_eV": 10.0,
+   "kappa_per_a0": 0.857313503633939,
+   "B": 0.16643444406421737,
+   "rel_reach_at_3p5A": 6.60265698674643,
+   "near_far_ratio_2p1_3p5": 93.33970961509536
+  },
+  "conjugated / substrate-like": {
+   "IE_eV": 8.0,
+   "kappa_per_a0": 0.7668045088616002,
+   "B": 0.30411335411238305,
+   "rel_reach_at_3p5A": 21.86162081659343,
+   "near_far_ratio_2p1_3p5": 57.82038736443766
+  }
+ }
+}

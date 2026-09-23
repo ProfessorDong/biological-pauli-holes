@@ -1,0 +1,20 @@
+{
+ "debye_to_ea0": 0.3934303,
+ "peptide_amide_dipole_D": 3.5,
+ "peptide_amide_dipole_ea0": 1.37700605,
+ "water_gas_dipole_D": 1.85,
+ "water_gas_dipole_ea0": 0.7278460550000001,
+ "pauli_induced_dipole_ea0": [
+  0.0043,
+  0.021
+ ],
+ "amide_over_pauli": [
+  65.57171666666666,
+  320.2339651162791
+ ],
+ "water_over_pauli": [
+  34.65933595238096,
+  169.2665244186047
+ ],
+ "note": "permanent molecular dipoles of the protein backbone and of water exceed the Pauli-induced dipole at bonding-range wall distances by two orders of magnitude; this is why the measured catalytic field is large while the induced contribution computed here is not"
+}

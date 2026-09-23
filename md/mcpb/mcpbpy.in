@@ -1,0 +1,8 @@
+original_pdb WT_model_h.pdb
+group_name SLO
+cut_off 2.8
+ion_ids 12979
+ion_mol2files FE.mol2
+naa_mol2files OH.mol2
+software_version gms
+gaff 2
