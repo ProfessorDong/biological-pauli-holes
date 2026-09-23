@@ -7,8 +7,11 @@ lipoxygenase (SLO).
 **Authors:** Liang Dong (corresponding, Liang_Dong@baylor.edu), Baylor
 University and UT Southwestern; Jun-Han You, Shanghai Jiao Tong University.
 
-> **Status: private repository, pre-publication.** The associated manuscript is
-> under preparation for submission. Please do not redistribute.
+> **Status: pre-publication.** The associated manuscript is in preparation for
+> submission; the paper reference will be added on acceptance. The code and
+> numerical results here are released under the licences below, so you are free
+> to use and redistribute them under those terms. If you use them before the
+> paper appears, please cite this repository via `CITATION.cff`.
 
 ## What is here
 
