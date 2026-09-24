@@ -127,14 +127,16 @@ CHECKS = [
     ('convergence figure folded in', APP, 'figED2_bead_convergence.pdf', True),
     ('no Supplemental Material pointers left', MAIN, 'Supplemental Material Sec', False),
     ('cover letter carries the current title', COVER,
-     'An exponential bound on Pauli confinement', True),
+     'Exponential locality and coordinate\ndependence of Pauli exchange repulsion', True),
+    ('cover letter drops the bound title', COVER,
+     'An exponential bound on Pauli confinement', False),
     ('cover letter drops the framing-A title', COVER,
      'Fragment-separation curvature is not', False),
     ('no document keeps the old title', SUP, 'locality of direct exchange', False),
     # Title changed 2026-09-24: "bound" asserted an inequality that main.tex's own Limits
     # paragraph disclaims ("we do not claim the first bounds the second").
     ('main text carries the current title', MAIN,
-     'Exponential locality and coordinate dependence of Pauli confinement', True),
+     'Exponential locality and coordinate dependence of Pauli exchange repulsion', True),
     ('the title no longer claims a bound', MAIN,
      'An exponential bound on Pauli confinement', False),
     ('main text drops the framing-A title', MAIN, "Fragment-separation curvature is not hydrogen confinement", False),
@@ -236,15 +238,23 @@ CHECKS = [
     # with "a bound rather than a correlation" and "We show it cannot be", which the manuscript
     # no longer claims. The case is now made on the measurement practice plus the honest null.
     ('cover letter argues the biological-physics case, not a methods case', COVER,
-     'measurement practice that biological\nphysicists can adopt', True),
+     'Any group\nstudying enzymatic hydrogen transfer can apply it to its own descriptor', True),
     ('cover letter does not claim an exclusion', COVER,
-     'We do not claim to have excluded exchange-mediated', True),
+     'we do not claim to have excluded exchange-mediated contributions to catalysis', True),
     ('cover letter does not say the total matrix is uncomputed', COVER,
      'total\nnuclear restoring matrix is not computed', False),
     ('cover letter does not claim the conclusion generalises', COVER,
      'That conclusion generalises past lipoxygenase', False),
     ('cover letter reports the native donor, not the methane surrogate', COVER,
-     'native\nbis-allylic substrate donor rather than a surrogate', True),
+     'native bis-allylic substrate\ndonor rather than a model surrogate', True),
+
+    # The letter must name the force-constant-decomposition precedent. A referee who knows
+    # Duarte will otherwise read the novelty pitch as overclaimed against the manuscript,
+    # which does cite it.
+    ('cover letter names the force-constant decomposition precedent', COVER,
+     'Duarte and Bruns\ndid the latter for interacting quantum atoms in 2022', True),
+    ('cover letter leads on the coordinate result', COVER,
+     'does not measure the curvature felt by the transferring hydrogen', True),
 
     # The figure captions were not in the sweep that qualified this claim, and the
     # Figure 5 caption carried the bare form while abstract, Results and appendix all
@@ -356,6 +366,42 @@ CHECKS = [
     # The primary-data Zenodo record does not exist yet; only the code record does.
     ('the primary data are not claimed to be already deposited', APP,
      'are a separate Zenodo record cross-linked to the code', False),
+
+    # ---- 2026-09-24 external audit, second round. Each verified before acting.
+    # Saved Mulliken data contradict the old diagnosis: substrate spin runs 0.002 -> 1.055 while
+    # Fe falls 4.17 -> 3.77, in 32 of 75 outputs above 0.5. The scan DOES change character.
+    ('the proton scan is not said to retain Fe(III) throughout', APP,
+     'retaining Fe(III) character', False),
+    ('the proton-scan spin trace is reported', APP,
+     'Mulliken spin on iron falls from', True),
+    # ORCA records: 7 unconverged jobs fail energy AND max-gradient, and only 2 of 10 meet
+    # every criterion (rda290_react is accepted under the alternative gradient rule).
+    ('the convergence description matches the ORCA records', APP,
+     'only two of\nthose meet every individual criterion', True),
+    ('the barrier is not called an upper bound', APP,
+     'each barrier is an upper bound on a fully relaxed path', False),
+    ('the reference-clamp figures are labelled extrapolation', APP,
+     'by \\emph{extrapolation} beyond the', True),
+    # methane panel: I552A is 2.65 fit SE from zero, so "16 to 48" was wrong
+    ('the methane sigma range is not overstated', MAIN, '16$ to $48', False),
+    # f is a participation measure; small f does not locate the flux
+    ('f is not said to prove rare configurations carry the rate', APP,
+     'rate is carried by a rare high-potency', False),
+    # averaging sorted eigenvalues is not the spectrum of the averaged matrix
+    ('no system is classified by its mean matrix', MAIN, 'indefinite in the mean', False),
+    ('the averaging caveat is stated', APP,
+     'not the same object as the spectrum of the\naveraged Hessian', True),
+    # the transverse ZPE is one channel, not the only one
+    ('the ZPE channel is not claimed to be the only route', MAIN,
+     'effect only by changing the curvature of the transverse potential', False),
+    # nonorthogonal diabatic states need an overlap-corrected coupling
+    ('the overlap-corrected coupling is given', APP, 'L\\"owdin orthogonalization', True),
+    # the m-dependent wavefunction needs its regularity factor
+    ('the parabolic wavefunction carries its regularity factor', APP,
+     '(\\rho_1\\rho_2)^{|m|/2}', True),
+    # descriptors were tested; the hypothesis was not
+    ('the hypothesis is not described as tested and unsupported', MAIN,
+     'confinement hypothesis are therefore tested and', False),
     ('we do not claim merely to be quantifying his stiffening picture', APP,
      'transverse-stiffening picture this paper tries to make', False),
 
@@ -428,6 +474,28 @@ CHECKS = [
      'Eq.~3 of the main text', False),
     ('no hard-coded equation number survives', APP,
      'of Eq.~(2) sharpens', False),
+
+    # Duarte force-constant decomposition: the novelty scoping and the numbers derived
+    # from scripts/duarte_projection_check.py. The 2022 paper decomposes an angular
+    # bending force constant, so a bare claim to the transverse coordinate is stale.
+    ('the transverse coordinate is not claimed as novel', MAIN,
+     'neither the second derivative nor a coordinate transverse to a bond is ours to claim', True),
+    ('the IQA bend counterexample is stated', MAIN,
+     'it is the intra-atomic term that is negative while the exchange contribution is '
+     'negligible or slightly positive', True),
+    ('the generalized extrema are attributed to their method', MAIN,
+     'against the Hartree-Fock total and $-0.117\\%$ to $+0.352\\%$ against the B3LYP one', True),
+    ('the additive shares are the HF span', MAIN,
+     'they run from $-0.067\\%$ to $+0.279\\%$ at Hartree-Fock', True),
+    ('the additive sign change is four systems, not six', APP,
+     'four systems rather than six', True),
+    ('the additive share span is quoted for both totals', APP,
+     '$-0.067$ to $+0.279\\%$ against the Hartree-Fock total and $-0.084$ to $+0.348\\%$ '
+     'against B3LYP', True),
+    # The script pointer was removed from the article at the author's request, so the
+    # check that required it now forbids it instead: a removed string must not creep back.
+    ('the article does not name the projection script', APP,
+     'duarte\\_projection\\_check', False),
 
 ]
 

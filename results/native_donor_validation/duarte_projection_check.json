@@ -1,0 +1,268 @@
+{
+  "scope": "Additive per-mode exchange shares, the construction used in the IQA",
+  "systems": {
+    "L754A": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          94.89975899688235,
+          410.53892012311746
+        ],
+        "additive_share_percent": [
+          0.1105106299898311,
+          0.08546027262644586
+        ],
+        "generalized_extrema_percent": [
+          0.07502721927826635,
+          0.12094368333801057
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          75.65970479580635,
+          390.1316041633904
+        ],
+        "additive_share_percent": [
+          0.1382956549693181,
+          0.08999217542471068
+        ],
+        "generalized_extrema_percent": [
+          0.08171094002003249,
+          0.14657689037399627
+        ],
+        "shares_inside_extrema": true
+      }
+    },
+    "I552A": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          98.15978350924996,
+          494.09484415931394
+        ],
+        "additive_share_percent": [
+          0.02300280839808019,
+          0.00688563354224266
+        ],
+        "generalized_extrema_percent": [
+          -0.007588552377469359,
+          0.03747699431779221
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          78.7252670568746,
+          474.6467793168829
+        ],
+        "additive_share_percent": [
+          0.02816558095000548,
+          0.00725331760874161
+        ],
+        "generalized_extrema_percent": [
+          -0.008420182100328804,
+          0.043839080659075894
+        ],
+        "shares_inside_extrema": true
+      }
+    },
+    "I538A": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          83.1137982052789,
+          288.0999437141396
+        ],
+        "additive_share_percent": [
+          -0.051768392143488585,
+          0.030626911220771585
+        ],
+        "generalized_extrema_percent": [
+          -0.06646658619262566,
+          0.04532510526990865
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          64.85538627811611,
+          270.0254547053286
+        ],
+        "additive_share_percent": [
+          -0.06717054662850402,
+          0.03287584668122491
+        ],
+        "generalized_extrema_percent": [
+          -0.08357914119019251,
+          0.049284441242913424
+        ],
+        "shares_inside_extrema": true
+      }
+    },
+    "L546A": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          101.44429664402469,
+          360.34955244484786
+        ],
+        "additive_share_percent": [
+          -0.018274711033210767,
+          0.03680348329781128
+        ],
+        "generalized_extrema_percent": [
+          -0.029480764992815732,
+          0.04800953725741624
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          81.9072502243886,
+          342.52185802178167
+        ],
+        "additive_share_percent": [
+          -0.022869181820033693,
+          0.03877535116184268
+        ],
+        "generalized_extrema_percent": [
+          -0.03572125919509544,
+          0.05162742853690444
+        ],
+        "shares_inside_extrema": true
+      }
+    },
+    "I553A": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          95.57367956439154,
+          322.6034315785213
+        ],
+        "additive_share_percent": [
+          -0.0401047048358394,
+          0.019706981598171885
+        ],
+        "generalized_extrema_percent": [
+          -0.05700418327589626,
+          0.03660646003822873
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          77.41707146771645,
+          304.544724679045
+        ],
+        "additive_share_percent": [
+          -0.049653727580913694,
+          0.020911975619022548
+        ],
+        "generalized_extrema_percent": [
+          -0.0685501975396426,
+          0.03980844557775143
+        ],
+        "shares_inside_extrema": true
+      }
+    },
+    "V750A": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          88.11952761142766,
+          519.1516946080288
+        ],
+        "additive_share_percent": [
+          0.27924226452998213,
+          0.0036778753929745463
+        ],
+        "generalized_extrema_percent": [
+          0.00021732036057959137,
+          0.2827028195623772
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          70.6593225587843,
+          498.14183625389535
+        ],
+        "additive_share_percent": [
+          0.3482805148044194,
+          0.0038278383927393563
+        ],
+        "generalized_extrema_percent": [
+          0.00022692281263700636,
+          0.3518814303845217
+        ],
+        "shares_inside_extrema": true
+      }
+    },
+    "WT": {
+      "HF": {
+        "K_tot_eigs_Nm": [
+          101.85701257948676,
+          345.82445240385766
+        ],
+        "additive_share_percent": [
+          -0.06693449247603939,
+          0.0045658897759667414
+        ],
+        "generalized_extrema_percent": [
+          -0.09744971509192339,
+          0.0350811123918507
+        ],
+        "shares_inside_extrema": true
+      },
+      "B3LYP": {
+        "K_tot_eigs_Nm": [
+          82.5539215514099,
+          328.92419828274194
+        ],
+        "additive_share_percent": [
+          -0.08345503929457604,
+          0.005018754062453655
+        ],
+        "generalized_extrema_percent": [
+          -0.1165019774618461,
+          0.03806569222972375
+        ],
+        "shares_inside_extrema": true
+      }
+    }
+  },
+  "summary": {
+    "HF": {
+      "additive_share_span_percent": [
+        -0.06693449247603939,
+        0.27924226452998213
+      ],
+      "generalized_extrema_span_percent": [
+        -0.09744971509192339,
+        0.2827028195623772
+      ],
+      "negative_shares": 4,
+      "n_shares": 14,
+      "systems_with_a_negative_share": [
+        "I538A",
+        "L546A",
+        "I553A",
+        "WT"
+      ]
+    },
+    "B3LYP": {
+      "additive_share_span_percent": [
+        -0.08345503929457604,
+        0.3482805148044194
+      ],
+      "generalized_extrema_span_percent": [
+        -0.1165019774618461,
+        0.3518814303845217
+      ],
+      "negative_shares": 4,
+      "n_shares": 14,
+      "systems_with_a_negative_share": [
+        "I538A",
+        "L546A",
+        "I553A",
+        "WT"
+      ]
+    }
+  },
+  "all_shares_inside_extrema": true
+}

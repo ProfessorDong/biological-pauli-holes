@@ -61,7 +61,10 @@ GENERATED = {
 
 # text that must appear in the artwork, and text that must NOT
 ARTWORK_REQUIRED = {
-    'fig1_pauli_pocket.pdf': ['K⊥'],
+    # The panel once built a harmonic ZPE from the EXCHANGE curvature, which is not
+    # positive definite in six of seven and so supplies no well. It now draws the total
+    # and says what exchange contributes to it; both statements must stay in the artwork.
+    'fig1_pauli_pocket.pdf': ['K⊥', 'tot', 'either sign'],
     'fig2_index.pdf': ['K⊥', 'Ksep'],
     'figED1_sapt_scans.pdf': ['wall displacement'],
     'fig_coordinate.pdf': ['H moves', 'wall moves'],
