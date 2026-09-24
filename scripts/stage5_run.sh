@@ -4,7 +4,7 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -u
 ROOT=${_REPO}
-PY=/home/liang/anaconda3/envs/pauli/bin/python
+PY="${PAULI_PYTHON:-/home/liang/anaconda3/envs/pauli/bin/python}"
 N=${1:-14}
 export OMP_NUM_THREADS=1
 mapfile -t JOBS < <(ls $ROOT/results/stage5_configs/*/*_native_donor.json 2>/dev/null)

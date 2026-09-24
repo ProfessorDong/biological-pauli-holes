@@ -7,7 +7,7 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -uo pipefail
 ROOT=${_REPO}
-PY=/home/liang/anaconda3/envs/pauli/bin/python
+PY="${PAULI_PYTHON:-/home/liang/anaconda3/envs/pauli/bin/python}"
 SCR="$ROOT/scripts/sapt_native_fragment.py"
 DIR="$ROOT/results/sapt_bio/native_fragment"
 LOG="$DIR/campaign.log"

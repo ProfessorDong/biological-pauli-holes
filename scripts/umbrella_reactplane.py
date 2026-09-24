@@ -10,6 +10,7 @@ needed because the rst7 is the endpoint of a 5 ns biased run at exactly the same
 Usage: umbrella_reactplane.py --prmtop P --seed S.rst7 --donor D --acceptor A
        --xferH H --r0 R --k K --ns-prod 0.2 --out OUT
 """
+import os as _os
 import argparse, numpy as np
 from openmm import app, unit, MonteCarloBarostat, LangevinMiddleIntegrator, CustomBondForce, Platform
 

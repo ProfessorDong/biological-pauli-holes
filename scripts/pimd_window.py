@@ -23,6 +23,7 @@ X-H bonds (HBonds) to keep the timestep at 0.5 fs; leave the transferring partic
 Usage: pimd_window.py --prmtop P --seed S.rst7 --donor i --acceptor j --xferH k
        --mass 1.008 --nbeads 8 --r0 3.35 --k 15 --ps-eq 5 --ps-prod 50 --out <prefix>
 """
+import os as _os
 import argparse, numpy as np, time
 from openmm import app, unit, RPMDIntegrator, CustomBondForce, Platform
 import openmm as mm

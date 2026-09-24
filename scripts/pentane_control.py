@@ -48,7 +48,8 @@ from pathlib import Path
 import numpy as np
 import psi4
 
-sys.path.insert(0, '/home/liang/anaconda3/envs/pauli/share/psi4/fsapt')
+sys.path.insert(0, _os.environ.get('PSI4_FSAPT',
+    _os.path.join(__import__('sys').prefix, 'share', 'psi4', 'fsapt')))
 import fsapt  # noqa: E402
 
 ROOT = Path(_REPO)

@@ -18,7 +18,7 @@ set -uo pipefail
 source ${_REPO}/setup/env.sh
 
 ROOT=${_REPO}
-PY=/home/liang/anaconda3/envs/slomd/bin/python
+PY="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
 SCR="$ROOT/scripts/proton_pes_scanner.py"
 PRM="$ROOT/md/mcpb/SLO_sub_solv.prmtop"
 UMB="$ROOT/results/umbrella"

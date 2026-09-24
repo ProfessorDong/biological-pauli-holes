@@ -7,7 +7,7 @@
 _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -euo pipefail
-SL=/home/liang/anaconda3/envs/slomd/bin/python
+SL="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
 DRV=${_REPO}/scripts/umbrella_driver.py
 MCPB=${_REPO}/md/mcpb
 LOG=${_REPO}/results/umbrella/pathA_replicas.log

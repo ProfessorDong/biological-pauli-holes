@@ -12,7 +12,7 @@ _REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
     _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
 
 import subprocess, re, numpy as np
-PY="/home/liang/anaconda3/envs/slomd/bin/python"
+PY=_os.environ.get('SLOMD_PYTHON', '/home/liang/anaconda3/envs/slomd/bin/python')
 PMF=_REPO + "/scripts/umbrella_pmf.py"
 
 # JBC-2019 self-consistent series (10 C); DM is a cross-ref (different series/temperature)

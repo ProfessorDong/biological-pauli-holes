@@ -47,7 +47,8 @@ import psi4
 # at full precision. That matters: the fsapt.dat it writes rounds to three decimals, which
 # is adequate for a system whose exchange is of order 1 kcal/mol and useless for L754A,
 # whose open wall puts the total at roughly 0.003.
-sys.path.insert(0, '/home/liang/anaconda3/envs/pauli/share/psi4/fsapt')
+sys.path.insert(0, _os.environ.get('PSI4_FSAPT',
+    _os.path.join(__import__('sys').prefix, 'share', 'psi4', 'fsapt')))
 import fsapt  # noqa: E402
 
 ROOT = Path(_REPO)

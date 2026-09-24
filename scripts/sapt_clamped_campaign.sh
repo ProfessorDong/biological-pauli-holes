@@ -18,8 +18,8 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -uo pipefail
 ROOT=${_REPO}
-SL=/home/liang/anaconda3/envs/slomd/bin/python     # parmed + openmm
-P4=/home/liang/anaconda3/envs/pauli/bin/python     # psi4
+SL="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"     # parmed + openmm
+P4=${PAULI_PYTHON:-/home/liang/anaconda3/envs/pauli/bin/python}     # psi4
 RG="$ROOT/results/reactive_geometry"
 LOG="$RG/sapt_campaign.log"
 echo "=== clamped SAPT campaign start $(date -Iseconds) ===" | tee -a "$LOG"

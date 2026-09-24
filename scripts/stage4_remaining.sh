@@ -7,7 +7,7 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -u
 ROOT=${_REPO}
-PY=/home/liang/anaconda3/envs/pauli/bin/python
+PY="${PAULI_PYTHON:-/home/liang/anaconda3/envs/pauli/bin/python}"
 L="$1"
 export OMP_NUM_THREADS=1
 

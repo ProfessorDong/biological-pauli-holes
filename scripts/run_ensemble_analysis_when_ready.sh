@@ -19,5 +19,5 @@ for f in kexch_frames_r255.json kexch_frames_r340.json; do
   fi
 done
 echo "=== inputs present; running pre-registered analysis $(date -Iseconds) ===" | tee -a "$LOG"
-/home/liang/anaconda3/envs/slomd/bin/python "$ROOT/scripts/analyze_ensemble_fluctuation.py" 2>&1 | tee -a "$LOG"
+${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python} "$ROOT/scripts/analyze_ensemble_fluctuation.py" 2>&1 | tee -a "$LOG"
 echo "=== analysis complete $(date -Iseconds) ===" | tee -a "$LOG"

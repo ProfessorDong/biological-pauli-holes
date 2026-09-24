@@ -33,7 +33,7 @@
 _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -uo pipefail
-SL=/home/liang/anaconda3/envs/slomd/bin/python
+SL="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
 WIN=${_REPO}/scripts/umbrella_window.py
 cd ${_REPO}/md/mcpb
 
@@ -71,7 +71,7 @@ run_clamp () {
 # instead of C14 and the iron-bound hydroxide; nothing raised and the colvar sat on
 # target while the intended coordinate stayed near 5.7 A. Resolve, assert, print.
 AMAP=${_REPO}/results/atom_map.json
-PY_ENV=/home/liang/anaconda3/envs/pauli/bin/python
+PY_ENV="${PAULI_PYTHON:-/home/liang/anaconda3/envs/pauli/bin/python}"
 [[ -f "$AMAP" ]] || { echo "FATAL: $AMAP missing; run scripts/resolve_atom_map.py"; exit 1; }
 amap () {   # amap <TAG> <donor_C|acceptor_O>
     "$PY_ENV" -c "import json,sys;m=json.load(open('$AMAP'))[sys.argv[1]];print(m[sys.argv[2]])" "$1" "$2"

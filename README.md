@@ -46,6 +46,18 @@ anywhere. To point them at a different tree, set `PAULI_ROOT`:
 That is how to run the manuscript checks if you have the manuscript sources
 separately: put them in `prxlife/` under the tree `PAULI_ROOT` names.
 
+The simulation and quantum-chemistry drivers additionally need interpreters and
+external programs. Those are read from the environment, with this machine's
+paths as fallbacks, so override whichever you need:
+
+| Variable | What it points at |
+|---|---|
+| `PAULI_ROOT` | the repository tree |
+| `PAULI_PYTHON` | Python for analysis (psi4, ASE, MDAnalysis, statsmodels) |
+| `SLOMD_PYTHON` | Python for MD (AmberTools, OpenMM, parmed, pymbar) |
+| `ORCA_DIR`, `OPENMPI_DIR`, `MULTIWFN_DIR` | external program installations |
+| `PSI4_FSAPT` | Psi4's `share/psi4/fsapt`; defaults to the running interpreter's |
+
 ## What is deliberately not here
 
 This repository is code and numbers only. Excluded, by category:

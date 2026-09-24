@@ -9,7 +9,7 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 set -uo pipefail
 
 ROOT=${_REPO}
-PY=/home/liang/anaconda3/envs/slomd/bin/python
+PY="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
 SCR="$ROOT/scripts/pimd_window.py"
 MD="$ROOT/md/mcpb"
 UMB="$ROOT/results/umbrella"

@@ -4,7 +4,7 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -u
 ROOT=${_REPO}
-SL=/home/liang/anaconda3/envs/slomd/bin/python
+SL="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
 LOG=$ROOT/results/stage5_configs/chain.log
 : > "$LOG"
 while pgrep -f umbrella_window_frames >/dev/null 2>&1; do sleep 60; done

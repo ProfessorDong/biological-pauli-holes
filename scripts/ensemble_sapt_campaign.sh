@@ -9,8 +9,8 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -uo pipefail
 ROOT=${_REPO}
-SL=/home/liang/anaconda3/envs/slomd/bin/python
-P4=/home/liang/anaconda3/envs/pauli/bin/python
+SL="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
+P4=${PAULI_PYTHON:-/home/liang/anaconda3/envs/pauli/bin/python}
 EF="$ROOT/results/ensemble_fluctuation"
 LOG="$EF/sapt_campaign.log"
 mkdir -p "$EF"

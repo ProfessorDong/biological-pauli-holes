@@ -12,7 +12,7 @@ _REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
 set -u
 ROOT=${_REPO}
-SL=/home/liang/anaconda3/envs/slomd/bin/python
+SL="${SLOMD_PYTHON:-/home/liang/anaconda3/envs/slomd/bin/python}"
 WIN=$ROOT/scripts/umbrella_window_frames.py
 MD=$ROOT/md/mcpb
 OUT=$ROOT/results/stage5_configs

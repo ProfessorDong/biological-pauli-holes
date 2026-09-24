@@ -14,7 +14,7 @@ tag,prmtop,eqrst,donor,acceptor = sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4
 eqr = float(sys.argv[6]) if len(sys.argv)>6 else 5.0
 rep = int(sys.argv[7]) if len(sys.argv)>7 else 1          # replica id (independent seeds)
 WIN = os.path.dirname(os.path.abspath(__file__))+"/umbrella_window.py"
-PY  = "/home/liang/anaconda3/envs/slomd/bin/python"
+PY  = _os.environ.get('SLOMD_PYTHON', '/home/liang/anaconda3/envs/slomd/bin/python')
 suffix = "" if rep==1 else f"_rep{rep}"
 outdir = _REPO + f"/results/umbrella/{tag}{suffix}"
 os.makedirs(outdir, exist_ok=True)
