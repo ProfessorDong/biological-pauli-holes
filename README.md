@@ -1,5 +1,7 @@
 # Biological Pauli Holes — analysis code and numerical results
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22927663.svg)](https://doi.org/10.5281/zenodo.22927663)
+
 Code and numerical results for a study of whether Pauli confinement of a
 transferring hydrogen can contribute to enzyme catalysis, tested in soybean
 lipoxygenase (SLO).

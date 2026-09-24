@@ -21,6 +21,14 @@ authors:
       Department of Astronomy, Shanghai Jiao Tong University,
       Shanghai 200240, China
 license: MIT
+doi: "10.5281/zenodo.22927663"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22927663"
+    description: "Concept DOI, always resolves to the latest version"
+  - type: doi
+    value: "10.5281/zenodo.22927664"
+    description: "Version DOI for v1.0.0"
 repository-code: "https://github.com/ProfessorDong/biological-pauli-holes"
 keywords:
   - quantum biology
