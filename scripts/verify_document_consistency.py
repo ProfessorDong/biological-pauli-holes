@@ -446,15 +446,32 @@ def main():
     cache = {}
     bad = 0
     width = max(len(c[0]) for c in CHECKS)
+    skipped = 0
     for desc, f, text, want in CHECKS:
         if f not in cache:
-            cache[f] = flat(f.read_text())
+            # A source this repository does not ship (the cover letter is author-editor
+            # correspondence and names suggested referees, so it is not published).
+            # Skip its checks rather than abort: everything else is still checkable.
+            cache[f] = flat(f.read_text()) if f.exists() else None
+        if cache[f] is None:
+            skipped += 1
+            print(f'  [SKIP] {desc:<{width}}  ({f.name}: not in this checkout)')
+            continue
         present = flat(text) in cache[f]
         ok = (present == want)
         bad += not ok
         print(f'  [{"OK " if ok else "FAIL"}] {desc:<{width}}  ({f.name}: '
               f'{"present" if present else "absent"})')
-    print(f'\n  {len(CHECKS)-bad}/{len(CHECKS)} consistency checks passed')
+    ran = len(CHECKS) - skipped
+    if ran == 0:
+        # Do not print "0/0 passed": nothing was verified, and a reader skimming the
+        # last line must not mistake that for success.
+        print(f'\n  NOTHING CHECKED: all {skipped} checks need manuscript sources that this '
+              f'checkout does not contain.\n  They are not published; see README. Point '
+              f'PAULI_ROOT at a tree that has prxlife/ to run them.')
+        return bad
+    tail = f'  ({skipped} skipped: source not in this checkout)' if skipped else ''
+    print(f'\n  {ran-bad}/{ran} consistency checks passed{tail}')
     return bad
 
 

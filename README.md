@@ -32,9 +32,14 @@ Two scripts are worth knowing about:
   its underlying data.
 
 **Both need the manuscript sources and figures, which this repository does not
-contain** (see below). From a bare checkout they will stop with a clear
-`FileNotFoundError` naming the missing file. Everything that reads only
-`results/` runs from a bare checkout as-is.
+contain.** The manuscript is not published here: the paper itself is the
+published artefact, and this repository is its code and numbers. The document
+checks therefore report `SKIP` on a bare checkout and say plainly that nothing
+was verified, rather than printing a passing-looking score. To run them, point
+`PAULI_ROOT` at a tree that has the sources in `prxlife/` (see Paths below).
+
+Everything that reads only `results/` runs from a bare checkout as-is, and
+reproduces the committed numbers exactly.
 
 ## Paths
 
