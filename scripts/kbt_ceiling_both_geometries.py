@@ -29,6 +29,10 @@ WHY THE TWO DIFFER
 
 Usage: kbt_ceiling_both_geometries.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
@@ -42,7 +46,7 @@ from confinement_universality import (  # noqa: E402
 
 mp.dps = 60
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results' / 'kbt_ceiling_both_geometries.json'
 
 HARTREE_EV = 27.211386245988

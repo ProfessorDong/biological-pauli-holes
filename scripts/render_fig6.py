@@ -4,6 +4,10 @@ RPMD campaign for I553A and I552A x {H, D}. 2x2 grid of 24x24 histograms of the
 transferring-particle bead positions projected onto (r_HO, theta_CHO), with N_eff and
 ln(N_eff,H/D) annotated per panel/system.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -11,8 +15,8 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm, Normalize
 
-DATA = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pimd_prod')
-OUT  = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/sn-article-template/fig6_pimd_density.pdf')
+DATA = Path(_REPO + '/results/pimd_prod')
+OUT  = Path(_REPO + '/sn-article-template/fig6_pimd_density.pdf')
 
 
 def load_projected(system, iso):

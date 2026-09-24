@@ -14,8 +14,10 @@
 # the restart file, and a colvar-only completion test scored them as done).
 #
 # 7 systems x 2 clamps x ~10-15 min => ~2-3 h on CPU.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python     # parmed + openmm
 P4=/home/liang/anaconda3/envs/pauli/bin/python     # psi4
 RG="$ROOT/results/reactive_geometry"
@@ -44,7 +46,7 @@ echo "=== clamped SAPT campaign done $(date -Iseconds) ===" | tee -a "$LOG"
 "$SL" - <<'PY' 2>&1 | tee -a "$LOG"
 import json, glob, os
 from pathlib import Path
-RG = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/reactive_geometry')
+RG = Path('${_REPO}/results/reactive_geometry')
 for clamp in ('r255','r340'):
     out = {}
     for f in sorted(RG.glob(f'*_{clamp}_native_result.json')):

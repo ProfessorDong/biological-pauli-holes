@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Wait for the stage-5 MD to finish, extract configurations, then run the SAPT pool.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -u
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python
 LOG=$ROOT/results/stage5_configs/chain.log
 : > "$LOG"

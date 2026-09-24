@@ -26,10 +26,25 @@ University and UT Southwestern; Jun-Han You, Shanghai Jiao Tong University.
 
 Two scripts are worth knowing about:
 
-- `scripts/verify_document_consistency.py` — 138 checks tying statements in the
+- `scripts/verify_document_consistency.py` — 156 checks tying statements in the
   manuscript to named fields of named result files.
 - `scripts/verify_figures.py` — 95 checks tying each figure to its generator and
   its underlying data.
+
+**Both need the manuscript sources and figures, which this repository does not
+contain** (see below). From a bare checkout they will stop with a clear
+`FileNotFoundError` naming the missing file. Everything that reads only
+`results/` runs from a bare checkout as-is.
+
+## Paths
+
+Scripts locate the repository from their own location, so a checkout works
+anywhere. To point them at a different tree, set `PAULI_ROOT`:
+
+    PAULI_ROOT=/path/to/tree python scripts/verify_document_consistency.py
+
+That is how to run the manuscript checks if you have the manuscript sources
+separately: put them in `prxlife/` under the tree `PAULI_ROOT` names.
 
 ## What is deliberately not here
 

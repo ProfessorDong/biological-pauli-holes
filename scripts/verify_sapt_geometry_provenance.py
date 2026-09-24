@@ -31,6 +31,10 @@ WHAT IT CHECKS, per system, for both the methane and the pentadienyl fragment fi
 Usage: verify_sapt_geometry_provenance.py [--fix-seed-field]     (slomd env: openmm)
        exit status is the number of failed checks
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import os
 import sys
@@ -39,7 +43,7 @@ from pathlib import Path
 import numpy as np
 from openmm import app, unit
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 DIR = ROOT / 'results/sapt_bio/native_fragment'
 UMB = ROOT / 'results/umbrella'
 CAP_BOND = 1.09          # the C-H distance the extractor places link atoms at

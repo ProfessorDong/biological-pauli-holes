@@ -19,6 +19,10 @@ is worth stating in the SI rather than hiding.
 
 Usage:  analyze_reactant_scans.py [--dir results/pcet_reactant_v2] [--tol 0.5]
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import argparse, json, math, sys
 from pathlib import Path
 import numpy as np
@@ -136,7 +140,7 @@ def analyse_scan(path, s2_tol=0.5, verbose=True):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--dir', default='/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pcet_reactant_v2')
+    ap.add_argument('--dir', default=_REPO + '/results/pcet_reactant_v2')
     ap.add_argument('--tol', type=float, default=0.5)
     a = ap.parse_args()
     files = sorted(Path(a.dir).glob('*_scan.json'))

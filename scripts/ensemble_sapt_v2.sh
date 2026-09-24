@@ -9,8 +9,10 @@
 #
 # Each frame is additionally wrapped in `timeout 300` so a single bad SCF costs
 # five minutes rather than a night, and the driver reports how many timed out.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python
 P4=/home/liang/anaconda3/envs/pauli/bin/python
 EF="$ROOT/results/ensemble_fluctuation"
@@ -38,7 +40,7 @@ for CLAMP in r255 r340; do
 import json,sys,glob
 from pathlib import Path
 TAG,CLAMP=sys.argv[1],sys.argv[2]
-EF=Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/ensemble_fluctuation')
+EF=Path('${_REPO}/results/ensemble_fluctuation')
 ks=[]
 # CORRECTION 2026-09-17: 'f*' also matched {TAG}_{CLAMP}_frames_geometry.json, which has
 # no k_exch_Nm key, so this block raised KeyError and no per-system aggregate was written.
@@ -61,7 +63,7 @@ echo "=== ensemble SAPT v2 done $(date -Iseconds) ===" | tee -a "$LOG"
 "$SL" - <<'PY' 2>&1 | tee -a "$LOG"
 import json
 from pathlib import Path
-EF=Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/ensemble_fluctuation')
+EF=Path('${_REPO}/results/ensemble_fluctuation')
 for clamp in ('r255','r340'):
     out={}
     for f in sorted(EF.glob(f'*_{clamp}_kexch_frames.json')):

@@ -35,13 +35,17 @@ WHAT COUNTS AS A HIT
 
 Usage: numeric_claim_sweep.py [--full]
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import re
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 TEX = [ROOT / 'prxlife/main.tex', ROOT / 'prxlife/appendices.tex',
        ROOT / 'prxlife/cover-letter.tex']  # supplement.tex retired 2026-09-18, folded into appendices
 # md/ and qm/ hold quantum-chemistry outputs that results/ does not mirror, and

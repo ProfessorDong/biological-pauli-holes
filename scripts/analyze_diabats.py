@@ -25,12 +25,16 @@ shows fragment spin ~1 instead of ~0, which criterion 2 catches. Energy
 coincidence is diagnostic only where the diabat is expected to be the UPPER
 surface, and is redundant with the spin test there.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, re, sys
 from pathlib import Path
 import numpy as np
 from scipy.interpolate import CubicSpline
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 Ha = 627.5094740631
 SPIN_TOL = 0.15
 FRAG_FIRST, FRAG_LAST = 2, 13

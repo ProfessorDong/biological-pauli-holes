@@ -21,12 +21,16 @@ Rate expression (Fermi Golden Rule, 0-0 dominant approximation):
           × exp[-(ΔG + λ + ε_ν^{(i)} - ε_μ^{(i)})^2 / (4 λ k_B T)]
 For 0-0 (μ=ν=0), ε_ν - ε_μ = ZPE_A - ZPE_D on the two wells (isotope-dependent).
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math
 import numpy as np
 from pathlib import Path
 from scipy.interpolate import CubicSpline
 
-DIR = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pcet_B34_dense')
+DIR = Path(_REPO + '/results/pcet_B34_dense')
 Ha2kcal = 627.5094740631
 kT_10C = 1.987e-3 * (283.15)                 # kcal/mol
 kT_40C = 1.987e-3 * (313.15)

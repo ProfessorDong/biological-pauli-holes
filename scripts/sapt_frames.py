@@ -9,11 +9,15 @@ Output: {TAG}_{CLAMP}_kexch_frames.json holding the per-frame k_exch series.
 
 Usage: sapt_frames.py <TAG> <clamp>
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, json, numpy as np, psi4
 from pathlib import Path
 
 TAG, CLAMP = sys.argv[1], sys.argv[2]
-EF = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/ensemble_fluctuation')
+EF = Path(_REPO + '/results/ensemble_fluctuation')
 geom = json.loads((EF / f'{TAG}_{CLAMP}_frames_geometry.json').read_text())
 
 Ha2kcal = 627.5094740631

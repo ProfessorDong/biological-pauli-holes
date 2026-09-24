@@ -8,11 +8,15 @@ single-configuration descriptor.
 
 Usage: extract_frames_geometry.py <TAG> <clamp>
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, json, numpy as np, parmed
 from pathlib import Path
 
 TAG, CLAMP = sys.argv[1], sys.argv[2]
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD = ROOT / 'md/mcpb'
 EF = ROOT / 'results/ensemble_fluctuation'
 

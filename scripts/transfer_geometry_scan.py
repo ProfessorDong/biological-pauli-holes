@@ -26,13 +26,17 @@ WHAT IT DOES
 Usage: transfer_geometry_scan.py write            build the ORCA inputs
        transfer_geometry_scan.py collect          parse finished jobs
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 SRC = ROOT / 'results/pcet_reactant_v2/wt_win270_pt00.inp'
 OUT = ROOT / 'results/transfer_geometry'
 XFER_H, DONOR_C, ACC_O, ACC_H, FE = 0, 65, 61, 62, 60

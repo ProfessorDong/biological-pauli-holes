@@ -18,12 +18,16 @@ DEFINITION (applied here and matched in the cross-system survey)
 
 Usage: slo_xi0_full.py
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import numpy as np
 import parmed
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD = ROOT / 'md' / 'mcpb'
 EF = ROOT / 'results' / 'ensemble_fluctuation'
 OUT = ROOT / 'results' / 'pauli_hole_survey'

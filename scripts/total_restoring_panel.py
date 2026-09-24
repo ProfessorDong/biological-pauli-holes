@@ -8,12 +8,16 @@ routes share no code and only one of them can see the fragment decomposition.
 
 Usage: total_restoring_panel.py   (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
 import numpy as np
 
-D = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/native_donor_validation')
+D = Path(_REPO + '/results/native_donor_validation')
 SYS = ['L754A', 'I552A', 'I538A', 'L546A', 'I553A', 'V750A', 'WT']
 
 

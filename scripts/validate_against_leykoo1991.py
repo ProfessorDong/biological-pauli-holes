@@ -25,6 +25,10 @@ WHAT WE FOUND
 
 Usage: validate_against_leykoo1991.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import importlib.util as iu
 import json
 import sys
@@ -32,7 +36,7 @@ from pathlib import Path
 
 from mpmath import mp
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results/leykoo1991_validation.json'
 
 # Ley-Koo and Garcia-Castelan, J. Phys. A 24, 1481 (1991)

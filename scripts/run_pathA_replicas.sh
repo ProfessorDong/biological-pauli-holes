@@ -2,12 +2,14 @@
 # Path A step (1): run replicas 2 and 3 of the DAD PMF for WT + I553A + L754A + DM.
 # Sequential (one GPU). Each system-replica = 15 windows x 5 ns HMR ~= 82.5 ns.
 # Total for step (1): 8 driver invocations, ~660 ns of production.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -euo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-cd /home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
+DRV=${_REPO}/scripts/umbrella_driver.py
+cd ${_REPO}/md/mcpb
 
-LOG=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/pathA_replicas.log
+LOG=${_REPO}/results/umbrella/pathA_replicas.log
 mkdir -p "$(dirname "$LOG")"
 echo "=== PATH A replicas start: $(date -Iseconds) ===" | tee -a "$LOG"
 

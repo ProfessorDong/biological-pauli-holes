@@ -8,11 +8,15 @@ so the control is the five CONTINUOUS runs cut into equal thirds and put through
 identical statistic. If the chunked spread sits inside the continuous spread, segmenting
 added nothing.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, numpy as np, pathlib
 sys.path.insert(0, str(pathlib.Path(__file__).parent))
 from stage5_extract import acf_tau
 
-OUT = pathlib.Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/stage5_configs')
+OUT = pathlib.Path(_REPO + '/results/stage5_configs')
 CHUNKED, CONTINUOUS = ['I538A', 'L546A'], ['WT', 'I553A', 'I552A', 'L754A', 'V750A']
 
 def stats(parts, name, kind):

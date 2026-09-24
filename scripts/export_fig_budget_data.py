@@ -8,11 +8,15 @@ Reproduces exactly what render_fig_budget.py computes:
            from the per-atom distances so the true STEP shape is visible. Interpolating the
            six tabulated radii would draw a smooth ramp and misrepresent it.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 FIG = ROOT / 'figures'
 d = json.loads((ROOT / 'results/confinement_budget.json').read_text())
 

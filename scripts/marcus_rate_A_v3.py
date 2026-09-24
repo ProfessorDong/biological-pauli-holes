@@ -14,6 +14,10 @@ Model: harmonic donor and acceptor wells (k = 500 N/m, typical C-H and O-H stret
 at positions q_D = r_CH = 1.09 A from the donor C and q_A = r_DA - r_OH = r_DA - 0.98
 from the donor C. Vary r_DA from 2.5 to 4.0 A.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import math, json
 import numpy as np
 from pathlib import Path
@@ -85,7 +89,7 @@ if __name__ == '__main__':
     # Compare with the r_DA of the five B3.4-dense snapshots. These come from BIASED
     # umbrella windows and are NOT an equilibrium distribution; the variable was once
     # named r_DA_equilibrium and that word propagated into the figure legend.
-    B34_DIR = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pcet_B34_dense')
+    B34_DIR = Path(_REPO + '/results/pcet_B34_dense')
     r_DA_equilibrium = []
     for w in ['270','320','345','370','395']:
         with open(B34_DIR/f'wt_win{w}_scan.json') as f:
@@ -130,7 +134,7 @@ if __name__ == '__main__':
     ax.set_xlim(2.4, 4.0)
     ax.set_ylim(1, 1e12)
 
-    OUT_PDF = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/sn-article-template/figED3_gating_KIE.pdf')
+    OUT_PDF = Path(_REPO + '/sn-article-template/figED3_gating_KIE.pdf')
     fig.savefig(OUT_PDF, format='pdf', bbox_inches='tight', dpi=200)
     plt.close(fig)
     print(f'\nwrote {OUT_PDF}')

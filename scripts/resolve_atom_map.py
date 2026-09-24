@@ -29,6 +29,10 @@ NOTE ON ELEMENTS
 
 Usage: resolve_atom_map.py [--json results/atom_map.json]    (slomd env: parmed)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import os
 import sys
@@ -36,7 +40,7 @@ from pathlib import Path
 
 import parmed
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 PRM = {'WT': 'SLO_sub_solv', 'I553A': 'SLO_I553A_sub_solv', 'I552A': 'SLO_I552A_sub_solv',
        'L754A': 'SLO_L754A_sub_solv', 'V750A': 'SLO_V750A_sub_solv',
        'I538A': 'SLO_I538A_sub_solv', 'L546A': 'SLO_L546A_sub_solv',

@@ -2,8 +2,10 @@
 # Waits for the ensemble SAPT campaign to finish, then runs the PRE-REGISTERED
 # analysis exactly once, unmodified. Chained so the result does not depend on an
 # interactive session staying alive.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 EF="$ROOT/results/ensemble_fluctuation"
 LOG="$EF/analysis_run.log"
 

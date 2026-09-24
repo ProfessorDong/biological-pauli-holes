@@ -24,12 +24,16 @@ snapshot by scripts/extract_pentadienyl_donor.py.
 
 Usage: sapt_pentadienyl_vs_methane.py TAG [basis]
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, sys
 from pathlib import Path
 import numpy as np
 import psi4
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 DIR = ROOT/'results/sapt_bio/native_fragment'
 OUT = ROOT/'results/sapt_bio/donor_fragment'
 OUT.mkdir(parents=True, exist_ok=True)

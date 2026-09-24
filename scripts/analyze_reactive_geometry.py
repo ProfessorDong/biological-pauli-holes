@@ -22,11 +22,15 @@ ABORT            : if variance inflation between k_exch and achieved r_DA exceed
 Inference: exhaustive permutation over all 7! label assignments for an exact p,
 bootstrap confidence intervals, and no treatment of nominal p<0.05 as decisive.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math, itertools, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 RG = ROOT / 'results' / 'reactive_geometry'
 
 KIE = {'WT': 66, 'I839A': 62, 'L754A': 106, 'V750A': 62,

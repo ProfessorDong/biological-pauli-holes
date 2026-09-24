@@ -3,11 +3,15 @@
 Derived mechanically from sapt_native_fragment.py so the descriptor is bit-for-bit
 the main-text 2.8 quantity; only the input geometry and output naming differ.
 Run in the pauli env (psi4)."""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, json, numpy as np, psi4
 from pathlib import Path
 
 TAG, CLAMP = sys.argv[1], sys.argv[2]
-DIR = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/reactive_geometry')
+DIR = Path(_REPO + '/results/reactive_geometry')
 with open(DIR/f'{TAG}_{CLAMP}_geometry.json') as f:
     geom = json.load(f)
 

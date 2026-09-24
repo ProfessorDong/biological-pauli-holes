@@ -4,11 +4,15 @@
 The TikZ figure reads this file rather than carrying numbers in its source, so the artwork cannot
 drift from the solver. Regenerate after any change to confinement_universality.py.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 K = 627.5094740631                      # hartree -> kcal/mol
 g = json.loads((ROOT / 'results/confinement_universality.json').read_text())['geometries']
 dp = np.array(g['paraboloid']['d_a0'])

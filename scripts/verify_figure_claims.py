@@ -20,13 +20,17 @@ WHAT IT COVERS
 
 Usage: verify_figure_claims.py     (pauli env; exit status is the failure count)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 fails = []
 
 

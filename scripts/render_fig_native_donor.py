@@ -11,6 +11,10 @@ Error bars are 2 sigma, propagated from the least-squares fit covariance to each
 
 Usage: render_fig_native_donor.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
@@ -19,7 +23,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 D = ROOT / 'results/native_donor_validation'
 T = ROOT / 'results/transverse_hessian'
 OUT = ROOT / 'figures/fig_native_donor.pdf'

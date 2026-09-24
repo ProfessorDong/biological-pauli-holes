@@ -28,6 +28,10 @@ reports the partition; the total it produces is checked against the SAPT0 total.
 
 Usage: fsapt_donor_decomposition.py [TAG [basis]]     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import contextlib
 import io
 import json
@@ -46,7 +50,7 @@ import psi4
 sys.path.insert(0, '/home/liang/anaconda3/envs/pauli/share/psi4/fsapt')
 import fsapt  # noqa: E402
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 DIR = ROOT / 'results/sapt_bio/native_fragment'
 OUT = ROOT / 'results/sapt_bio/donor_fragment'
 SCRATCH = Path(os.environ.get('FSAPT_SCRATCH', Path.home() / 'scratch/fsapt_donor'))

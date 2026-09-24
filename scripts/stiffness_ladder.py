@@ -28,12 +28,16 @@ WHAT THIS DOES AND DOES NOT ESTABLISH
 
 Usage: stiffness_ladder.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results/sapt_bio/stiffness_ladder.json'
 
 AMU = 1.66053906660e-27      # kg

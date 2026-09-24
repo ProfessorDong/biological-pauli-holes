@@ -4,9 +4,11 @@
 # 2 windows (r_DA=3.35, 3.60) x 3 replicas x 30 ps production
 # = 48 windows total; P=16 ~30 min/window, P=32 ~60 min/window -> ~36 hours GPU
 
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/pimd_window.py"
 MD="$ROOT/md/mcpb"

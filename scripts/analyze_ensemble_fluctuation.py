@@ -25,11 +25,15 @@ face value. Secondary results are compared against a Bonferroni threshold of 0.0
 ABORT: VIF > 5 on any endpoint means the descriptor and residual geometry cannot be
 separated at n=7, and that endpoint is reported as unresolvable rather than as a result.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math, itertools, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 EF = ROOT / 'results' / 'ensemble_fluctuation'
 KIE = {'WT': 66, 'L754A': 106, 'V750A': 62, 'I538A': 100,
        'L546A': 131, 'I553A': 148, 'I552A': 66}

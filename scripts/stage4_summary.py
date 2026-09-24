@@ -5,11 +5,15 @@ Every row changes ONE setting from the published panel (WT, SAPT0/jun-cc-pVDZ, n
 side-chain wall, 5x5 grid at half-width 0.15 A). Reports both eigenvalues and the fitted gradient,
 as the pre-registration requires, and the percentage change of each eigenvalue from the baseline.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 import numpy as np
 
-D = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/native_donor_validation')
+D = Path(_REPO + '/results/native_donor_validation')
 S = D / 'stage4'
 
 

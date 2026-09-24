@@ -26,13 +26,17 @@ WHAT IT IS NOT
 
 Usage: permutation_scheme_sensitivity.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import itertools
 import json
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 R = ROOT / 'results'
 SYSTEMS = ['WT', 'V750A', 'I552A', 'I538A', 'L754A', 'L546A', 'I553A']
 KIE = {'WT': 66, 'L754A': 106, 'V750A': 62, 'I538A': 100, 'L546A': 131,

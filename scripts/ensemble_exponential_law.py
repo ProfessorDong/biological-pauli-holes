@@ -29,6 +29,10 @@ CAVEATS THAT LIMIT THE STRENGTH OF A POSITIVE RESULT
 
 Usage: ensemble_exponential_law.py [TAG [clamp]]     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
@@ -36,7 +40,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import pearsonr
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 DF = ROOT / 'results/sapt_bio/donor_fragment'
 A0 = 0.5291772109          # angstrom per bohr
 SOLVED_PER_A0 = 2.011      # paraboloid fitted rate, from confinement_universality

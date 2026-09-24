@@ -15,6 +15,10 @@ gives the KIE temperature dependence (the gating signature). The SYSTEM-relative
 normalized to WT) is independent of R0 and of the intrinsic prefactor, so it is the robust
 quantity to regress against the measured ladder. a_H,a_D scanned for sensitivity.
 Usage: tunneling_pmf.py"""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import glob, numpy as np
 trapz = np.trapezoid if hasattr(np,"trapezoid") else np.trapz
 kB=0.0019872041  # kcal/mol/K
@@ -24,7 +28,7 @@ A_PAIRS=[(20,28),(25,35),(30,42)]   # (a_H,a_D) in A^-1; middle = default, sensi
 R0=2.70                              # reference reactive DAD (A); cancels in system-relative KIE
 
 def load_pmf(tag):
-    f=f"/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/{tag}/pmf.dat"
+    f=_REPO + f"/results/umbrella/{tag}/pmf.dat"
     d=np.loadtxt(f); return d[:,0], d[:,1]                # r (A), W (kcal/mol)
 
 def kie(tag, aH, aD, T):

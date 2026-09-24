@@ -9,11 +9,15 @@ eigh non-convergence on ill-conditioned Theta); restrict to the near-attack rang
 r_DA in [2.8, 3.6] A; compute the joint weighted 2x2 covariance on (r_HO, theta_CHO)
 and report sqrt(det Sigma). Regress against ln(KIE_10C).
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np, json
 from pymbar import MBAR
 
-DATA = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella_reactplane')
+DATA = Path(_REPO + '/results/umbrella_reactplane')
 OUT  = DATA/'analysis'; OUT.mkdir(parents=True, exist_ok=True)
 
 SYSTEMS = ['WT','V750A','I552A','I538A','L754A','L546A','I553A','DM']

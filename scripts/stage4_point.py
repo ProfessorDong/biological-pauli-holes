@@ -7,11 +7,15 @@ already exists is skipped, so a driver can be re-run to resume.
 
 Usage: stage4_point.py LABEL TAG METHOD BASIS DONOR WALL HALF NPA I J MEM
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, os, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 D = ROOT / 'results/native_donor_validation'
 Ha2kcal = 627.5094740631
 

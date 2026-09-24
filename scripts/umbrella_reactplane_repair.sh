@@ -13,9 +13,11 @@
 #   L754A r=3.20
 #   DM    r=3.20
 
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/umbrella_reactplane.py"
 MD="$ROOT/md/mcpb"

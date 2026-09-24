@@ -2,8 +2,10 @@
 # Finish the stage-5 MD for the two systems the crash left without data, in 1 ns segments.
 # Each segment is seeded from the previous one's restart, so a crash costs one segment, not a system.
 # Segments are concatenated into <TAG>_frames.npy, the single file stage5_extract.py reads.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -u
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python
 OUT=$ROOT/results/stage5_configs
 LOG=$OUT/chunked.log
@@ -14,7 +16,7 @@ run_one() {  # tag prmtop donor acceptor
   "$SL" - "$tag" <<'PY' | tee -a "$LOG"
 import sys, numpy as np, pathlib
 tag = sys.argv[1]
-out = pathlib.Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/stage5_configs')
+out = pathlib.Path('${_REPO}/results/stage5_configs')
 segs = sorted(out.glob(f'{tag}_seg*_frames.npy'))
 arrs = [np.load(s) for s in segs]
 allf = np.concatenate(arrs, axis=0)

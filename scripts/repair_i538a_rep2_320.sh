@@ -3,11 +3,13 @@
 #   * I538A rep 1 window 4.95 (colvar present, rst7 missing; driver would skip it)
 #   * I538A rep 2 window 3.20 (both colvar and rst7 missing; driver will try to run it)
 # With the current writer (0-d array fix + atomic rename) both should produce complete outputs.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -euo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-MCPB=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
-RES=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella
+DRV=${_REPO}/scripts/umbrella_driver.py
+MCPB=${_REPO}/md/mcpb
+RES=${_REPO}/results/umbrella
 LOG=$RES/pathA_followup.log
 
 # --- delete the partial 4.95 outputs so the driver's colvar-existence check triggers a rerun ---

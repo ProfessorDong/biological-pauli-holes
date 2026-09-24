@@ -13,6 +13,10 @@ For each of the seven JBC systems, prints and JSON-dumps:
   - dZPE_H_D: single-mode isotope shift (kcal/mol)
   - KIE at 10 C
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math
 from pathlib import Path
 
@@ -31,8 +35,8 @@ def zpe_kcal(k_Nm, m_amu):
     w = math.sqrt(k_Nm / (m_amu * amu))
     return (hbar * w / 2.0) / kcal_per_particle
 
-RAW = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/sapt_bio/sapt_summary.json')
-OUT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/sapt_bio/sapt_summary_corrected.json')
+RAW = Path(_REPO + '/results/sapt_bio/sapt_summary.json')
+OUT = Path(_REPO + '/results/sapt_bio/sapt_summary_corrected.json')
 
 with open(RAW) as f:
     raw = json.load(f)

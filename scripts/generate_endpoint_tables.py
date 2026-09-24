@@ -14,13 +14,17 @@ WHY THIS EXISTS
 
 Usage: generate_endpoint_tables.py [--check | --emit]     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 RG, EF = ROOT / 'results/reactive_geometry', ROOT / 'results/ensemble_fluctuation'
 TEX = ROOT / 'prxlife/appendices.tex'
 # printed order, which is by ascending isotope effect

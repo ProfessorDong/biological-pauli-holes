@@ -44,13 +44,17 @@ CATEGORIES
 
 Usage: confinement_budget_pdb.py     (pauli env; no external dependencies)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results' / 'confinement_budget_crossenzyme.json'
 
 A0 = 0.529177210903

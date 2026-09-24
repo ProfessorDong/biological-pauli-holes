@@ -4,11 +4,15 @@
 Reports BOTH eigenvalues and the fitted gradient at the setting, and labels the residual a fit
 residual. Uses the same quad2d as the published panel rather than a reimplementation.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 P = ROOT / 'results/native_donor_validation/stage4'
 sys.path.insert(0, str(ROOT / 'scripts'))
 from transverse_native_donor import quad2d

@@ -19,6 +19,10 @@ WHAT IS EMITTED
 
 Usage: donor_fragment_indices.py TAG     (slomd env: parmed)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import os
 import sys
@@ -28,7 +32,7 @@ import numpy as np
 import parmed
 from openmm import app, unit
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD, UMB = ROOT / 'md/mcpb', ROOT / 'results/umbrella'
 OUT = ROOT / 'results/sapt_bio/native_fragment'
 

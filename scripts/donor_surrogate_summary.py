@@ -28,6 +28,10 @@ WHAT IT REPORTS
 
 Usage: donor_surrogate_summary.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import itertools
 import json
 import math
@@ -36,7 +40,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import pearsonr, spearmanr
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 D = ROOT / 'results/sapt_bio/donor_fragment'
 TAGS = ['WT', 'I553A', 'I552A', 'L754A', 'V750A', 'I538A', 'L546A']
 # The published native-fragment curvature, methane donor, for the assertion below.

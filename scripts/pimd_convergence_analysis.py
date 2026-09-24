@@ -13,10 +13,14 @@ Data sources:
 - P=8:  results/pimd_prod/*_pimd.npz          (from the reported campaign, 36 trajs)
 - P=16, P=32: results/pimd_convergence/*_pimd.npz  (this convergence sweep, 48 trajs)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np, json
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results')
+ROOT = Path(_REPO + '/results')
 P8_DIR   = ROOT/'pimd_prod'
 BIG_DIR  = ROOT/'pimd_convergence'
 OUT      = ROOT/'pimd_convergence'/'analysis'

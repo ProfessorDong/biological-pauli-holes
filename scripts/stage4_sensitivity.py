@@ -12,12 +12,16 @@ setting, the rms residual labelled as a fit residual and never as a sampling unc
 Usage: stage4_sensitivity.py LABEL TAG METHOD BASIS DONOR WALL [half] [npa] [nproc] [mem]
   DONOR: native | shell2        WALL: sidechain | backbone
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, os, sys
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 D = ROOT / 'results/native_donor_validation'
 OUT = D / 'stage4'
 Ha2kcal, CONV = 627.5094740631, 0.694770

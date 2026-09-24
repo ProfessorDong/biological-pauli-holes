@@ -4,13 +4,15 @@
 #   (2) minimize + equilibrate the 3 fresh mutants (V750A, I538A, L546A)
 #   (3) 3-replica DAD PMFs for the 3 fresh mutants
 # ~17 GPU-h total on the Blackwell.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -euo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-MIN=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/minimize_sub.py
-EQ=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/equilibrate_sub.py
-MCPB=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
-RES=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella
+DRV=${_REPO}/scripts/umbrella_driver.py
+MIN=${_REPO}/md/mcpb/minimize_sub.py
+EQ=${_REPO}/md/mcpb/equilibrate_sub.py
+MCPB=${_REPO}/md/mcpb
+RES=${_REPO}/results/umbrella
 
 cd "$MCPB"
 LOG="$RES/pathA_followup.log"

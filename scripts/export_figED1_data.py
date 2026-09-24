@@ -5,11 +5,15 @@ One table of the five computed points per system, one of the fitted quadratics s
 finely, and one rank table. Values come from the native-fragment campaign results and the
 parametric-bootstrap uncertainties, the same files the manuscript table quotes.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 NF = ROOT / 'results/sapt_bio/native_fragment'
 U = json.loads((ROOT / 'results/sapt_bio/native_fragment_uncertainty.json').read_text())['systems']
 KIE = {'WT': 66, 'V750A': 62, 'I552A': 66, 'I538A': 100,

@@ -14,10 +14,14 @@ assumption inherited from the extraction, not established here.
 
 POST HOC. The pre-registered endpoints are on K_sep and stay there.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, numpy as np
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 CFG  = ROOT / 'results/stage5_configs'
 SYS  = ['L754A', 'I552A', 'I538A', 'L546A', 'I553A', 'V750A', 'WT']   # ascending methane K_sep
 KIE  = {'WT': 66, 'V750A': 62, 'I552A': 66, 'I538A': 100,

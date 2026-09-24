@@ -5,8 +5,10 @@
 # SAPT0/jun-cc-pVDZ descriptor once per frame. 7 systems x 2 clamps x 40 frames
 # x 5 scan points = 2800 SAPT calculations, ~3 h. Collates into the two files the
 # pre-registered analysis reads.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python
 P4=/home/liang/anaconda3/envs/pauli/bin/python
 EF="$ROOT/results/ensemble_fluctuation"
@@ -40,7 +42,7 @@ echo "=== ensemble SAPT done $(date -Iseconds) ===" | tee -a "$LOG"
 "$SL" - <<'PY' 2>&1 | tee -a "$LOG"
 import json
 from pathlib import Path
-EF = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/ensemble_fluctuation')
+EF = Path('${_REPO}/results/ensemble_fluctuation')
 for clamp in ('r255','r340'):
     out = {}
     for f in sorted(EF.glob(f'*_{clamp}_kexch_frames.json')):

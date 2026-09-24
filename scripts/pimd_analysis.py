@@ -19,12 +19,16 @@ The bead-cloud sigma is reported alongside as a sanity-check descriptor: for a
 transferring particle in a harmonic well, sigma_H/sigma_D -> sqrt(m_D/m_H) = sqrt(2)
 = 1.414 in the harmonic limit.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np
 import json
 
-DATA = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pimd_prod')
-OUT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pimd_prod/analysis')
+DATA = Path(_REPO + '/results/pimd_prod')
+OUT = Path(_REPO + '/results/pimd_prod/analysis')
 OUT.mkdir(parents=True, exist_ok=True)
 
 SYSTEMS = ['I553A', 'I552A']

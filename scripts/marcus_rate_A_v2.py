@@ -16,12 +16,16 @@ Assemble Fermi Golden Rule rate with literature V_el, λ, ΔG.
 The result is a "first-principles reactant + literature product" hybrid rate. Fully
 first-principles product-side quantities require CDFT (Task B).
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math
 import numpy as np
 from pathlib import Path
 from scipy.interpolate import CubicSpline
 
-DIR = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pcet_B34_dense')
+DIR = Path(_REPO + '/results/pcet_B34_dense')
 Ha2kcal = 627.5094740631
 
 # Physical constants

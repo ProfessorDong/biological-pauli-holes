@@ -39,6 +39,10 @@ AUDIT CORRECTIONS (2026-08-15)
 
 Output: figures/figED2_bead_convergence.pdf
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
@@ -47,7 +51,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 JSON_PATH = ROOT / 'results/pimd_convergence/analysis/B1_convergence_analysis.json'
 OUT_PDF = ROOT / 'figures/figED2_bead_convergence.pdf'
 

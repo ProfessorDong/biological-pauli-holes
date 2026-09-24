@@ -5,6 +5,10 @@ Applies the decision rule pre-registered in prxlife/NATIVE_DONOR_VALIDATION.md s
 looking at anything else, and reports every scalar summary of the Hessian rather than the one
 that flatters the argument. Usage: native_donor_panel.py   (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import itertools
 import json
 from pathlib import Path
@@ -12,7 +16,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import rankdata
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 D = ROOT / 'results/native_donor_validation'
 SYS = ['L754A', 'I552A', 'I538A', 'L546A', 'I553A', 'V750A', 'WT']   # ascending methane K_sep
 KIE = {'WT': 66, 'V750A': 62, 'I552A': 66, 'I538A': 100, 'L754A': 106, 'L546A': 131, 'I553A': 148}

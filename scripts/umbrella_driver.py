@@ -4,6 +4,10 @@ adiabatically outward from the equilibrated structure (start at the window neare
 equilibrated r_DA, then step inward toward the near-attack and outward toward the resting
 distance, each window seeded from its completed neighbor) -> smooth pulling, no hysteresis.
 Usage: umbrella_driver.py <tag> <prmtop> <eq_rst7> <donor> <acceptor> [eqr_DA]"""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, os, subprocess, numpy as np
 
 tag,prmtop,eqrst,donor,acceptor = sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5]
@@ -12,7 +16,7 @@ rep = int(sys.argv[7]) if len(sys.argv)>7 else 1          # replica id (independ
 WIN = os.path.dirname(os.path.abspath(__file__))+"/umbrella_window.py"
 PY  = "/home/liang/anaconda3/envs/slomd/bin/python"
 suffix = "" if rep==1 else f"_rep{rep}"
-outdir = f"/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/{tag}{suffix}"
+outdir = _REPO + f"/results/umbrella/{tag}{suffix}"
 os.makedirs(outdir, exist_ok=True)
 
 centers = np.round(np.arange(2.7, 6.21, 0.25), 2)          # 2.70 .. 6.20 A, 15 windows

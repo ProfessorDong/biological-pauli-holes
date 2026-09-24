@@ -10,11 +10,15 @@ transformed positions and labelled with the original values:
     |y| <= t :  y' = sign(y) * a * |y|/t
     |y| >  t :  y' = sign(y) * (a + log10(|y|/t)),   a = linscale/(1 - 1/10)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 sys.path.insert(0, str(ROOT / 'scripts'))
 from render_fig_native_donor import fit, SYS, D, T
 

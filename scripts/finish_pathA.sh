@@ -1,13 +1,15 @@
 #!/bin/bash
 # Finish: equilibrate + PMFs for V750A/I538A/L546A. Skips WT rep-1 retry (14/15 is fine).
 # equilibrate_sub.py now writes .rst7 first (before the crashy PDB write) then os._exit(0).
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -euo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-MIN=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/minimize_sub.py
-EQ=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/equilibrate_sub.py
-MCPB=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
-LOG=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/pathA_followup.log
+DRV=${_REPO}/scripts/umbrella_driver.py
+MIN=${_REPO}/md/mcpb/minimize_sub.py
+EQ=${_REPO}/md/mcpb/equilibrate_sub.py
+MCPB=${_REPO}/md/mcpb
+LOG=${_REPO}/results/umbrella/pathA_followup.log
 cd "$MCPB"
 echo "=== PATH A FINISH v2 start: $(date -Iseconds) ===" | tee -a "$LOG"
 

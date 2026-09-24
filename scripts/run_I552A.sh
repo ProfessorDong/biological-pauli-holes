@@ -1,13 +1,15 @@
 #!/bin/bash
 # Add I552A (the 7th single-site JBC-2019 mutant, KIE=66/60) to the panel.
 # minimize + equilibrate + 3 replicas of umbrella sampling.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -euo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-MIN=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/minimize_sub.py
-EQ=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/equilibrate_sub.py
-MCPB=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
-LOG=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/pathA_followup.log
+DRV=${_REPO}/scripts/umbrella_driver.py
+MIN=${_REPO}/md/mcpb/minimize_sub.py
+EQ=${_REPO}/md/mcpb/equilibrate_sub.py
+MCPB=${_REPO}/md/mcpb
+LOG=${_REPO}/results/umbrella/pathA_followup.log
 cd "$MCPB"
 echo "=== I552A pipeline start: $(date -Iseconds) ===" | tee -a "$LOG"
 

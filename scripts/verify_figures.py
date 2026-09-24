@@ -19,6 +19,11 @@ WHAT IT CHECKS
 
 Usage: verify_figures.py     (pauli env; exit status is the failure count)
 """
+
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import hashlib
 import json
 import re
@@ -26,7 +31,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 LIVE, FIGS, R = ROOT / 'prxlife', ROOT / 'figures', ROOT / 'results'
 MAIN, APP = LIVE / 'main.tex', LIVE / 'appendices.tex'
 CAPTION_MAX_WORDS = 245

@@ -15,11 +15,15 @@ WHY THIS EXISTS
 
 Usage: verify_document_consistency.py     (pauli env; exit status is the failure count)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import re
 import sys
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/prxlife')
+ROOT = Path(_REPO + '/prxlife')
 MAIN, APP = (ROOT / 'main.tex'), (ROOT / 'appendices.tex')
 # The separate Supplemental Material was retired on 2026-09-18 and folded into the
 # appendices, which removes the drift vector these checks were written for. The
@@ -127,7 +131,12 @@ CHECKS = [
     ('cover letter drops the framing-A title', COVER,
      'Fragment-separation curvature is not', False),
     ('no document keeps the old title', SUP, 'locality of direct exchange', False),
-    ('main text carries the current title', MAIN, '\\title{' + "An exponential bound on Pauli confinement in enzyme active sites" + '}', True),
+    # Title changed 2026-09-24: "bound" asserted an inequality that main.tex's own Limits
+    # paragraph disclaims ("we do not claim the first bounds the second").
+    ('main text carries the current title', MAIN,
+     'Exponential locality and coordinate dependence of Pauli confinement', True),
+    ('the title no longer claims a bound', MAIN,
+     'An exponential bound on Pauli confinement', False),
     ('main text drops the framing-A title', MAIN, "Fragment-separation curvature is not hydrogen confinement", False),
     ('no document keeps the superseded title', MAIN,
      'Testing hydrogen confinement by exchange', False),
@@ -186,12 +195,16 @@ CHECKS = [
      'ALMO-EDA sensitivity remains the natural next-round refinement', False),
     ('main text reports the six-setting sweep', MAIN,
      'The sign of the smaller eigenvalue survives all six', True),
-    ('main text attaches the fragment uncertainty to magnitudes', MAIN,
-     'fragment-definition uncertainty of about $28\%$', True),
+    # 28% is WT's SMALLER eigenvalue only. On the same substitution the larger eigenvalue
+    # moves 130.4% and the spectral norm 43.6%, so it is not a universal error bar.
+    ('the 28% figure is scoped to WT\'s smaller eigenvalue', MAIN,
+     "it is the change in WT's \\emph{smaller} eigenvalue", True),
+    ('no universal fragment error bar is attached to every magnitude', MAIN,
+     'Every transverse magnitude quoted here should therefore be read', False),
     ('appendix states the sign is invariant across settings', APP,
      'Nothing tested reverses the classification', True),
     ('appendix names the donor fragment as the dominant sensitivity', APP,
-     'the donor fragment at $27.6\%$', True),
+     r'the donor fragment at $27.6\%$', True),
     ('appendix reports SAPT2+ preserving the sign', APP,
      'leaves its sign and the\nwhole argument intact', True),
     ('appendix records the wall truncation as not load-bearing', APP,
@@ -204,18 +217,34 @@ CHECKS = [
     # ---- framing B: the exponential bound leads the paper (2026-09-23) ----
     ('abstract leads with the exponential bound', MAIN,
      'question about a single distance', True),
-    ('abstract states the quantitative exclusion', MAIN,
-     'Confinement is therefore not the\ncatalytic field', True),
+    # The abstract asserted an exclusion the Limits paragraph disclaims.
+    ('abstract scopes the field estimate to the model', MAIN,
+     'this is an estimate of scale, not an exclusion', True),
+    ('abstract does not assert the exclusion', MAIN,
+     'Confinement is therefore not the\ncatalytic field', False),
     ('abstract keeps the measured-not-assumed discipline', MAIN,
      'We measure that distance rather than assume it', True),
     ('exponential section precedes the coordinate section', MAIN,
      'How far direct exchange reaches', True),
-    ('discussion opens on the quantitative answer', MAIN,
-     'The question has a quantitative answer', True),
+    ('discussion separates the model estimate from the measured content', MAIN,
+     'a modelling assumption rather than an inequality', True),
+    ('discussion does not claim a generalised negative answer', MAIN,
+     'negative for a reason that generalises beyond this enzyme', False),
     ('discussion no longer calls fragment sensitivity outstanding', MAIN,
      'whether they survive changes of fragment size and electronic treatment,\nis what is left', False),
+    # Cover letter rewritten 2026-09-24. The old phrasing paired the biological-physics case
+    # with "a bound rather than a correlation" and "We show it cannot be", which the manuscript
+    # no longer claims. The case is now made on the measurement practice plus the honest null.
     ('cover letter argues the biological-physics case, not a methods case', COVER,
-     'answers a mechanistic question in biological physics', True),
+     'measurement practice that biological\nphysicists can adopt', True),
+    ('cover letter does not claim an exclusion', COVER,
+     'We do not claim to have excluded exchange-mediated', True),
+    ('cover letter does not say the total matrix is uncomputed', COVER,
+     'total\nnuclear restoring matrix is not computed', False),
+    ('cover letter does not claim the conclusion generalises', COVER,
+     'That conclusion generalises past lipoxygenase', False),
+    ('cover letter reports the native donor, not the methane surrogate', COVER,
+     'native\nbis-allylic substrate donor rather than a surrogate', True),
 
     # The figure captions were not in the sweep that qualified this claim, and the
     # Figure 5 caption carried the bare form while abstract, Results and appendix all
@@ -292,8 +321,41 @@ CHECKS = [
     # when our intermolecular transverse curvature is anti-confining in six of seven: opposite
     # sign.  Claiming to quantify an antecedent we actually reverse both misdescribes it and
     # undersells the result.
-    ('the Kohen antecedent is reported as reversed, not confirmed', APP,
-     'Making it quantitative reverses its sign', True),
+    # Kohen's statement concerns the whole enzymatic system near the TS; ours is one wall
+    # fragment's intermolecular contribution at restrained reactant-like geometries. Neither
+    # confirming nor reversing him is the defensible reading.
+    ('the Kohen antecedent is neither confirmed nor reversed', APP,
+     'neither a confirmation nor a refutation of it', True),
+    ('we do not claim to reverse Kohen', APP,
+     'Making it quantitative reverses its sign', False),
+
+    # ---- external audit responses, 2026-09-24. Each verified independently before acting.
+    # A norm ratio is not the fraction along every direction; the generalised eigenproblem
+    # K_exch v = lambda K_tot v gives extrema -0.097% to +0.283% (reproduced exactly).
+    ('the exchange fraction reports directional extrema, not only the norm ratio', MAIN,
+     'whose extrema over the tested transverse plane run from', True),
+    # A constrained two-point energy difference is not an activation barrier nor a bound on one;
+    # 3 of 10 optimizations converged and the reference-clamp values are extrapolations.
+    ('the barrier comparison does not claim an upper bound', MAIN,
+     'not automatically an activation barrier nor an upper bound on one', True),
+    ('the barrier comparison does not claim to remove circularity', MAIN,
+     'removes the circularity from the choice of', False),
+    ('the reference-clamp barrier is labelled an extrapolation', MAIN,
+     'extrapolations beyond the sampled range', True),
+    # slo_xi0_full.json stores per-system/per-clamp MEANS; WT alone reaches 2.356 A.
+    ('the cavity interval is labelled an interval of means', MAIN,
+     'per-system, per-clamp \\emph{mean} closest', True),
+    # The stage-5 selector takes a strided prefix, not a spread across the trajectory.
+    ('the stage-5 sampling prefix is disclosed', APP,
+     'takes a strided\n\\emph{prefix} of each saved trajectory', True),
+    ('stage-5 configurations are not called independent', APP,
+     'on independent configurations', False),
+    # HF treats polarization self-consistently; it lacks correlation dispersion.
+    ('HF is not said to omit induction', APP,
+     'SAPT0 contains induction and dispersion\nthat Hartree-Fock omits', False),
+    # The primary-data Zenodo record does not exist yet; only the code record does.
+    ('the primary data are not claimed to be already deposited', APP,
+     'are a separate Zenodo record cross-linked to the code', False),
     ('we do not claim merely to be quantifying his stiffening picture', APP,
      'transverse-stiffening picture this paper tries to make', False),
 

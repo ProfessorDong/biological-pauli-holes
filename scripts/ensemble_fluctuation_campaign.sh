@@ -30,12 +30,14 @@
 # Pauli-confinement question; it is not intended to produce a free energy.
 #
 # 7 JBC systems x 2 clamps x 3 ns. Expect ~10-12 min per window => ~3 h.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-WIN=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_window_frames.py
-cd /home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
+WIN=${_REPO}/scripts/umbrella_window_frames.py
+cd ${_REPO}/md/mcpb
 
-OUT=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/ensemble_fluctuation
+OUT=${_REPO}/results/ensemble_fluctuation
 mkdir -p "$OUT"
 LOG="$OUT/campaign.log"
 echo "=== ensemble-fluctuation campaign start $(date -Iseconds) ===" | tee -a "$LOG"
@@ -68,7 +70,7 @@ run_clamp () {
 # across variants silently restrained V750A on LIG:C11 and the Ile817 carboxylate
 # instead of C14 and the iron-bound hydroxide; nothing raised and the colvar sat on
 # target while the intended coordinate stayed near 5.7 A. Resolve, assert, print.
-AMAP=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/atom_map.json
+AMAP=${_REPO}/results/atom_map.json
 PY_ENV=/home/liang/anaconda3/envs/pauli/bin/python
 [[ -f "$AMAP" ]] || { echo "FATAL: $AMAP missing; run scripts/resolve_atom_map.py"; exit 1; }
 amap () {   # amap <TAG> <donor_C|acceptor_O>
@@ -76,7 +78,7 @@ amap () {   # amap <TAG> <donor_C|acceptor_O>
 }
 
 # seed each clamp from that system's most compressed equilibrated window
-U=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella
+U=${_REPO}/results/umbrella
 for r0 in 2.55 3.40; do
   for MUT in WT I553A L754A V750A I538A L546A I552A; do
     case $MUT in WT) PRMF=SLO_sub_solv.prmtop;; *) PRMF=SLO_${MUT}_sub_solv.prmtop;; esac

@@ -16,12 +16,16 @@ of the transferring hydrogen, exactly as extract_native_donor_clamped.py checks 
 
 Usage: stage4_fragment_variants.py TAG [CLAMP]
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, sys
 from pathlib import Path
 import numpy as np, parmed
 from openmm import app, unit
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 RG, MD = ROOT / 'results/reactive_geometry', ROOT / 'md/mcpb'
 OUT = ROOT / 'results/native_donor_validation'
 Z = {'H': 1, 'C': 6, 'N': 7, 'O': 8, 'S': 16}

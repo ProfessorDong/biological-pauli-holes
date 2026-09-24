@@ -7,9 +7,13 @@ is a DIFFERENT series and is shown as a cross-reference point, NOT in the fit.
 Gating theory (Klinman/Hammes-Schiffer): larger + more T-dependent KIE <-> longer r_DA^0 and/or
 softer k_gate. So expect KIE to ANTI-correlate with k_gate and correlate with r_DA^0 / <dR^2>.
 Usage: umbrella_summary.py"""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import subprocess, re, numpy as np
 PY="/home/liang/anaconda3/envs/slomd/bin/python"
-PMF="/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_pmf.py"
+PMF=_REPO + "/scripts/umbrella_pmf.py"
 
 # JBC-2019 self-consistent series (10 C); DM is a cross-ref (different series/temperature)
 KIE={'WT':(66,52,'JBC2019'),'L754A':(106,82,'JBC2019'),'I553A':(148,77,'JBC2019'),

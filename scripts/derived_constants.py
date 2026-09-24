@@ -15,10 +15,14 @@ Two of these were quoted incorrectly before this script existed:
 
 Usage: derived_constants.py
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results' / 'derived_constants.json'
 
 # CODATA 2018

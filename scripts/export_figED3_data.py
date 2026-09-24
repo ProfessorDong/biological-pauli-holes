@@ -8,11 +8,15 @@ PROVENANCE NOTE. Those files sit in a directory whose QM PROTON SCANS are invali
 (5-point / M=5 / charge +2). Only the field r_DA is read here, which is a geometric property
 of the snapshot and is unaffected by the SCF settings used to scan a proton on it.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import importlib.util, json
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 spec = importlib.util.spec_from_file_location('m3', ROOT / 'scripts/marcus_rate_A_v3.py')
 m = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(m) if False else None

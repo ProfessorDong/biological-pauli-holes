@@ -25,13 +25,17 @@ VERIFICATION PERFORMED HERE
 
 Usage: extract_pentadienyl_donor.py TAG    (slomd env: parmed + openmm)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, sys
 from pathlib import Path
 import numpy as np
 import parmed
 from openmm import app, unit
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD = ROOT/'md/mcpb'; UMB = ROOT/'results/umbrella'
 OUT = ROOT/'results/sapt_bio/native_fragment'
 SYS = json.loads((ROOT/'scripts/_sapt_systems.json').read_text()) if (ROOT/'scripts/_sapt_systems.json').exists() else None

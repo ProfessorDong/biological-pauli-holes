@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # Fixed-size worker pool over every stage-5 configuration.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -u
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/pauli/bin/python
 N=${1:-14}
 export OMP_NUM_THREADS=1

@@ -24,6 +24,10 @@ DOMAIN OF VALIDITY (recorded per site, not hidden)
 
 Usage: pauli_hole_survey.py
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, sys, urllib.request
 from pathlib import Path
 import numpy as np
@@ -31,7 +35,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from pauli_hole_hydrogen import solve, A0_ANG
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results' / 'pauli_hole_survey'
 CACHE = OUT / 'pdb'
 CLOSED_SHELL = {'C', 'N', 'O', 'S', 'P', 'SE', 'CL', 'F'}

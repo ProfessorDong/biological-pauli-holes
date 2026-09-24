@@ -15,11 +15,15 @@ WHY THIS EXISTS
 
 Usage: sapt_campaign_manifest.py [--latex]     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 R = ROOT / 'results'
 
 CAMPAIGNS = [

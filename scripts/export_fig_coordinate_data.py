@@ -5,11 +5,15 @@ matplotlib drew panel b on symlog(linthresh=0.05, linscale=0.55). pgfplots has n
 transform is applied here and the axis is drawn linear with ticks relabelled to the originals.
 Values are read from the same per-system files the manuscript quotes.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 T = ROOT / 'results/transverse_hessian'
 LT, LS = 0.05, 0.55
 A = LS / (1.0 - 0.1)

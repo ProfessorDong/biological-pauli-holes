@@ -30,11 +30,15 @@ METHOD
 
 Usage: herring_flicker_benchmark.py [--basis aug-cc-pVQZ] [--rmax 11]
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math, sys
 from pathlib import Path
 import psi4
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results' / 'herring_flicker'
 OUT.mkdir(parents=True, exist_ok=True)
 HF_COEFF, HF_POWER, HF_RATE = 1.641, 2.5, 2.0     # Herring & Flicker Eq. (19), for |2J|

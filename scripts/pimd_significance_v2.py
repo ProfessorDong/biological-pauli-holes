@@ -6,10 +6,14 @@ x beads (~7200 samples per condition) and block-bootstrap over frames with block
 (1.5 ps blocks) to respect the autocorrelation of the PIMD reactive-basin sampling. This gives
 the honest error bar on Delta ln(N_eff,H/D) per system and on the between-systems difference.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np, json
 
-DATA = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pimd_prod')
+DATA = Path(_REPO + '/results/pimd_prod')
 OUT = DATA/'analysis'; OUT.mkdir(parents=True, exist_ok=True)
 
 

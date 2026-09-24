@@ -4,10 +4,14 @@
 Every value comes from results/pimd_convergence/analysis/B1_convergence_analysis.json, the
 same file verify_figures.py checks the manuscript against.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 d = json.loads((ROOT / 'results/pimd_convergence/analysis/B1_convergence_analysis.json').read_text())
 pc, cv = d['per_condition'], d['convergence']
 Ps = (8, 16, 32)

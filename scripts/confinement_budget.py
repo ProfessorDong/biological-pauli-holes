@@ -39,6 +39,10 @@ TWO BUGS IN THE FIRST VERSION OF THIS SCRIPT, BOTH FIXED HERE
 
 Usage: confinement_budget.py     (needs the slomd env for parmed)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from collections import defaultdict
 from pathlib import Path
@@ -46,7 +50,7 @@ from pathlib import Path
 import numpy as np
 import parmed
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD = ROOT / 'md' / 'mcpb'
 RG = ROOT / 'results' / 'reactive_geometry'
 OUT = ROOT / 'results' / 'confinement_budget.json'

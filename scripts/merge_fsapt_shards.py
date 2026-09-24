@@ -12,13 +12,17 @@ number that looks fine.
 
 Usage: merge_fsapt_shards.py TAG CLAMP [n_frames]     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results/sapt_bio/donor_fragment'
 ENS = ROOT / 'results/ensemble_fluctuation'
 

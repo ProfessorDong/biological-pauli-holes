@@ -36,12 +36,16 @@ WHAT THE NUMBER MEANS, AND WHAT IT DOES NOT
 
 Usage: sapt_native_uncertainty.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 SRC = ROOT / 'results/sapt_bio/native_fragment'
 OUT = ROOT / 'results/sapt_bio/native_fragment_uncertainty.json'
 

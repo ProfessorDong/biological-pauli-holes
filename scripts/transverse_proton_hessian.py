@@ -39,6 +39,10 @@ WHAT IS AND IS NOT CLAIMED
 
 Usage: transverse_proton_hessian.py TAG CLAMP [half_width_A] [n_per_axis]   (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import os
 import sys
@@ -47,7 +51,7 @@ from pathlib import Path
 import numpy as np
 import psi4
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 RG = ROOT / 'results/reactive_geometry'
 OUT = ROOT / 'results/transverse_hessian'
 OUT.mkdir(parents=True, exist_ok=True)

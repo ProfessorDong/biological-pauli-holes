@@ -7,8 +7,10 @@
 # clamped runs (k = 150 kcal/mol/A^2, r0 = 2.55 A, 0.3 ns equilibration, 3.0 ns production) with a
 # fresh RNG seed, writing full coordinates every 50 ps. The result is an independent ensemble,
 # which is a stronger sensitivity test than re-using the published frames would have been.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -u
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python
 WIN=$ROOT/scripts/umbrella_window_frames.py
 MD=$ROOT/md/mcpb

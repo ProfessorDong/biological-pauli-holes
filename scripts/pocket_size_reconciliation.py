@@ -44,6 +44,10 @@ WHAT THIS IMPLIES, AND IT IS NOT A DISMISSAL
 
 Usage: pocket_size_reconciliation.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
@@ -51,7 +55,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import pauli_hole_hydrogen as ph  # noqa: E402
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results/pocket_size_reconciliation.json'
 A0 = 0.529177210903
 FIELD_CONST = 1523.99          # MV/cm per (e a0) / A^3, the manuscript's units identity

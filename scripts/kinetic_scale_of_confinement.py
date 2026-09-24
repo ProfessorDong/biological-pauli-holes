@@ -37,12 +37,16 @@ A SEPARATE POINT ABOUT FORCES, WHICH IS A REAL SUBTLETY
 
 Usage: kinetic_scale_of_confinement.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results/kinetic_scale_of_confinement.json'
 kB = 1.380649e-23
 amu = 1.66053906660e-27

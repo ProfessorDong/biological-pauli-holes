@@ -27,6 +27,10 @@ WHAT IT DOES NOT DO
 
 Usage: transverse_native_donor.py TAG [CLAMP] [half_width_A] [n_per_axis]   (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import os
 import sys
@@ -35,7 +39,7 @@ from pathlib import Path
 import numpy as np
 import psi4
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 D = ROOT / 'results/native_donor_validation'
 Ha2kcal, CONV = 627.5094740631, 0.694770
 

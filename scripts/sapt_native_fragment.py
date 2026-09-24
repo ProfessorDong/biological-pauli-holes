@@ -1,10 +1,14 @@
 """Step 2 of B2: run SAPT0/jun-cc-pVDZ 5-point scan reading the geometry JSON from step 1.
 Run in pauli env (which has psi4)."""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, json, numpy as np, psi4
 from pathlib import Path
 
 TAG = sys.argv[1]
-DIR = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/sapt_bio/native_fragment')
+DIR = Path(_REPO + '/results/sapt_bio/native_fragment')
 with open(DIR/f'{TAG}_geometry.json') as f:
     geom = json.load(f)
 

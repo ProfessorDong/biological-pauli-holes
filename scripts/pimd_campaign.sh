@@ -10,9 +10,11 @@
 # path-multiplicity analysis (Renyi-2 reactive-flux entropy from the isotope-specific
 # quantum marginal density on the reactive plane).
 
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/pimd_window.py"
 MD="$ROOT/md/mcpb"

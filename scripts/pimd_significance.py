@@ -8,10 +8,14 @@ and compute the distribution of
     Delta ln(N_eff,H/N_eff,D)_I553A - Delta ln(N_eff,H/N_eff,D)_I552A.
 Report P(delta > 0), the mean and 95% CI.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np, json
 
-DATA = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pimd_prod')
+DATA = Path(_REPO + '/results/pimd_prod')
 
 
 def load_run(system, iso, rep):

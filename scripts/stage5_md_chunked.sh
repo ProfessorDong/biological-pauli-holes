@@ -8,8 +8,10 @@
 # exists is skipped.
 #
 # Usage: stage5_md_chunked.sh TAG PRMTOP DONOR ACCEPTOR N_SEGMENTS [NS_PER_SEG]
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -u
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 SL=/home/liang/anaconda3/envs/slomd/bin/python
 WIN=$ROOT/scripts/umbrella_window_frames.py
 MD=$ROOT/md/mcpb

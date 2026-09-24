@@ -3,8 +3,10 @@
 # Runs Psi4 SAPT0/jun-cc-pVDZ on native isobutane (Leu) or acetamide (Asn) wall
 # fragment, 5-point scan. ~10-15 min per system on Psi4 (CPU), ~2 h total for 7 systems.
 
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/pauli/bin/python
 SCR="$ROOT/scripts/sapt_native_fragment.py"
 DIR="$ROOT/results/sapt_bio/native_fragment"

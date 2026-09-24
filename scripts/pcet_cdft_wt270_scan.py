@@ -13,6 +13,10 @@ cold-started from the reactant B3.4-dense atomic guess.
 Wall time estimate: 5 h/point cold-started, 1.5 h/point warm-started;
 total ~25-30 h for the full 15 points.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import subprocess, os, sys, json, time, shutil
 from pathlib import Path
 import numpy as np
@@ -24,7 +28,7 @@ from proton_pes_scanner_cdft_nwchem import (
     NWCHEM_ENV, NWCHEM_BIN, MPIRUN, NWCHEM_BASIS_LIBRARY,
 )
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUTDIR = ROOT / 'results' / 'pcet_cdft_v2'
 PRM = ROOT / 'md/mcpb/SLO_sub_solv.prmtop'
 # GEOMETRY CONSISTENCY: this MUST be the identical snapshot used by the

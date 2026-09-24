@@ -8,13 +8,17 @@ cannot find its source fails loudly rather than passing quietly.
 
 Usage: verify_2026_09_17_corrections.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import re
 import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 R = ROOT / 'results'
 PDF = ROOT / 'prxlife/main.pdf'
 

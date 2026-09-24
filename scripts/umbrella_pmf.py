@@ -7,12 +7,16 @@ gating descriptors that vibronically-nonadiabatic SLO rate theory connects to th
   dW(near)      W at the near-attack (3.1 A) above the minimum (kcal/mol)
 Convergence: each window is block-split (1st vs 2nd half) and the PMF recomputed for a spread.
 Usage: umbrella_pmf.py <tag> [--half first|second]"""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, glob, numpy as np
 from pymbar import FES
 
 tag=sys.argv[1]
 half = sys.argv[sys.argv.index('--half')+1] if '--half' in sys.argv else None
-d=f"/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/{tag}"
+d=_REPO + f"/results/umbrella/{tag}"
 kT=0.5961                                                  # kcal/mol at 300 K
 K_BIAS=12.0                                                # kcal/mol/A^2 (matches driver)
 

@@ -3,8 +3,10 @@
 # Each run is one process per grid point (psi4 is unreliable in a forked pool here), resumable
 # because a point whose file exists is skipped. Worker counts are set by per-point memory:
 # aug-cc-pVTZ has nbf 828 and needs the most, so it gets the fewest workers.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -u
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/pauli/bin/python
 L="$1"
 export OMP_NUM_THREADS=1

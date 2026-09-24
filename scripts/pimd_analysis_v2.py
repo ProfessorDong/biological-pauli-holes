@@ -9,10 +9,14 @@ per trajectory, ~86400 samples per (system, isotope) combination pooled.
 Reports both point estimate (histogram entropy) and frame-level block-bootstrap
 confidence intervals on Delta ln(N_eff,H/N_eff,D) per system and between systems.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 from pathlib import Path
 import numpy as np, json
 
-DATA = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pimd_prod')
+DATA = Path(_REPO + '/results/pimd_prod')
 OUT  = DATA/'analysis'; OUT.mkdir(parents=True, exist_ok=True)
 
 

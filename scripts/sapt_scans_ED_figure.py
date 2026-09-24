@@ -2,6 +2,10 @@
 """A1 + A2: parse the seven SAPT scans, refit quadratics with bootstrap uncertainty
 on k_exch^bio, render an Extended Data figure showing per-system exchange energy
 scans + residuals + summary (k_exch vs r_HW on log axes)."""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import re, math, json
 from pathlib import Path
 import numpy as np
@@ -96,7 +100,7 @@ for tag in SYSTEMS:
           f'RMS_resid = {math.sqrt(np.mean(resid**2)):.4f} kcal/mol')
 
 # JSON dump for the paper
-OUT_JSON = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/sapt_bio/sapt_uncertainty.json')
+OUT_JSON = Path(_REPO + '/results/sapt_bio/sapt_uncertainty.json')
 with open(OUT_JSON, 'w') as f:
     json.dump(results, f, indent=2)
 print(f'wrote {OUT_JSON}')
@@ -153,7 +157,7 @@ ax.text(0.98, 40.5, r'H$\cdots$H$\cdots$H model', ha='right', va='bottom',
 fig.suptitle(r'SAPT0/jun-cc-pVDZ transverse exchange scans across seven JBC-2019 SLO systems  '
              r'($E_{\mathrm{exch}}$ vs wall displacement $\delta$)', fontsize=9, y=0.99)
 
-OUT_PDF = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/sn-article-template/figED1_sapt_scans.pdf')
+OUT_PDF = Path(_REPO + '/sn-article-template/figED1_sapt_scans.pdf')
 fig.savefig(OUT_PDF, format='pdf', bbox_inches='tight', dpi=200)
 plt.close(fig)
 print(f'wrote {OUT_PDF}')

@@ -4,10 +4,12 @@
 # to resolve the barrier region and both wells at rate-quality resolution.
 # ~15-30 min per point × 15 points × 5 snapshots ~= 30-40 hours compute.
 
-set -uo pipefail
-source /home/liang/Workspace/WritePaper/CatalysisQuamBio/setup/env.sh
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+set -uo pipefail
+source ${_REPO}/setup/env.sh
+
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/proton_pes_scanner.py"
 PRM="$ROOT/md/mcpb/SLO_sub_solv.prmtop"

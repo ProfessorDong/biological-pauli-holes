@@ -29,6 +29,10 @@ overlap is integrated numerically, and KIE_FC = |S_H|^2/|S_D|^2 is swept over
 r_DA. No expansion of the coupling is made, which is the approach Soudackov and
 Hammes-Schiffer recommend over linear or quadratic expansion.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json, math, sys
 from pathlib import Path
 import numpy as np
@@ -129,7 +133,7 @@ if __name__ == '__main__' and '--test' not in _sys.argv:
     print(f'    Meyer-Klinman, harm.  : 0.75 A')
     print(f'    van der Waals contact : 1.17 A   (at r_DA = 3.22 A)')
 
-    out = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/fc_gating_morse.json')
+    out = Path(_REPO + '/results/fc_gating_morse.json')
     out.write_text(json.dumps(dict(
         morse_params=dict(D_CH=D_CH, beta_CH=B_CH, R0_CH=R0_CH,
                           D_OH=D_OH, beta_OH=B_OH, R0_OH=R0_OH),

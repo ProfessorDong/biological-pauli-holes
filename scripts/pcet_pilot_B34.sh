@@ -11,10 +11,12 @@
 # Runs the proton-PES scanner with npts=5, small-mode (73-atom cluster,
 # UKS B3LYP-D3BJ/def2-SVP + TRAH), for each snapshot. ~100 min per snapshot.
 
-set -uo pipefail
-source /home/liang/Workspace/WritePaper/CatalysisQuamBio/setup/env.sh
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+set -uo pipefail
+source ${_REPO}/setup/env.sh
+
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/proton_pes_scanner.py"
 PRM="$ROOT/md/mcpb/SLO_sub_solv.prmtop"

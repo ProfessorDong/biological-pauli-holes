@@ -45,6 +45,10 @@ resolve it against E ~ 0.5. Everything is done in mpmath at 60 digits.
 
 Usage: confinement_universality.py
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 from pathlib import Path
 
@@ -53,7 +57,7 @@ from mpmath import mp, mpf, hyp1f1, findroot, log as mlog
 
 mp.dps = 60
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 OUT = ROOT / 'results' / 'confinement_universality.json'
 
 A0_ANG = 0.529177210903

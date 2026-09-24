@@ -18,6 +18,10 @@ WHAT IT DOES
 
 Usage: stage5_extract.py TAG [n_configs]     (slomd env: parmed + openmm)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
@@ -25,7 +29,7 @@ from pathlib import Path
 import numpy as np
 import parmed
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD, CFG = ROOT / 'md/mcpb', ROOT / 'results/stage5_configs'
 RG = ROOT / 'results/reactive_geometry'
 LEU = ['CB', 'HB2', 'HB3', 'CG', 'HG', 'CD1', 'HD11', 'HD12', 'HD13',

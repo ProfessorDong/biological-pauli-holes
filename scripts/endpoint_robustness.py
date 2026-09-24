@@ -18,6 +18,10 @@ WHY THIS EXISTS
 
 Usage: endpoint_robustness.py     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import importlib.util as iu
 import itertools
 import json
@@ -25,7 +29,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 
 
 def load_modules():

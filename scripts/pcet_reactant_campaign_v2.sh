@@ -12,10 +12,12 @@
 #      > 0.5 is flagged loudly. See AUDIT_2026-08-10.md.
 #
 # 5 stratified WT snapshots x 15 points. Expect ~25-35 min/point => ~35 h total.
-set -uo pipefail
-source /home/liang/Workspace/WritePaper/CatalysisQuamBio/setup/env.sh
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+set -uo pipefail
+source ${_REPO}/setup/env.sh
+
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/proton_pes_scanner.py"
 PRM="$ROOT/md/mcpb/SLO_sub_solv.prmtop"
@@ -60,7 +62,7 @@ ls "$OUT"/*_scan.json 2>/dev/null | wc -l | xargs -I {} echo "  scans complete: 
 import json, glob
 bad = tot = 0
 print('\n  spin-state audit (expect <S^2> = 8.75):')
-for f in sorted(glob.glob('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/pcet_reactant_v2/*_scan.json')):
+for f in sorted(glob.glob('${_REPO}/results/pcet_reactant_v2/*_scan.json')):
     d = json.load(open(f))
     for p in d['points']:
         tot += 1

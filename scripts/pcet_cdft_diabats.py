@@ -50,6 +50,10 @@ Usage:
   pcet_cdft_diabats.py --spin 0.0 --out reactant_diabat
   pcet_cdft_diabats.py --spin 1.0 --out product_diabat --reverse
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import argparse, subprocess, os, sys, json, time, re
 from pathlib import Path
 import numpy as np
@@ -60,7 +64,7 @@ from qm_cluster import build_cluster
 from proton_pes_scanner_cdft_nwchem import (
     NWCHEM_ENV, NWCHEM_BIN, MPIRUN, NWCHEM_BASIS_LIBRARY)
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 PRM = ROOT / 'md/mcpb/SLO_sub_solv.prmtop'
 SEED = ROOT / 'results/umbrella/_RTX4060_rep1_archive_2026-08-10/WT/win_2.70_final.rst7'
 DONOR, ACCEPTOR, XFERH = 13002, 12985, 13031

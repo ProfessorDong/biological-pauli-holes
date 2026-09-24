@@ -3,13 +3,17 @@
 from the topology + snapshot. Writes a JSON that the psi4-env SAPT scan reads.
 
 Run in slomd env (which has parmed and openmm)."""
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import sys, json, numpy as np, parmed
 from openmm import app, unit
 from pathlib import Path
 
 TAG = sys.argv[1]
-MD = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb')
-UMB = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella')
+MD = Path(_REPO + '/md/mcpb')
+UMB = Path(_REPO + '/results/umbrella')
 
 # WT, I553A and L754A were extracted from the rep-1 trajectories that task C6 later
 # re-ran in place on the Blackwell GPU. The frames these fragments came from therefore
@@ -80,7 +84,7 @@ out = dict(
     native_wall=native,
     seed=info['seed'],
 )
-OUT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/sapt_bio/native_fragment')
+OUT = Path(_REPO + '/results/sapt_bio/native_fragment')
 OUT.mkdir(parents=True, exist_ok=True)
 with open(OUT/f'{TAG}_geometry.json','w') as f:
     json.dump(out, f, indent=2)

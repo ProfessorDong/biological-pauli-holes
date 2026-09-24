@@ -27,6 +27,10 @@ WHY THIS EXISTS
 
 Usage: methane_azimuth_sensitivity.py [TAG [n_angles]]     (pauli env)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
@@ -34,7 +38,7 @@ from pathlib import Path
 import numpy as np
 import psi4
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 DIR = ROOT / 'results/sapt_bio/native_fragment'
 OUT = ROOT / 'results/sapt_bio/donor_fragment'
 Ha2kcal, CONV = 627.5094740631, 0.694770

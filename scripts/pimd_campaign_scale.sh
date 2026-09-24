@@ -10,9 +10,11 @@
 # All other settings unchanged from pimd_campaign.sh (N=8 beads, 0.25 fs, NVT, no constraints,
 # 2 ps eq + 15 ps prod, HBonds relaxed).
 
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/pimd_window.py"
 MD="$ROOT/md/mcpb"

@@ -5,9 +5,11 @@
 # 8 systems x 15 windows x 200 ps = 24 ns MD ~ ~1.2 h GPU (200 ps @ ~3 min).
 # We restrict to a single replica (rep 1) for the 2D-volume MBAR pass.
 
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 
-ROOT=/home/liang/Workspace/WritePaper/CatalysisQuamBio
+ROOT=${_REPO}
 PY=/home/liang/anaconda3/envs/slomd/bin/python
 SCR="$ROOT/scripts/umbrella_reactplane.py"
 MD="$ROOT/md/mcpb"

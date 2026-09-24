@@ -5,11 +5,15 @@ Imports the projection and binning from render_fig6.py rather than reimplementin
 grids are the same numbers the superseded matplotlib figure drew. Emits one table per condition
 plus the shared colour-scale maximum and the annotated entropies.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import importlib.util, sys
 from pathlib import Path
 import numpy as np
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 spec = importlib.util.spec_from_file_location('rf6', ROOT / 'scripts/render_fig6.py')
 m = importlib.util.module_from_spec(spec)
 m.__dict__['__name__'] = 'rf6'

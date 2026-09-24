@@ -14,12 +14,14 @@
 # comparable; only the sampling hardware is now uniform.
 #
 # 4 systems x 15 windows x 5 ns ~= 330 ns. Expect ~15 min/window => ~15 h.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -uo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-cd /home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
+DRV=${_REPO}/scripts/umbrella_driver.py
+cd ${_REPO}/md/mcpb
 
-LOG=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/rep1_blackwell.log
+LOG=${_REPO}/results/umbrella/rep1_blackwell.log
 mkdir -p "$(dirname "$LOG")"
 echo "=== rep1 Blackwell re-run start: $(date -Iseconds) ===" | tee -a "$LOG"
 nvidia-smi --query-gpu=name,driver_version --format=csv,noheader 2>/dev/null | tee -a "$LOG"
@@ -38,6 +40,6 @@ run_rep DM    SLO_DM_sub_solv.prmtop    SLO_DM_sub_eq.rst7    12984 12967 5.53 1
 echo "" | tee -a "$LOG"
 echo "=== rep1 Blackwell re-run done: $(date -Iseconds) ===" | tee -a "$LOG"
 for s in WT I553A L754A DM; do
-  n=$(ls /home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/$s/win_*_colvar.dat 2>/dev/null | wc -l)
+  n=$(ls ${_REPO}/results/umbrella/$s/win_*_colvar.dat 2>/dev/null | wc -l)
   echo "  $s: $n / 15 windows" | tee -a "$LOG"
 done

@@ -10,13 +10,17 @@ Bohr -> Ang via *0.529), (iii) builds the 3x3 sub-Hessian eigen-blocks, and
 (iv) calls force_constant_bond / force_angle_constant for every Fe-centred bond and angle.
 Output: Fe-ligand bond k (kcal/mol/Ang^2) + r0, and X-Fe-Y / Fe-L-X angle k (kcal/mol/rad^2) + theta0.
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..', '..'))
+
 import sys, numpy as np
-REF="/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/ModSeminario_Py/Python_Modified_Seminario_Method"
+REF=_REPO + "/md/mcpb/ModSeminario_Py/Python_Modified_Seminario_Method"
 sys.path.insert(0, REF)
 from force_constant_bond import force_constant_bond
 from force_angle_constant import force_angle_constant
 
-HESS="/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb/orca_fe/fe_freq.hess"
+HESS=_REPO + "/md/mcpb/orca_fe/fe_freq.hess"
 BOHR=0.529                       # exact constant used by the reference (for consistency)
 H2KCAL=627.509391
 

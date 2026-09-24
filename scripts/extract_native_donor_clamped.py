@@ -20,6 +20,10 @@ WHAT IT GUARANTEES
 
 Usage: extract_native_donor_clamped.py TAG CLAMP      (slomd env: parmed + openmm)
 """
+import os as _os
+_REPO = _os.environ.get('PAULI_ROOT') or _os.path.abspath(
+    _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), '..'))
+
 import json
 import sys
 from pathlib import Path
@@ -28,7 +32,7 @@ import numpy as np
 import parmed
 from openmm import app, unit
 
-ROOT = Path('/home/liang/Workspace/WritePaper/CatalysisQuamBio')
+ROOT = Path(_REPO)
 MD, RG = ROOT / 'md/mcpb', ROOT / 'results/reactive_geometry'
 OUT = ROOT / 'results/native_donor_validation'
 

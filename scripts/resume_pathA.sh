@@ -4,11 +4,13 @@
 # already exists.
 #   L754A_rep2 (6 remaining) -> DM_rep2 (15) -> rep3 for WT/I553A/L754A/DM (15 x 4 = 60)
 # Then chains to run_pathA_followup.sh.
+_REPO="${PAULI_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")/.." && pwd)}"
+
 set -euo pipefail
 SL=/home/liang/anaconda3/envs/slomd/bin/python
-DRV=/home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/umbrella_driver.py
-MCPB=/home/liang/Workspace/WritePaper/CatalysisQuamBio/md/mcpb
-LOG=/home/liang/Workspace/WritePaper/CatalysisQuamBio/results/umbrella/pathA_replicas.log
+DRV=${_REPO}/scripts/umbrella_driver.py
+MCPB=${_REPO}/md/mcpb
+LOG=${_REPO}/results/umbrella/pathA_replicas.log
 cd "$MCPB"
 echo "=== PATH A RESUME start: $(date -Iseconds) ===" | tee -a "$LOG"
 
@@ -30,4 +32,4 @@ run_rep DM    SLO_DM_sub_solv.prmtop    SLO_DM_sub_eq.rst7    12984 12967 5.53 3
 
 echo "=== PATH A RESUME done: $(date -Iseconds) ===" | tee -a "$LOG"
 echo "=== Chaining into pathA_followup.sh ===" | tee -a "$LOG"
-exec /home/liang/Workspace/WritePaper/CatalysisQuamBio/scripts/run_pathA_followup.sh
+exec ${_REPO}/scripts/run_pathA_followup.sh
