@@ -68,7 +68,9 @@ ARTWORK_REQUIRED = {
     'fig2_index.pdf': ['K⊥', 'Ksep'],
     'figED1_sapt_scans.pdf': ['wall displacement'],
     'fig_coordinate.pdf': ['H moves', 'wall moves'],
-    'fig_native_donor.pdf': ['methane donor', 'native'],
+    'fig_native_donor.pdf': ['methane donor', 'native', 'native unresolved'],
+    # the axis once read "confinement weight" while its caption said range weight
+    'fig_budget.pdf': ['hydrogenic range weight'],
 }
 ARTWORK_FORBIDDEN = {
     # the measured curvature is a fragment separation, so no figure may label it transverse
@@ -88,6 +90,10 @@ ARTWORK_FORBIDDEN = {
     # frames store no acceptor oxygen, so 'sampled' invited a reading the data
     # cannot support
     'fig_coordinate.pdf': ['sampled C'],
+    # V750A is weakly negative with methane at 2.3 fit SE and unresolved only with the
+    # native donor; the artwork called it unresolved in both long after the caption was fixed
+    'fig_native_donor.pdf': ['unresolved in both'],
+    'fig_budget.pdf': ['confinement weight'],
     # the five snapshots are from BIASED windows; the artwork called them equilibrium
     # while the caption said the opposite. The generator's own variable was
     # r_DA_equilibrium, which is how the word reached the label.

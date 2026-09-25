@@ -160,7 +160,7 @@ CHECKS = [
     ('main text reports the thermal ensemble', MAIN,
      'No system changes class', True),
     ('abstract carries the ensemble result', MAIN,
-     '$101$-configuration thermal\nensemble', True),
+     'keeps\nthat sign in every one of $101$ sampled configurations', True),
     ('body carries the ensemble result', MAIN, 'No system changes class', True),
     # K_perp^int was negative definite in six of seven ONLY at the static geometries.
     # Over the ensemble it is five. The qualifier is the whole point and must survive.
@@ -170,8 +170,10 @@ CHECKS = [
      'six of the seven systems on these configurations', True),
     ('body records the ensemble count as five', MAIN,
      'over the thermal ensemble it is five', True),
-    ('appendix records that the ensemble count is five, not six', APP,
-     'the count is five', True),
+    ('appendix reports per-configuration frequencies, not a class for the mean matrix', APP,
+     'rather than a class for the averaged matrix', True),
+    ('appendix does not infer an indefinite mean matrix from a positive mean eigenvalue', APP,
+     'so it is indefinite in the mean', False),
     ('appendix does not present six-of-seven as an ensemble property', APP,
      'negative definite in six of seven over the ensemble', False),
     # the pre-registered plan was deviated from in three ways; all must stay disclosed
@@ -217,8 +219,10 @@ CHECKS = [
      'separation working rather than failing', True),
 
     # ---- framing B: the exponential bound leads the paper (2026-09-23) ----
-    ('abstract leads with the exponential bound', MAIN,
-     'question about a single distance', True),
+    ('abstract poses range AND coordinate, not one distance', MAIN,
+     'a question about range and about which displacement', True),
+    ('abstract does not reduce the question to one distance', MAIN,
+     'is a question about a single distance', False),
     # The abstract asserted an exclusion the Limits paragraph disclaims.
     ('abstract scopes the field estimate to the model', MAIN,
      'this is an estimate of scale, not an exclusion', True),
@@ -239,6 +243,8 @@ CHECKS = [
     # no longer claims. The case is now made on the measurement practice plus the honest null.
     ('cover letter argues the biological-physics case, not a methods case', COVER,
      'Any group\nstudying enzymatic hydrogen transfer can apply it to its own descriptor', True),
+    ('cover letter gives the single-centre intuition', COVER,
+     "costs $U'(r)/r<0$", True),
     ('cover letter does not claim an exclusion', COVER,
      'we do not claim to have excluded exchange-mediated contributions to catalysis', True),
     ('cover letter does not say the total matrix is uncomputed', COVER,
@@ -246,15 +252,15 @@ CHECKS = [
     ('cover letter does not claim the conclusion generalises', COVER,
      'That conclusion generalises past lipoxygenase', False),
     ('cover letter reports the native donor, not the methane surrogate', COVER,
-     'native bis-allylic substrate\ndonor rather than a model surrogate', True),
+     'using the real substrate as the hydrogen\ndonor rather than a small-molecule stand-in', True),
 
     # The letter must name the force-constant-decomposition precedent. A referee who knows
     # Duarte will otherwise read the novelty pitch as overclaimed against the manuscript,
     # which does cite it.
     ('cover letter names the force-constant decomposition precedent', COVER,
-     'Duarte and Bruns\ndid the latter for interacting quantum atoms in 2022', True),
+     'Duarte and Bruns did it for interacting quantum atoms in 2022', True),
     ('cover letter leads on the coordinate result', COVER,
-     'does not measure the curvature felt by the transferring hydrogen', True),
+     'is not the Pauli repulsion felt by the hydrogen atom the cavity encloses', True),
 
     # The figure captions were not in the sweep that qualified this claim, and the
     # Figure 5 caption carried the bare form while abstract, Results and appendix all
@@ -487,8 +493,10 @@ CHECKS = [
      'against the Hartree-Fock total and $-0.117\\%$ to $+0.352\\%$ against the B3LYP one', True),
     ('the additive shares are the HF span', MAIN,
      'they run from $-0.067\\%$ to $+0.279\\%$ at Hartree-Fock', True),
-    ('the additive sign change is four systems, not six', APP,
-     'four systems rather than six', True),
+    ('the additive comparison is four versus five, not four versus six', APP,
+     'which are resolved negative in five systems', True),
+    ('the appendix does not claim V750A lost a negative native component', APP,
+     'removes the negative share in I552A and V750A', False),
     ('the additive share span is quoted for both totals', APP,
      '$-0.067$ to $+0.279\\%$ against the Hartree-Fock total and $-0.084$ to $+0.348\\%$ '
      'against B3LYP', True),
@@ -496,7 +504,85 @@ CHECKS = [
     # check that required it now forbids it instead: a removed string must not creep back.
     ('the article does not name the projection script', APP,
      'duarte\\_projection\\_check', False),
+    # Inline repo paths were removed throughout: a reader cannot act on a bare working
+    # filename, the Code Availability statement already points at the whole repository,
+    # and two of the files named were not even tracked in it.  Software names, ORCA
+    # keywords and library calls are not paths and are unaffected.
+    ('no script filename is printed in the article', APP, '.py}', False),
+    ('no results path is printed in the article', APP, 'texttt{results/', False),
+    ('the unfindable demo scan is not cited', APP, 'sapt\\_demo', False),
+    ('the unpublished revision-audit script is not cited', APP,
+     'check\\_coordinate\\_claims', False),
 
+    # ---- revision-2 audit, 2026-09-24 afternoon.  Each was a statement the manuscript's own
+    # revised passages withdrew while a duplicate went on asserting it.  Guard the ABSENCE of
+    # the withdrawn form, not only the presence of the correction: a positive-string check
+    # cannot detect the opposite claim surviving somewhere else in the document.
+    ('the withdrawn Fe(III)-retention claim is gone', APP,
+     'retained Fe(III) character across the whole scan', False),
+    ('the scan is not called single-diabatic', APP, 'single-diabatic-surface', False),
+    ('the scan is described as unconstrained adiabatic', APP,
+     'unconstrained single-adiabatic-surface construction', True),
+    ('the stale three-of-ten convergence count is gone', MAIN,
+     '$3$ of the $10$ optimizations met every', False),
+    ('the mean/median orderings are not claimed to agree', APP,
+     'and the two orderings agree', False),
+    ('the secondary association is placed at the reference condition', MAIN,
+     'it appears at the reference condition rather than the compressed one', True),
+    ('the non-reactive-location wording is gone', MAIN,
+     'the inverted sign and the non-reactive location', False),
+    ('thermal motion is not said to increase anti-confinement', APP,
+     'anti-confinement away; it increases it', False),
+    ('the constrained pilot is not called an electronic barrier', MAIN,
+     'the electronic barrier falls by', False),
+    ('the constrained pilot is named as an endpoint energy difference', MAIN,
+     'constrained endpoint energy difference', True),
+    ('one constrained path is not read as excluding transfer', APP,
+     'so no transfer occurs at the equilibrium separation at all', False),
+    ('the biased snapshot mean is not called an equilibrium mean', APP,
+     'at the equilibrium umbrella-sampling', False),
+    ('f is not called the share of the ensemble carrying flux', APP,
+     'share of the equilibrium ensemble that carries isotope-$i$ flux', False),
+    ('the FC inversion does not assert a small f', APP,
+     'this places the wild-type $f\\!\\ll\\!1$', False),
+    ('the ZPE channel is not called a maximum isotope effect', APP,
+     'the largest isotope effect one variant can gain', False),
+    ('mutagenesis is not said to report the separation curvature', MAIN,
+     'The exchange-repulsion curvature a cavity-lining mutation reports', False),
+    ('the descriptor is presented as our own computational proposal', MAIN,
+     'We tested a fragment-separation curvature as a computational descriptor', True),
+    ('the hydrogen is not called mid-transfer', MAIN, 'is mid-transfer in an', False),
+    ('the exponential form is not called established in the active site', MAIN,
+     'exponential form is established in a real active site', False),
+    ('the abstract scopes the exponential rate to the solved geometries', MAIN,
+     'at a rate fixed in both solved geometries', True),
+    ('the Duarte comparison is not said to remove the partition explanation', MAIN,
+     'the agreement removes one explanation we would otherwise owe a reader', False),
+    ('the sphere kT range is not the superseded 1.4 to 8.2', APP,
+     'The spherical geometry gives $1.4$ to $8.2$', False),
+    ('the restraint offsets are the raw-series values', APP, '$+0.2289\\,\\text{\\AA}$', True),
+    ('the superseded restraint offset is gone', APP, '$+0.223\\,\\text{\\AA}$', False),
+    ('the permutation test is not called exact', MAIN, 'exact permutation', False),
+    ('the stage-5 grid retention limit is stated', APP,
+     'cannot be independently refitted from it', True),
+    ('the cover letter does not generalise the 28 per cent', COVER,
+     'setting a $28\\%$ uncertainty on the magnitude', False),
+    ('the cover letter reports both totals', COVER,
+     'against the Hartree-Fock total and $-0.117\\%$ to $+0.352\\%$', True),
+    ('the cover letter does not claim the complete record is public', COVER,
+     'The complete input, output and analysis record for every number', False),
+    ('the version DOI is cited', MAIN, '10.5281/zenodo.22947653', True),
+
+    # A draft-era convention announced that provisional results were flagged
+    # [pending completion of the validation study].  The macro was defined once, used once,
+    # and marked NO result: every run had finished.  It told a referee the paper contained
+    # provisional numbers that do not exist.
+    ('no provisional-results convention is announced', APP,
+     'Results that depend on the running simulations are marked', False),
+    ('the pending macro is not defined', MAIN, 'newcommand{\\pending}', False),
+    # the protocol headings carried a hard-coded "6.N" from a structure this appendix no
+    # longer has, printed inside a lettered appendix
+    ('the protocol headings are not hard-numbered', APP, 'subsection*{6.', False),
 ]
 
 
