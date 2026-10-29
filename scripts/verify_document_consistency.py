@@ -573,6 +573,18 @@ CHECKS = [
      'The complete input, output and analysis record for every number', False),
     ('the version DOI is cited', MAIN, '10.5281/zenodo.22947653', True),
 
+    # ---- equation audit, 2026-10-29.  Every display equation must fit one column.
+    ('no widetext in the main text', MAIN, 'begin{widetext}', False),
+    ('no widetext in the appendices', APP, 'begin{widetext}', False),
+    # eq:HSrate carried unindexed level energies while eq:kchannels and eq:SEqH index them
+    ('HSrate indexes the vibronic levels by isotope', APP,
+     'varepsilon_{\\nu}^{(i)}-\\varepsilon_{\\mu}^{(i)}\\big)^{2}}{4\\lambda(\\mathbf R)k_{B}T}\\right].', True),
+    # eq:Efield mixed r and R for the same distance
+    ('Efield uses one symbol for the distance', APP, '(r\\times10^{-10})', False),
+    # the dipole asymptote's large-xi0 behaviour is stated with its 50-digit numbers
+    ('the asymptote overshoot at large xi0 is stated', APP,
+     'reaches $1.019$ at $25$ and is still $1.015$ at $50$', True),
+
     # A draft-era convention announced that provisional results were flagged
     # [pending completion of the validation study].  The macro was defined once, used once,
     # and marked NO result: every run had finished.  It told a referee the paper contained
