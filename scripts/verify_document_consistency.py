@@ -318,7 +318,7 @@ CHECKS = [
     ('the anti-confining eigenvalue count is not left unqualified', APP,
      'anti-confining eigenvalue we find in six of seven systems, a count', True),
 
-    # Verified against references/1803.01037.pdf on 2026-09-23.  The source says "a typical
+    # Verified against references/markland2018_arxiv.pdf on 2026-09-23.  The source says "a typical
     # system containing O-H covalent bonds", not X-H, and it does NOT state a
     # P ~ hbar*w_max/kT criterion anywhere; that inference is ours.  Both had been folded into
     # a single \\cite{markland2018}.  O-H is the higher frequency, so their P=32 overstates
@@ -332,7 +332,7 @@ CHECKS = [
     ('the criterion is not presented as the accepted one', APP,
      'The accepted criterion is that $P$ must be a low multiple', False),
 
-    # Verified against references/ar500322s.pdf on 2026-09-23.  The quotation is verbatim (only
+    # Verified against references/kohen2015.pdf on 2026-09-23.  The quotation is verbatim (only
     # sentence-initial "From" lowercased for embedding) and "orthogonal" occurs exactly ONCE in
     # the whole paper, in a concluding summary, so "asserted qualitatively without an associated
     # observable" is exact.  But the passage had said we make his stiffening picture quantitative,
