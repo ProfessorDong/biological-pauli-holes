@@ -159,8 +159,9 @@ CHECKS = [
      'has no ensemble averaging', False),
     ('main text reports the thermal ensemble', MAIN,
      'No system changes class', True),
-    ('abstract carries the ensemble result', MAIN,
-     'keeps\nthat sign in every one of $101$ sampled configurations', True),
+    # 69, not 101: the five negative systems were sampled 16+16+16+16+5 times; 101 is all seven
+    ('abstract carries the ensemble result with the right denominator', MAIN,
+     'all $69$ configurations sampled from those five systems', True),
     ('body carries the ensemble result', MAIN, 'No system changes class', True),
     # K_perp^int was negative definite in six of seven ONLY at the static geometries.
     # Over the ensemble it is five. The qualifier is the whole point and must survive.
@@ -168,8 +169,9 @@ CHECKS = [
      'six of the seven systems on these configurations', True),
     ('body qualifies the total-interaction count as geometry-specific', MAIN,
      'six of the seven systems on these configurations', True),
-    ('body records the ensemble count as five', MAIN,
-     'over the thermal ensemble it is five', True),
+    # a mean of sorted eigenvalues is not the spectrum of a mean matrix: report frequencies
+    ('body reports ensemble per-configuration frequencies, not a class count', MAIN,
+     '$10$ of $16$ for V750A, with L754A positive in all $16$', True),
     ('appendix reports per-configuration frequencies, not a class for the mean matrix', APP,
      'rather than a class for the averaged matrix', True),
     ('appendix does not infer an indefinite mean matrix from a positive mean eigenvalue', APP,
@@ -252,7 +254,7 @@ CHECKS = [
     ('cover letter does not claim the conclusion generalises', COVER,
      'That conclusion generalises past lipoxygenase', False),
     ('cover letter reports the native donor, not the methane surrogate', COVER,
-     'using the real substrate as the hydrogen\ndonor rather than a small-molecule stand-in', True),
+     'substrate fragment as the hydrogen donor rather than a small-molecule stand-in', True),
 
     # The letter must name the force-constant-decomposition precedent. A referee who knows
     # Duarte will otherwise read the novelty pitch as overclaimed against the manuscript,
@@ -260,7 +262,7 @@ CHECKS = [
     ('cover letter names the force-constant decomposition precedent', COVER,
      'Duarte and Bruns did it for interacting quantum atoms in 2022', True),
     ('cover letter leads on the coordinate result', COVER,
-     'is not the Pauli repulsion felt by the hydrogen atom the cavity encloses', True),
+     'one from displacing the hydrogen atom the cavity encloses, do not agree', True),
 
     # The figure captions were not in the sweep that qualified this claim, and the
     # Figure 5 caption carried the bare form while abstract, Results and appendix all
@@ -309,8 +311,8 @@ CHECKS = [
     # 16+5+16+16+16+16+16 = 101 configurations.  K_perp^int: negative DEFINITE in 6 of 7 at the
     # static geometries but only 5 of 7 over the ensemble, V750A's larger eigenvalue averaging
     # +0.0091 N/m.  Verified against stage5_ensemble_panel.json on 2026-09-23.
-    ('ensemble negative-definite count is five, not six', MAIN,
-     'over the thermal ensemble it is five of seven', True),
+    ('the ensemble five-of-seven class count is gone', MAIN,
+     'over the thermal ensemble it is five of seven', False),
     ('static negative-definite count carries the geometry qualifier', MAIN,
      'negative definite in six of the seven systems \\emph{at these geometries}', True),
     ('the anti-confining eigenvalue count is not left unqualified', APP,
@@ -582,8 +584,54 @@ CHECKS = [
     # eq:Efield mixed r and R for the same distance
     ('Efield uses one symbol for the distance', APP, '(r\\times10^{-10})', False),
     # the dipole asymptote's large-xi0 behaviour is stated with its 50-digit numbers
-    ('the asymptote overshoot at large xi0 is stated', APP,
+    ('the asymptote numbers at large xi0 are stated', APP,
      'reaches $1.019$ at $25$ and is still $1.015$ at $50$', True),
+    ('the asymptote error direction is stated the right way round', APP,
+     'past the crossing the leading form underestimates the exact value', True),
+    ('the reversed direction wording is gone', APP,
+     'the leading form overshoots rather than undershoots', False),
+
+    # ---- 2026-10-29 audit.  Absence guards for every statement replaced in that pass.
+    ('the abstract counts 69 configurations for the five negative systems', MAIN,
+     'all $69$ configurations sampled from those five systems', True),
+    ('the abstract does not claim 101 configurations for five systems', MAIN,
+     'every one of $101$ sampled configurations', False),
+    ('the wall check is not extended to I553A', MAIN,
+     'grid and wall checks extended to L754A and I553A', False),
+    ('the appendix does not run all six settings on L754A', APP,
+     'Across all six settings $\\lambda_1$ stays', False),
+    ('Figure 5 caption uses the plotted geometry distance', MAIN,
+     '$3.46\\,\\si{\\angstrom}$ away in this geometry', True),
+    ('Figure 5 caption does not carry the equilibrium-campaign 4.8', MAIN,
+     'polar and\n$4.8\\,\\si{\\angstrom}$ away', False),
+    ('the ensemble is reported by per-configuration frequency, not a class count', MAIN,
+     'it is five of seven, V750A being the', False),
+    ('the methane Methods text does not call the wall scan transverse', APP,
+     'obtained\nfrom displacements \\emph{transverse} to that axis', False),
+    ('the methane scan is named a fragment-separation curvature', APP,
+     'the fragment-separation curvature reported as $k_{\\mathrm{exch}}^{\\mathrm{bio}}=2a_{2}$', True),
+    ('the proton scan is not called QM/MM', MAIN, 'QM/MM proton', False),
+    ('the proton scan is not called QM/MM in the appendix', APP, 'QM/MM proton', False),
+    ('the overlap term is not said to have to carry the ladder', MAIN, 'must carry the ladder', False),
+    ('the longitudinal comparison is not a failed test', MAIN, 'the wall contact fails it', False),
+    ('no pocket radius is inferred from the transverse Hessian', MAIN,
+     'no pocket radius is inferred from it', True),
+    ('the native pair is not called open-shell', MAIN, 'open-shell native pair', False),
+    ('the range-weight gap is 0.39 A', APP, 'about $0.39\\,\\si{\\angstrom}$ rather than $0.75$', True),
+    ('the range-weight factor at the measured gap is 4.3', APP, 'the measured $0.39\\,\\si{\\angstrom}$ into $4.3$', True),
+    ('the e-folding length is a0/2', APP, 'e-folding length is $a_0/2=0.26', True),
+    ('the half-angstrom decay length is gone', APP, 'decay length of half an angstrom', False),
+    ('the cavity is not said to be unable to recover the factor', APP, 'by weight of numbers, and it cannot', False),
+    ('the paraboloid prefactor argument keeps u0', APP, '\\epsilon\\simeq u_0e^{-u_0}\\simeq2d', True),
+    ('Table VIII I538A native value is 6.53', APP, '$\\phantom{1}6.53$ & $100$', True),
+    ('Table XIV L754A residual is 8.4e-6', APP, '$0.1633$ & $8.4\\times10^{-6}$', True),
+    ('Table XVI text does not call the differences barriers', APP, 'Barriers are stable', False),
+    ('LaCour is cited as the published article', Path(str(COVER).replace('cover-letter.tex', 'pauli-references.bib')),
+     'J. Chem. Theory Comput.",\n  volume  = "22"', True),
+    ('the Duarte range names the ammonia donors near 2 per cent', MAIN, 'with the ammonia donors near $2\\%$', True),
+    ('the cover letter uses the 69 denominator', COVER, '$69$ in all for the five negative ones', True),
+    ('the cover letter does not claim 101 for the resolved systems', COVER,
+     'persists in every one of $101$ configurations', False),
 
     # A draft-era convention announced that provisional results were flagged
     # [pending completion of the validation study].  The macro was defined once, used once,
