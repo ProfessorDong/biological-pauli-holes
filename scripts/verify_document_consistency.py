@@ -227,11 +227,11 @@ CHECKS = [
      'is a question about a single distance', False),
     # The abstract asserted an exclusion the Limits paragraph disclaims.
     ('abstract scopes the field estimate to the model', MAIN,
-     'this is an estimate of scale, not an exclusion', True),
+     'a one-electron hard-wall estimate of scale, not an exclusion', True),
     ('abstract does not assert the exclusion', MAIN,
      'Confinement is therefore not the\ncatalytic field', False),
     ('abstract keeps the measured-not-assumed discipline', MAIN,
-     'We measure that distance rather than assume it', True),
+     'At the measured contact distances,', True),
     ('exponential section precedes the coordinate section', MAIN,
      'How far direct exchange reaches', True),
     ('discussion separates the model estimate from the measured content', MAIN,
@@ -304,7 +304,7 @@ CHECKS = [
     ('appendix still discloses the Ley-Koo dipole disagreement by row', APP,
      '$P=0.0041$ at $\\xi_0=10.01$', True),
     ('appendix still credits Ley-Koo and Garcia-Castelan for the same boundary', APP,
-     'The same single open paraboloidal boundary was also solved directly', True),
+     'solved that same single open paraboloidal boundary directly', True),
 
     # Two different matrices give two different counts and they must not be swapped.
     # K_perp^exch: smaller eigenvalue negative in 6 of 7 ensemble means (all but L754A), over
@@ -328,7 +328,7 @@ CHECKS = [
     ('the P=32 requirement is not generalised to X-H', MAIN,
      'structural properties of X--H bonds', False),
     ('the bead-count criterion is marked as our inference, not the source\'s', APP,
-     'it is ours rather than theirs', False if False else True),
+     'is ours rather than theirs', True),
     ('the criterion is not presented as the accepted one', APP,
      'The accepted criterion is that $P$ must be a low multiple', False),
 
@@ -359,10 +359,10 @@ CHECKS = [
     ('the barrier comparison does not claim to remove circularity', MAIN,
      'removes the circularity from the choice of', False),
     ('the reference-clamp barrier is labelled an extrapolation', MAIN,
-     'extrapolations beyond the sampled range', True),
+     'by extrapolation beyond the computed range', True),
     # slo_xi0_full.json stores per-system/per-clamp MEANS; WT alone reaches 2.356 A.
     ('the cavity interval is labelled an interval of means', MAIN,
-     'per-system, per-clamp \\emph{mean} closest', True),
+     'per-system means of $2.42$ to $2.95', True),
     # The stage-5 selector takes a strided prefix, not a spread across the trajectory.
     ('the stage-5 sampling prefix is disclosed', APP,
      'takes a strided\n\\emph{prefix} of each saved trajectory', True),
@@ -398,7 +398,7 @@ CHECKS = [
     # averaging sorted eigenvalues is not the spectrum of the averaged matrix
     ('no system is classified by its mean matrix', MAIN, 'indefinite in the mean', False),
     ('the averaging caveat is stated', APP,
-     'not the same object as the spectrum of the\naveraged Hessian', True),
+     'coincide with the spectrum of the averaged Hessian only when the eigenvectors do not rotate', True),
     # the transverse ZPE is one channel, not the only one
     ('the ZPE channel is not claimed to be the only route', MAIN,
      'effect only by changing the curvature of the transverse potential', False),
@@ -530,7 +530,7 @@ CHECKS = [
     ('the mean/median orderings are not claimed to agree', APP,
      'and the two orderings agree', False),
     ('the secondary association is placed at the reference condition', MAIN,
-     'it appears at the reference condition rather than the compressed one', True),
+     'appears at the reference condition rather than the compressed one', True),
     ('the non-reactive-location wording is gone', MAIN,
      'the inverted sign and the non-reactive location', False),
     ('thermal motion is not said to increase anti-confinement', APP,
