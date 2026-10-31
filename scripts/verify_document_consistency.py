@@ -34,7 +34,8 @@ COVER = ROOT / 'cover-letter.tex'
 # (description, file, text, must_be_present)
 CHECKS = [
     # the withdrawn reactant-ZPE rate partition must not survive anywhere
-    ('rate partition withdrawn in supplement', SUP, 'we withdraw it', True),
+    ('no isotope scaling is formed from the O...O curvature', SUP,
+     'An isotope scaling obtained by inserting a chosen mass into a curvature measured along a different coordinate is arithmetic, not evidence', True),
     ('no tunneling amplification claimed in supplement', SUP,
      'is the additional amplification attributable to tunneling', False),
     ('no tunneling amplification claimed in appendix', APP,
@@ -45,7 +46,8 @@ CHECKS = [
     ('main text does not assert adiabatic impossibility', MAIN,
      'cannot relax the electronic structure', False),
     # the separation curvature must not be converted into a nuclear frequency
-    ('appendix withdraws the ZPE conversion', APP, 'That conversion is withdrawn', True),
+    ('appendix forms no ZPE from the separation curvature', APP,
+     'so it supports no frequency and no zero-point energy', True),
     ('main text does not call k_exch a transverse curvature', MAIN,
      'transverse exchange-repulsion curvature $k_\\mathrm{exch}', False),
     # coordinate invariance of a covariance determinant
@@ -123,6 +125,15 @@ CHECKS = [
     # figure is quoted more easily than the caption that retracts it. The appendix
     # section is retained in full, so the record survives without the artwork.
     ('withdrawn dispersion figure is not reinstated', APP, 'fig4_dispersion.pdf', False),
+    # 2026-10-31: this is a first submission. A reader has no "earlier version" to compare
+    # against, so the manuscript states the correct result and carries no correction diary.
+    # The withdrawn claims are still guarded by the absence checks throughout this file.
+    ('main text carries no earlier-version narrative', MAIN, 'earlier version', False),
+    ('main text carries no earlier-draft narrative', MAIN, 'earlier draft', False),
+    ('appendix carries no earlier-version narrative', APP, 'earlier version', False),
+    ('appendix carries no retraction subsection', APP, 'app:retraction', False),
+    ('appendix does not call the exploratory descriptor withdrawn in a heading', APP,
+     'campaigns and a withdrawn descriptor', False),
     ('density figure folded in', APP, 'fig6_pimd_density.pdf', True),
     ('convergence figure folded in', APP, 'figED2_bead_convergence.pdf', True),
     ('no Supplemental Material pointers left', MAIN, 'Supplemental Material Sec', False),
@@ -278,7 +289,7 @@ CHECKS = [
     ('retained section names sigma, not a mean, for the MBAR recomputation', APP,
      'MBAR reanalysis of $\\sigma_{r_{\\mathrm{DA}}}$', True),
     ('the removal is recorded rather than silent', APP,
-     'An earlier version of this appendix carried a two-panel figure', True),
+     'The apparent significance of the endpoint estimator is therefore an umbrella-window-spacing artefact', True),
     ('no MBAR-reweighted mean r_DA is claimed', APP,
      'MBAR-reweighted mean $r_\\mathrm{DA}$', False),
 
