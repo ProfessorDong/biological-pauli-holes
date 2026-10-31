@@ -146,6 +146,12 @@ CHECKS = [
      'The pair brackets the separations Klinman and Kohen contrast', True),
     ('KSI field attributed to short polar contacts, not to repulsion (Fried & Boxer 2017)', MAIN,
      'paid for by distal binding', True),
+    # Discussion places the exchange decay (2.79 and 3.80 per A, both already in Results) beside
+    # Klinman & Kohen's ~23 per A for hydrogen tunneling; the 23 is THEIR quoted estimate.
+    ('tunneling decay constant is attributed to Klinman & Kohen', MAIN,
+     'Klinman and Kohen quote a decay constant of about $23$ per', True),
+    ('the decay comparison is framed as mass, not model', MAIN,
+     'The gap is one of mass rather than of model', True),
     ('density figure folded in', APP, 'fig6_pimd_density.pdf', True),
     ('convergence figure folded in', APP, 'figED2_bead_convergence.pdf', True),
     ('no Supplemental Material pointers left', MAIN, 'Supplemental Material Sec', False),
