@@ -134,6 +134,18 @@ CHECKS = [
     ('appendix carries no retraction subsection', APP, 'app:retraction', False),
     ('appendix does not call the exploratory descriptor withdrawn in a heading', APP,
      'campaigns and a withdrawn descriptor', False),
+    # 2026-10-31: three review PDFs (hs2015, fried2017, klinman2013) read in full; the sentences
+    # they now anchor were checked against the printed text, and a sentence that rendered as
+    # "different derivatives Second," was repaired.
+    ('I553 comparison sentence is complete', MAIN, 'different derivatives Second', False),
+    ('KIE temperature dependence is tied to DAD sampling (Klinman & Kohen 2013)', MAIN,
+     'their temperature dependence reports how much the donor--acceptor distance must be sampled', True),
+    ('classical force-field resolution caveat (Hammes-Schiffer 2015) is stated', MAIN,
+     'classical force fields often cannot resolve', True),
+    ('the two clamps are bracketed against Klinman & Kohen 2013', MAIN,
+     'The pair brackets the separations Klinman and Kohen contrast', True),
+    ('KSI field attributed to short polar contacts, not to repulsion (Fried & Boxer 2017)', MAIN,
+     'paid for by distal binding', True),
     ('density figure folded in', APP, 'fig6_pimd_density.pdf', True),
     ('convergence figure folded in', APP, 'figED2_bead_convergence.pdf', True),
     ('no Supplemental Material pointers left', MAIN, 'Supplemental Material Sec', False),
