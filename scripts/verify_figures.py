@@ -142,7 +142,9 @@ def main():
 
     # fig4_dispersion was removed 2026-09-23: it plotted a withdrawn correlation, and a
     # figure is quoted more easily than its caption. The appendix section is retained.
-    ck(len(allcaps) == 12, 'figure count is 12', f'found {len(allcaps)}')
+    # fig2_index was removed 2026-10-31: it duplicated fig_coordinate's two-coordinate panel
+    # and illustrated an index the paper never evaluates.
+    ck(len(allcaps) == 11, 'figure count is 11', f'found {len(allcaps)}')
 
     for name, cap in allcaps:
         f = LIVE / name
@@ -175,11 +177,15 @@ def main():
     # inequality surviving in the appendix and in this figure's artwork after both had been
     # described as withdrawn, so the check is now inverted: presence of the numbers is
     # required in the model discussion, presence of the inequality is forbidden anywhere.
-    kt = json.loads((R / 'kbt_ceiling_both_geometries.json').read_text())['by_distance']['2.4']
-    ck(f'{kt["sphere"]["dE_over_kT"]:.1f}' in main_txt, 'model ratio 8.2 still traceable',
-       'kbt_ceiling_both_geometries.json :: by_distance.2.4.sphere.dE_over_kT')
-    ck(f'{kt["paraboloid"]["dE_over_kT"]:.2f}' in main_txt, 'model ratio 1.02 still traceable',
-       'kbt_ceiling_both_geometries.json :: by_distance.2.4.paraboloid.dE_over_kT')
+    # The JSON's 2.4/3.0 A window (8.2 and 1.02) is the SUPERSEDED window; the paper quotes the
+    # 2.42/2.95 A window (7.8 and 0.96, from the exact solver). Guard that the superseded pair is
+    # not quoted as the biological range, and that the current pair is present.
+    kt = json.loads((R / 'kbt_ceiling_both_geometries.json').read_text())['by_distance']
+    ck('1.4 to 8.2' not in main_txt and '0.14 to 1.02' not in main_txt,
+       'superseded 2.4/3.0 A thermal window not quoted as the biological range',
+       'kbt_ceiling_both_geometries.json :: by_distance (2.4, 3.0)')
+    ck('1.6 to 7.8' in main_txt and '0.16 to 0.96' in main_txt,
+       'current 2.42/2.95 A thermal window quoted for both geometries')
     for bad, what in [('\\Pi_H\\le8.2', 'Pi_H <= 8.2'), ('\\Pi_H\\le1.02', 'Pi_H <= 1.02')]:
         ck(bad not in APP.read_text() and bad not in MAIN.read_text(),
            f'no biological bound "{what}" in source')

@@ -120,7 +120,28 @@ CHECKS = [
     # inside the article, and no stray Supplemental Material pointer may remain in the text
     ('RPMD account folded into the appendices', APP,
      'Equilibrium quantum delocalization on the I553A/I552A pair', True),
-    ('index figure folded in', APP, 'fig2_index.pdf', True),
+    # 2026-10-31 float audit: the index figure duplicated fig:coordinate (two coordinates) and
+    # illustrated an index the paper never evaluates; it was removed, not folded.
+    ('index figure removed as redundant', APP, 'fig2_index.pdf', False),
+    # every float is cited from the text; these eleven had no \ref before the audit
+    ('fig:coordinate is cited', MAIN, 'Fig.~\\ref{fig:coordinate}', True),
+    ('tab:wallcheck is cited', APP, 'Table~\\ref{tab:wallcheck}', True),
+    ('tab:scalarsummary is cited', APP, 'Table~\\ref{tab:scalarsummary}', True),
+    ('tab:transfergeom is cited', APP, 'Table~\\ref{tab:transfergeom}', True),
+    ('tab:qmpes is cited', APP, 'Table~\\ref{tab:qmpes}', True),
+    ('tab:fc_gating is cited', APP, 'Table~\\ref{tab:fc_gating}', True),
+    ('tab:ensfluct is cited', APP, 'Table~\\ref{tab:ensfluct}', True),
+    ('tab:expbound is cited', APP, 'Table~\\ref{tab:expbound}', True),
+    ('fig:fields is cited', APP, 'Fig.~\\ref{fig:fields}', True),
+    ('fig:decisive is cited', APP, 'Fig.~\\ref{fig:decisive}', True),
+    ('fig:pimd is cited from its own appendix', APP, '(Fig.~\\ref{fig:pimd})', True),
+    # one definition of the transverse curvature (eq:curv) and one rate kernel (eq:HSrate)
+    ('the transverse curvature is defined once', APP, 'label{eq:Kperp}', False),
+    ('the rate kernel is displayed once', APP, 'label{eq:kchannels}', False),
+    ('the dipole asymptote is displayed once', APP, 'label{eq:expbound-si}', False),
+    ('no stale pointer to a Methods subsection in tab:kexch', APP,
+     'SAPT exchange curvature at biological geometry', False),
+    ('no clamp is called where transfer occurs', APP, 'at the separations where transfer occurs', False),
     # fig4_dispersion was REMOVED 2026-09-23. It plotted a withdrawn correlation, and a
     # figure is quoted more easily than the caption that retracts it. The appendix
     # section is retained in full, so the record survives without the artwork.
@@ -345,7 +366,7 @@ CHECKS = [
     ('static negative-definite count carries the geometry qualifier', MAIN,
      'negative definite in six of the seven systems \\emph{at these geometries}', True),
     ('the anti-confining eigenvalue count is not left unqualified', APP,
-     'anti-confining eigenvalue we find in six of seven systems, a count', True),
+     'anti-confining in six of seven systems with the methane donor and five of seven with the native one', True),
 
     # Verified against references/markland2018_arxiv.pdf on 2026-09-23.  The source says "a typical
     # system containing O-H covalent bonds", not X-H, and it does NOT state a
