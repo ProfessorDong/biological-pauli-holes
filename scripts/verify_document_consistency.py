@@ -619,8 +619,11 @@ CHECKS = [
      'cannot be independently refitted from it', True),
     ('the cover letter does not generalise the 28 per cent', COVER,
      'setting a $28\\%$ uncertainty on the magnitude', False),
-    ('the cover letter reports both totals', COVER,
-     'against the Hartree-Fock total and $-0.117\\%$ to $+0.352\\%$', True),
+    # 2026-10-31: the one-page letter quotes the median share only; a lone Hartree-Fock
+    # directional range must not come back without its B3LYP partner.
+    ('the cover letter quotes no single-total directional share', COVER,
+     'against the Hartree-Fock total', False),
+    ('the cover letter quotes the median exchange share', COVER, 'median $0.040\\%$', True),
     ('the cover letter does not claim the complete record is public', COVER,
      'The complete input, output and analysis record for every number', False),
     ('the version DOI is cited', MAIN, '10.5281/zenodo.22947653', True),
