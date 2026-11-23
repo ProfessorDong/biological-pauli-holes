@@ -26,9 +26,9 @@ University and UT Southwestern; Jun-Han You, Shanghai Jiao Tong University.
 
 Two scripts are worth knowing about:
 
-- `scripts/verify_document_consistency.py` — 156 checks tying statements in the
+- `scripts/verify_document_consistency.py` — checks tying statements in the
   manuscript to named fields of named result files.
-- `scripts/verify_figures.py` — 95 checks tying each figure to its generator and
+- `scripts/verify_figures.py` — checks tying each figure to its generator and
   its underlying data.
 
 **Both need the manuscript sources and figures, which this repository does not
@@ -69,8 +69,10 @@ This repository is code and numbers only. Excluded, by category:
 
 - **Manuscript sources and figures.** Held separately.
 - **Large primary data** — MD trajectories, Amber topologies and restarts,
-  ORCA `.gbw` wavefunctions and outputs, bead-frame arrays (~7 GB). These
-  exceed GitHub's limits and will be deposited on Zenodo, which mints a DOI.
+  quantum-chemistry inputs and outputs, and bead-frame arrays (about 6 GB
+  uncompressed). A checksummed archive is prepared and available to referees
+  on request; its Zenodo deposit is planned for acceptance. Regenerable ORCA
+  `.gbw` and density intermediates are excluded from that archive.
 - **Published literature.** Third-party copyright; consult the citations.
 - **Third-party software and benchmark sets** (ORCA, i-pi, GMTKN55,
   ModSeminario_Py). Obtain these from their own distributors under their own
