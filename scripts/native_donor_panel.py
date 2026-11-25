@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Panel summary of the matched native-donor validation, against the published methane series.
 
-Applies the decision rule pre-registered in prxlife/NATIVE_DONOR_VALIDATION.md section 8 before
+Applies the decision rule pre-registered in section 8 of NATIVE_DONOR_VALIDATION.md before
 looking at anything else, and reports every scalar summary of the Hessian rather than the one
 that flatters the argument. Usage: native_donor_panel.py   (pauli env)
 """

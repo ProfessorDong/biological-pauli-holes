@@ -1,0 +1,51 @@
+{
+ "tag": "L754A",
+ "rigid_shift_A": [
+  58.1542,
+  44.4994,
+  39.2826
+ ],
+ "unchanged_atoms_checked": 106115,
+ "atoms_in_changed_residues": 161,
+ "bonded_terms": {
+  "bonds": {
+   "checked": 106265,
+   "mismatched": 0
+  },
+  "angles": {
+   "checked": 23595,
+   "mismatched": 0
+  },
+  "dihedrals": {
+   "checked": 37295,
+   "mismatched": 0
+  }
+ },
+ "metal_site_atoms": 74,
+ "solute_charge": -10.9999,
+ "total_charge": 0.0002,
+ "n_Na": 11,
+ "P_residues": {
+  "0": "ACE",
+  "1": "HIE",
+  "2": "LYS",
+  "3": "ILE",
+  "4": "LYS",
+  "5": "GLY"
+ },
+ "changed_residue_names": [
+  "HIE",
+  "ASN",
+  "ASN",
+  "ALA",
+  "GLY",
+  "HIP",
+  "GLH",
+  "LYN",
+  "LYN",
+  "GLH"
+ ],
+ "issues": [],
+ "n_issues": 0,
+ "passed": true
+}

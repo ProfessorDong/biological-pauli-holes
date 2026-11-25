@@ -26,7 +26,8 @@ import numpy as np
 
 ROOT = Path(_REPO)
 RG, EF = ROOT / 'results/reactive_geometry', ROOT / 'results/ensemble_fluctuation'
-TEX = ROOT / 'prxlife/appendices.tex'
+MS = ROOT / _os.environ.get('PAULI_MANUSCRIPT_DIR', 'manuscript')
+TEX = MS / 'appendices.tex'
 # printed order, which is by ascending isotope effect
 SYS = ['V750A', 'WT', 'I552A', 'I538A', 'L754A', 'L546A', 'I553A']
 KIE = {'WT': 66, 'V750A': 62, 'I552A': 66, 'I538A': 100, 'L754A': 106, 'L546A': 131, 'I553A': 148}
@@ -107,7 +108,7 @@ def main():
             bad += not ok
             print(f'  [{"OK " if ok else "BAD"}] {s:<6} printed {g}  data {want}')
     total = sum(int(x) for _, c in ensemble_rows() for x in c[4].split('/'))
-    body = TEX.read_text() + (ROOT / 'prxlife/main.tex').read_text()
+    body = TEX.read_text() + (MS / 'main.tex').read_text()
     ok_total = str(total) in body
     bad += not ok_total
     print(f'\n  [{"OK " if ok_total else "BAD"}] total finite calculations = {total} present in text')

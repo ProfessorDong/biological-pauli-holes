@@ -28,7 +28,7 @@ identifiers:
     description: "Concept DOI for the archived release series; Git commits may contain subsequent work"
   - type: doi
     value: "10.5281/zenodo.22947653"
-    description: "Archived baseline release v1.1.0, which predates some later checks; the calculation snapshot is Git commit f7dc316"
+    description: "Archived release v1.1.0, which predates later checks and the sensitivity analyses"
 repository-code: "https://github.com/ProfessorDong/biological-pauli-holes"
 keywords:
   - quantum biology

@@ -1,0 +1,1 @@
+{"label": "s4_order_sapt2p", "i": 0, "j": 1, "d1": -0.15, "d2": -0.075, "exch": 2.1115190613126296, "total": -0.5505069092583187, "method": "sapt2+", "basis": "jun-cc-pVDZ", "donor": "native", "wall": "sidechain", "n_donor": 13, "n_wall": 14}

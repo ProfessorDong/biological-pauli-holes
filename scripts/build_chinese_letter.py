@@ -11,7 +11,7 @@ WHY THIS EXISTS
   Requires Noto Serif CJK SC and xelatex. Two passes, because a one-pass ctexart build can
   leave CJK line breaking unsettled.
 
-Usage: build_chinese_letter.py <name-without-extension>   (pauli env; run from prxlife/)
+Usage: build_chinese_letter.py <name-without-extension>   (pauli env; run from the letters' directory)
        e.g.  build_chinese_letter.py 致尤教授-关于泡利口袋尺寸
 """
 import re

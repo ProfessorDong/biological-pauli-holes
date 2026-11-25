@@ -30,7 +30,6 @@
 !/scripts/**/*.py
 !/scripts/**/*.sh
 !/setup/**/*.sh
-!/setup/**/*.md
 
 # ---- MD build inputs (text only; topologies and trajectories go to Zenodo) ----
 !/md/**/*.py
@@ -54,6 +53,7 @@
 /results/pcet_B34_dense/
 /results/pcet_pilot/
 **/*.PUBLISHED.json
+**/*.STALE*.json
 
 # ---- re-deny: never, under any rule above ----
 /references/
@@ -68,5 +68,3 @@
 /pauli_data/
 /md/mcpb/ModSeminario_Py/
 
-# ---- re-deny: internal working notes, not paper code or data ----
-/setup/claude_memory_backup/

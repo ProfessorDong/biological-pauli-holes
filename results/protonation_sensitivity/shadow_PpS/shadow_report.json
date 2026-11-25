@@ -1,0 +1,11 @@
+{
+ "kind": "P",
+ "links": 160,
+ "patches": {
+  "confinement_budget.py": 14,
+  "extract_clamped_fragment.py": 21,
+  "extract_frames_geometry.py": 21,
+  "extract_native_fragment.py": 21,
+  "slo_xi0_full.py": 14
+ }
+}

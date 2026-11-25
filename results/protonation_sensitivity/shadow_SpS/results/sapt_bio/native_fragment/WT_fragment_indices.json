@@ -1,0 +1,50 @@
+{
+ "TAG": "WT",
+ "prm": "SLO_sub_solv",
+ "donor_C": 13002,
+ "xferH": 13031,
+ "carbons": [
+  13002,
+  13001,
+  12998,
+  13005,
+  13003
+ ],
+ "hydrogens": [
+  {
+   "idx": 13031,
+   "transferring": true
+  },
+  {
+   "idx": 13032,
+   "transferring": false
+  },
+  {
+   "idx": 13030,
+   "transferring": false
+  },
+  {
+   "idx": 13025,
+   "transferring": false
+  },
+  {
+   "idx": 13034,
+   "transferring": false
+  },
+  {
+   "idx": 13033,
+   "transferring": false
+  }
+ ],
+ "caps": [
+  {
+   "host": 12998,
+   "beyond": 12994
+  },
+  {
+   "host": 13003,
+   "beyond": 12999
+  }
+ ],
+ "formula": "C5H8"
+}

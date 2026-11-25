@@ -46,8 +46,9 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(_REPO)
-TEX = [ROOT / 'prxlife/main.tex', ROOT / 'prxlife/appendices.tex',
-       ROOT / 'prxlife/cover-letter.tex']  # supplement.tex retired 2026-09-18, folded into appendices
+MS = ROOT / _os.environ.get('PAULI_MANUSCRIPT_DIR', 'manuscript')
+TEX = [MS / 'main.tex', MS / 'appendices.tex',
+       MS / 'cover-letter.tex']  # supplement.tex retired 2026-09-18, folded into appendices
 # md/ and qm/ hold quantum-chemistry outputs that results/ does not mirror, and
 # ~/scratch/orca_rerun holds the ORCA runs the project convention keeps out of the
 # repo. All three are legitimate provenance and all three must be searched.

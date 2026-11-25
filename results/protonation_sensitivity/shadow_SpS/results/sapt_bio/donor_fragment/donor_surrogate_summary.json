@@ -1,0 +1,76 @@
+{
+ "tags": [
+  "WT",
+  "I553A",
+  "I552A",
+  "L754A",
+  "V750A",
+  "I538A",
+  "L546A"
+ ],
+ "KIE_10C": [
+  66.0,
+  148.0,
+  66.0,
+  106.0,
+  62.0,
+  100.0,
+  131.0
+ ],
+ "wall_atom": [
+  "CD2",
+  "CD2",
+  "CD2",
+  "OD1",
+  "CG",
+  "CD2",
+  "CD2"
+ ],
+ "k_methane_Nm": [
+  7.885168332998773,
+  13.96076809173443,
+  4.932167382504449,
+  0.004010241984455683,
+  7.709938633731622,
+  6.534661302407252,
+  16.38072508954883
+ ],
+ "k_pentadienyl_Nm": [
+  12.597517161299109,
+  14.31371539637207,
+  7.620229613151696,
+  0.041879382428766314,
+  9.853708566552141,
+  8.75634774541101,
+  18.776383604775436
+ ],
+ "ratio": [
+  1.5976218425901638,
+  1.0252813672083418,
+  1.5450062867254732,
+  10.443106074670123,
+  1.2780527880522095,
+  1.3399849418645964,
+  1.146248624656736
+ ],
+ "ratio_range_excluding": [
+  "L754A"
+ ],
+ "ratio_min": 1.0252813672083418,
+ "ratio_max": 1.5976218425901638,
+ "ratio_median": 1.309018864958403,
+ "spearman_methane_vs_pentadienyl": 1.0,
+ "kie_correlation": {
+  "methane": {
+   "pearson_R": 0.4888673949186799,
+   "exact_perm_p": 0.2702380952380952,
+   "spearman_rho": 0.3783937343321348
+  },
+  "pentadienyl": {
+   "pearson_R": 0.28924695473648576,
+   "exact_perm_p": 0.5456349206349206,
+   "spearman_rho": 0.3783937343321348
+  }
+ },
+ "verdict": "The donor surrogate understates the curvature by a median factor of 1.31 but preserves the rank order exactly, and the correlation with the isotope-effect ladder remains unresolved from zero under either donor. Replacing the surrogate does not rescue the descriptor, so the reported null is not an artifact of the model donor."
+}

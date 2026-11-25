@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extended Data scan figure (figED1, Fig. 10 in the PRX Life manuscript) --
+"""Extended Data scan figure (figED1) --
 SAPT0/jun-cc-pVDZ five-point transverse exchange scans and quadratic fits for the
 seven JBC-2019 SLO systems.
 

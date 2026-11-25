@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extended Data bead-convergence figure (figED2, Fig. 11 in the PRX Life manuscript):
+"""Extended Data bead-convergence figure (figED2):
 bead-count convergence of the equilibrium isotope-specific delocalization observable
 on I553A/I552A x {H, D} x P in {8, 16, 32}.
 

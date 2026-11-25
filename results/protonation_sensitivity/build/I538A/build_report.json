@@ -1,0 +1,88 @@
+{
+ "tag": "I538A",
+ "seed": "results/umbrella/I538A/win_2.70_final.rst7",
+ "prmtop_S": "SLO_I538A_sub_solv.prmtop",
+ "box_A": [
+  116.3716416,
+  89.0466953,
+  78.6076537
+ ],
+ "caps": {
+  "ACE before 0": {
+   "direction_of": "H1",
+   "clearance_A": 3.654
+  },
+  "ACE before 13": {
+   "direction_of": "H2",
+   "clearance_A": 4.777
+  },
+  "ACE before 99": {
+   "direction_of": "H3",
+   "clearance_A": 4.256
+  },
+  "NME after 12": {
+   "clearance_A": 3.731,
+   "omega_deg": -180.0
+  },
+  "NME after 98": {
+   "clearance_A": 3.61,
+   "omega_deg": 180.0
+  }
+ },
+ "removed_atoms": [
+  "LYS504:HZ1",
+  "LYS719:HZ1"
+ ],
+ "renamed": {
+  "LYN504": {
+   "HZ1": "removed",
+   "HZ2": "HZ2",
+   "HZ3": "HZ3",
+   "nearest_acceptor_A": [
+    2.164,
+    1.864,
+    2.16
+   ]
+  },
+  "LYN719": {
+   "HZ1": "removed",
+   "HZ2": "HZ2",
+   "HZ3": "HZ3",
+   "nearest_acceptor_A": [
+    2.223,
+    1.963,
+    1.829
+   ]
+  },
+  "GLH327": {
+   "hbonds_accepted": {
+    "OE1": 2,
+    "OE2": 3
+   },
+   "protonated": "OE1"
+  },
+  "GLH730": {
+   "hbonds_accepted": {
+    "OE1": 2,
+    "OE2": 1
+   },
+   "protonated": "OE2"
+  }
+ },
+ "waters_removed": 24,
+ "renumbered_bonds": [
+  "483.NE2-824.FE",
+  "488.NE2-824.FE",
+  "674.NE2-824.FE",
+  "823.OXT-824.FE",
+  "824.FE-825.O",
+  "482.C-483.N",
+  "483.C-484.N",
+  "487.C-488.N",
+  "488.C-489.N",
+  "673.C-674.N",
+  "674.C-675.N",
+  "822.C-823.N"
+ ],
+ "tleap_returncode": 0
+}

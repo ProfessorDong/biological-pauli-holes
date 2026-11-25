@@ -1,0 +1,51 @@
+{
+ "null": {
+  "case": "NULL",
+  "raw": -0.28155658683118445,
+  "vif": 1.0173329155188005,
+  "partial": -0.6290763680078604,
+  "p_exact": 0.1734126984126984,
+  "ci": [
+   -1.0,
+   0.9999999999999999
+  ],
+  "excludes_zero": false,
+  "n_perm": 5040,
+  "expectation": "partial ~ 0, p large, CI spans zero"
+ },
+ "confounded": {
+  "case": "CONFOUNDED",
+  "raw": 0.7694897729540982,
+  "vif": 197.56636580838278,
+  "partial": -0.36636198851207186,
+  "p_exact": 0.4714285714285714,
+  "ci": [
+   -1.0,
+   0.9999999999999998
+  ],
+  "excludes_zero": false,
+  "n_perm": 5040,
+  "expectation": "raw nonzero but partial collapses toward zero"
+ },
+ "signal": {
+  "case": "SIGNAL",
+  "raw": 0.9867310023308645,
+  "vif": 3.239177932799815,
+  "partial": 0.9694274458910841,
+  "p_exact": 0.004365079365079365,
+  "ci": [
+   0.800303809797439,
+   1.0
+  ],
+  "excludes_zero": true,
+  "n_perm": 5040,
+  "expectation": "partial large, CI excludes zero (power)"
+ },
+ "fpr": {
+  "n_replicates": 300,
+  "p_lt_005": 0.043333333333333335,
+  "p_lt_bonferroni": 0.006666666666666667,
+  "median_abs_partial_null": 0.34421798670914217
+ },
+ "passed": true
+}

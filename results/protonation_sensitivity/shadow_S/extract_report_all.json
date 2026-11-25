@@ -1,0 +1,486 @@
+[
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "WT",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/WT_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "WT",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/WT_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "WT",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/WT_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "WT",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/WT_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "WT",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/WT_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "WT",
+   "16"
+  ],
+  "output": "results/stage5_configs/WT/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "I538A",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/I538A_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "I538A",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/I538A_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "I538A",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/I538A_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "I538A",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/I538A_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "I538A",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/I538A_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "I538A",
+   "16"
+  ],
+  "output": "results/stage5_configs/I538A/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "I552A",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/I552A_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "I552A",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/I552A_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "I552A",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/I552A_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "I552A",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/I552A_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "I552A",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/I552A_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "I552A",
+   "16"
+  ],
+  "output": "results/stage5_configs/I552A/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "I553A",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/I553A_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "I553A",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/I553A_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "I553A",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/I553A_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "I553A",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/I553A_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "I553A",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/I553A_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "I553A",
+   "16"
+  ],
+  "output": "results/stage5_configs/I553A/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "L546A",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/L546A_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "L546A",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/L546A_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "L546A",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/L546A_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "L546A",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/L546A_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "L546A",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/L546A_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "L546A",
+   "16"
+  ],
+  "output": "results/stage5_configs/L546A/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "L754A",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/L754A_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "L754A",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/L754A_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "L754A",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/L754A_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "L754A",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/L754A_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "L754A",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/L754A_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "L754A",
+   "16"
+  ],
+  "output": "results/stage5_configs/L754A/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "V750A",
+   "r255"
+  ],
+  "output": "results/reactive_geometry/V750A_r255_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "V750A",
+   "r255"
+  ],
+  "output": "results/ensemble_fluctuation/V750A_r255_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_clamped_fragment.py",
+  "args": [
+   "V750A",
+   "r340"
+  ],
+  "output": "results/reactive_geometry/V750A_r340_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_frames_geometry.py",
+  "args": [
+   "V750A",
+   "r340"
+  ],
+  "output": "results/ensemble_fluctuation/V750A_r340_frames_geometry.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "extract_native_donor_clamped.py",
+  "args": [
+   "V750A",
+   "r255"
+  ],
+  "output": "results/native_donor_validation/V750A_r255_native_donor.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "stage5_extract.py",
+  "args": [
+   "V750A",
+   "16"
+  ],
+  "output": "results/stage5_configs/V750A/selection.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "confinement_budget.py",
+  "args": [],
+  "output": "results/confinement_budget.json",
+  "rc": 0,
+  "identical_to_published": true,
+  "diffs": []
+ },
+ {
+  "script": "slo_xi0_full.py",
+  "args": [],
+  "output": "results/pauli_hole_survey/slo_xi0_full.json",
+  "rc": 0,
+  "identical_to_published": false,
+  "diffs": [
+   ".V750A_r255.xi0_A: 2.6067759096622467 vs 2.820970267057419",
+   ".V750A_r255.sd: 0.19255661820184677 vs 0.08756387298667816",
+   ".V750A_r255.nearest[0]: 'IE1817:O (28/40)' vs 'LIG820:C15 (16/40)'",
+   ".V750A_r255.nearest[1]: 'LIG820:C10 (12/40)' vs 'LIG820:C10 (14/40)'",
+   ".V750A_r340.xi0_A: 2.8222203254699707 vs 2.817540842294693"
+  ]
+ }
+]

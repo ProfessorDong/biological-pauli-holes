@@ -36,10 +36,36 @@ contain.** The manuscript is not published here: the paper itself is the
 published artefact, and this repository is its code and numbers. The document
 checks therefore report `SKIP` on a bare checkout and say plainly that nothing
 was verified, rather than printing a passing-looking score. To run them, point
-`PAULI_ROOT` at a tree that has the sources in `prxlife/` (see Paths below).
+`PAULI_ROOT` at a tree that has the sources in `manuscript/` (see Paths below).
 
 Everything that reads only `results/` runs from a bare checkout as-is, and
 reproduces the committed numbers exactly.
+
+## Sensitivity analyses: protonation model and the L754A hydrogen
+
+`results/protonation_sensitivity/` holds two sensitivity analyses, each run with
+the production code unchanged.
+
+- **Model P.** The production model (model S) keeps every titratable residue in
+  its standard state. Model P applies the PROPKA predictions (Glu349 and Glu752
+  protonated, His248 doubly protonated, Lys526 and Lys741 neutral) and caps the
+  five chain ends created by unresolved residues. All seven variants are
+  simulated and analysed again. `comparison.json` sets the two models side by
+  side.
+- **The L754A hydrogen.** Each variant is analysed with the C11 hydrogen that
+  faces the acceptor in its simulated pose. That is the pro-S hydrogen, which the
+  enzyme abstracts, in six variants, and the pro-R hydrogen in L754A. Every
+  L754A quantity is repeated with the pro-S hydrogen in both models.
+  `proS/summary_proS.json` collects both hydrogens in both models;
+  `proS/orientation.json` and `proS/umbrella_final_frames_orientation.json`
+  record which hydrogen faces the acceptor.
+
+Each analysis runs in a shadow root (`shadow_P`, `shadow_SpS`, `shadow_PpS`, and
+`shadow_S` for the model-S validation): a tree laid out like this repository,
+which the production scripts read through `PAULI_ROOT`. The driving scripts are
+`scripts/psens_*.py` and `scripts/sapt_methane_wall.py`.
+`psens_proS_summary.py` and `psens_scalar_spearman.py` run from a checkout; the
+others need the primary data.
 
 ## Paths
 
@@ -49,7 +75,8 @@ anywhere. To point them at a different tree, set `PAULI_ROOT`:
     PAULI_ROOT=/path/to/tree python scripts/verify_document_consistency.py
 
 That is how to run the manuscript checks if you have the manuscript sources
-separately: put them in `prxlife/` under the tree `PAULI_ROOT` names.
+separately: put them in `manuscript/` under the tree `PAULI_ROOT` names, or name
+another directory with `PAULI_MANUSCRIPT_DIR`.
 
 The simulation and quantum-chemistry drivers additionally need interpreters and
 external programs. Those are read from the environment, with this machine's
@@ -69,10 +96,12 @@ This repository is code and numbers only. Excluded, by category:
 
 - **Manuscript sources and figures.** Held separately.
 - **Large primary data** — MD trajectories, Amber topologies and restarts,
-  quantum-chemistry inputs and outputs, and bead-frame arrays (about 6 GB
-  uncompressed). A checksummed archive is prepared and available to referees
-  on request; its Zenodo deposit is planned for acceptance. Regenerable ORCA
-  `.gbw` and density intermediates are excluded from that archive.
+  quantum-chemistry inputs and outputs, and bead-frame arrays (about 8.6 GB
+  uncompressed, in two archives: the production campaigns and the sensitivity
+  analyses). Checksummed archives are prepared and available to referees on
+  request; their Zenodo deposit is planned for acceptance. Regenerable ORCA
+  `.gbw` and density intermediates, and Psi4 F-SAPT scratch files, are
+  excluded from them.
 - **Published literature.** Third-party copyright; consult the citations.
 - **Third-party software and benchmark sets** (ORCA, i-pi, GMTKN55,
   ModSeminario_Py). Obtain these from their own distributors under their own

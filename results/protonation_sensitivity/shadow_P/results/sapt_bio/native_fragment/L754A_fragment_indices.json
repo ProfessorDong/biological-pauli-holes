@@ -1,0 +1,51 @@
+{
+ "TAG": "L754A",
+ "prm": "SLO_L754A_sub_solv",
+ "donor_C": 13016,
+ "xferH": 13046,
+ "carbons": [
+  13016,
+  13015,
+  13012,
+  13019,
+  13017
+ ],
+ "hydrogens": [
+  {
+   "idx": 13045,
+   "transferring": false
+  },
+  {
+   "idx": 13046,
+   "transferring": true
+  },
+  {
+   "idx": 13044,
+   "transferring": false
+  },
+  {
+   "idx": 13039,
+   "transferring": false
+  },
+  {
+   "idx": 13048,
+   "transferring": false
+  },
+  {
+   "idx": 13047,
+   "transferring": false
+  }
+ ],
+ "caps": [
+  {
+   "host": 13012,
+   "beyond": 13008
+  },
+  {
+   "host": 13017,
+   "beyond": 13013
+  }
+ ],
+ "formula": "C5H8",
+ "_model": "P (indices mapped from model S by residue and atom name)"
+}

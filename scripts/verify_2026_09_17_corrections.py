@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(_REPO)
 R = ROOT / 'results'
-PDF = ROOT / 'prxlife/main.pdf'
+PDF = ROOT / _os.environ.get('PAULI_MANUSCRIPT_DIR', 'manuscript') / 'main.pdf'
 
 
 def load(rel):

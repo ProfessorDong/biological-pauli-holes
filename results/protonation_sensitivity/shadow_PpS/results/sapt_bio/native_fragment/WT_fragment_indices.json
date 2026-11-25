@@ -1,0 +1,51 @@
+{
+ "TAG": "WT",
+ "prm": "SLO_sub_solv",
+ "donor_C": 13025,
+ "xferH": 13054,
+ "carbons": [
+  13025,
+  13024,
+  13021,
+  13028,
+  13026
+ ],
+ "hydrogens": [
+  {
+   "idx": 13054,
+   "transferring": true
+  },
+  {
+   "idx": 13055,
+   "transferring": false
+  },
+  {
+   "idx": 13053,
+   "transferring": false
+  },
+  {
+   "idx": 13048,
+   "transferring": false
+  },
+  {
+   "idx": 13057,
+   "transferring": false
+  },
+  {
+   "idx": 13056,
+   "transferring": false
+  }
+ ],
+ "caps": [
+  {
+   "host": 13021,
+   "beyond": 13017
+  },
+  {
+   "host": 13026,
+   "beyond": 13022
+  }
+ ],
+ "formula": "C5H8",
+ "_model": "P (indices mapped from model S by residue and atom name)"
+}

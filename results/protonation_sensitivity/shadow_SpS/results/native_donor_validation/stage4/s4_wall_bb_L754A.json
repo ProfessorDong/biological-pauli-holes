@@ -1,0 +1,32 @@
+{
+  "label": "s4_wall_bb_L754A",
+  "method": "sapt0",
+  "basis": "jun-cc-pVDZ",
+  "donor": "native",
+  "wall": "backbone",
+  "n_donor": 13,
+  "n_wall": 16,
+  "half": 0.15,
+  "n_per_axis": 5,
+  "n_points": 25,
+  "K_perp_exch_eigs": [
+    -0.005670436952319971,
+    0.002230835010055022
+  ],
+  "K_perp_exch_grad_kcal_per_A": [
+    -0.007996788692270992,
+    -0.0010829159991450504
+  ],
+  "K_perp_exch_grad_norm": 0.008069779207019082,
+  "K_perp_exch_rms_kcal": 6.4692763025093775e-06,
+  "K_perp_int_eigs": [
+    -0.47256579076271377,
+    0.14660391948001822
+  ],
+  "K_perp_int_grad_kcal_per_A": [
+    -0.00752764989955973,
+    -0.10475282194774116
+  ],
+  "K_perp_int_grad_norm": 0.10502294615475945,
+  "K_perp_int_rms_kcal": 0.0005449481226626608
+}

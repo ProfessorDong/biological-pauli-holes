@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(_REPO)
-LIVE, FIGS, R = ROOT / 'prxlife', ROOT / 'figures', ROOT / 'results'
+LIVE, FIGS, R = ROOT / _os.environ.get('PAULI_MANUSCRIPT_DIR', 'manuscript'), ROOT / 'figures', ROOT / 'results'
 MAIN, APP = LIVE / 'main.tex', LIVE / 'appendices.tex'
 CAPTION_MAX_WORDS = 245
 
@@ -75,7 +75,7 @@ ARTWORK_REQUIRED = {
 ARTWORK_FORBIDDEN = {
     # the measured curvature is a fragment separation, so no figure may label it transverse
     'fig1_pauli_pocket.pdf': ['kexch'],
-    # The revision-2 audit withdrew every biological bound on the confinement index.
+    # An internal audit withdrew every biological bound on the confinement index.
     # The artwork went on printing "bounded Pi_H <= 8.2" while its own caption said the
     # opposite; only the caption had been corrected. Both forms are forbidden now.
     'fig2_index.pdf': ['kexch', 'bounded', '8.2'],

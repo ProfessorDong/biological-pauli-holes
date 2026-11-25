@@ -1,0 +1,1 @@
+{"label": "s4_basis_augtz", "i": 1, "j": 3, "d1": -0.075, "d2": 0.07499999999999998, "exch": 1.842584569684654, "total": -1.1193752599108557, "method": "sapt0", "basis": "aug-cc-pVTZ", "donor": "native", "wall": "sidechain", "n_donor": 13, "n_wall": 14}

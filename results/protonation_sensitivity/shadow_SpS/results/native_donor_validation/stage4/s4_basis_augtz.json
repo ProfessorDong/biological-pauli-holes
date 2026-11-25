@@ -1,0 +1,32 @@
+{
+  "label": "s4_basis_augtz",
+  "method": "sapt0",
+  "basis": "aug-cc-pVTZ",
+  "donor": "native",
+  "wall": "sidechain",
+  "n_donor": 13,
+  "n_wall": 14,
+  "half": 0.15,
+  "n_per_axis": 5,
+  "n_points": 25,
+  "K_perp_exch_eigs": [
+    -0.13539857059458418,
+    0.09560009339737471
+  ],
+  "K_perp_exch_grad_kcal_per_A": [
+    -0.07014670183407375,
+    -0.12175772417432537
+  ],
+  "K_perp_exch_grad_norm": 0.1405186933269362,
+  "K_perp_exch_rms_kcal": 0.0001446924563459653,
+  "K_perp_int_eigs": [
+    -0.2475619516306845,
+    -0.11614438175818367
+  ],
+  "K_perp_int_grad_kcal_per_A": [
+    -0.09297692675457625,
+    -0.04548126870060319
+  ],
+  "K_perp_int_grad_norm": 0.10350485356417981,
+  "K_perp_int_rms_kcal": 0.00011210277575464915
+}

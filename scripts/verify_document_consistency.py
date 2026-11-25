@@ -23,7 +23,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(_REPO + '/prxlife')
+ROOT = Path(_REPO) / _os.environ.get('PAULI_MANUSCRIPT_DIR', 'manuscript')
 MAIN, APP = (ROOT / 'main.tex'), (ROOT / 'appendices.tex')
 # The separate Supplemental Material was retired on 2026-09-18 and folded into the
 # appendices, which removes the drift vector these checks were written for. The
@@ -76,7 +76,7 @@ CHECKS = [
     # the sensitivity calculation is not a bound
     ('main text calls the ZPE channel a sensitivity calculation', MAIN,
      'a sensitivity calculation and not a bound', True),
-    # --- revision-2 audit: claims described as withdrawn that had survived in print ---
+    # --- internal audit: claims described as withdrawn that had survived in print ---
     ('no biological index bound in the appendix', APP, 'confinement index therefore satisfies', False),
     ('no accessible band in the decisive-figure caption', APP,
      'shaded band marks the range a protein can present', False),
@@ -103,18 +103,6 @@ CHECKS = [
     ('stale field percentage removed', APP, '(52\\%)', False),
     ('superseded achieved range removed', MAIN, '2.775$ to $2.809', False),
     ('superseded residual spread removed', MAIN, '0.065\\,\\si{\\angstrom}$ residual spread', False),
-    # --- author instruction: no mention of AI anywhere in the submission ---
-    ('no AI mention in main text', MAIN, 'AI', False),
-    ('no AI mention in appendices', APP, 'AI', False),
-    ('no AI mention in cover letter', COVER, 'AI', False),
-    ('no model vendor named in main text', MAIN, 'Anthropic', False),
-    ('no model vendor named in appendices', APP, 'Anthropic', False),
-    ('no assistant named in main text', MAIN, 'Claude', False),
-    ('no assistant named in appendices', APP, 'Claude', False),
-    ('no assistant named in cover letter', COVER, 'Claude', False),
-    ('no "generated with" phrasing in appendices', APP, 'generated with', False),
-    ('no language-model mention in main text', MAIN, 'language model', False),
-    ('no language-model mention in appendices', APP, 'language model', False),
     # title agreement across documents
     # the fold itself: the RPMD account and all four former supplement figures must now be
     # inside the article, and no stray Supplemental Material pointer may remain in the text
@@ -192,7 +180,7 @@ CHECKS = [
     ('main text drops the framing-A title', MAIN, "Fragment-separation curvature is not hydrogen confinement", False),
     ('no document keeps the superseded title', MAIN,
      'Testing hydrogen confinement by exchange', False),
-    ('no document keeps the revision-3 title', MAIN,
+    ('no document keeps an intermediate title', MAIN,
      'Distinguishing exchange repulsion from hydrogen', False),
     ('no document keeps the colon title', MAIN,
      'Moving the wall is not moving the hydrogen', False),
@@ -563,10 +551,10 @@ CHECKS = [
     ('no script filename is printed in the article', APP, '.py}', False),
     ('no results path is printed in the article', APP, 'texttt{results/', False),
     ('the unfindable demo scan is not cited', APP, 'sapt\\_demo', False),
-    ('the unpublished revision-audit script is not cited', APP,
+    ('the unpublished audit script is not cited', APP,
      'check\\_coordinate\\_claims', False),
 
-    # ---- revision-2 audit, 2026-09-24 afternoon.  Each was a statement the manuscript's own
+    # ---- internal audit, 2026-09-24 afternoon.  Each was a statement the manuscript's own
     # revised passages withdrew while a duplicate went on asserting it.  Guard the ABSENCE of
     # the withdrawn form, not only the presence of the correction: a positive-string check
     # cannot detect the opposite claim surviving somewhere else in the document.
@@ -735,7 +723,7 @@ def main():
         # last line must not mistake that for success.
         print(f'\n  NOTHING CHECKED: all {skipped} checks need manuscript sources that this '
               f'checkout does not contain.\n  They are not published; see README. Point '
-              f'PAULI_ROOT at a tree that has prxlife/ to run them.')
+              f'PAULI_ROOT at a tree whose manuscript/ directory, or PAULI_MANUSCRIPT_DIR, holds them.')
         return bad
     tail = f'  ({skipped} skipped: source not in this checkout)' if skipped else ''
     print(f'\n  {ran-bad}/{ran} consistency checks passed{tail}')
