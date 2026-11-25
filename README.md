@@ -137,4 +137,5 @@ Code is MIT (`LICENSE`); the numerical results under `results/` are CC BY 4.0
 
 ## Citing
 
-See `CITATION.cff`. The paper reference will be added on acceptance.
+See `CITATION.cff`. The calculation snapshot for the article is release v1.2.0
+(doi:10.5281/zenodo.24544928). The paper reference will be added on acceptance.

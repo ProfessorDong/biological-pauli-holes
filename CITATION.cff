@@ -27,6 +27,9 @@ identifiers:
     value: "10.5281/zenodo.22927663"
     description: "Concept DOI for the archived release series; Git commits may contain subsequent work"
   - type: doi
+    value: "10.5281/zenodo.24544928"
+    description: "Archived release v1.2.0, the calculation snapshot for the article (Git commit 904a9d0)"
+  - type: doi
     value: "10.5281/zenodo.22947653"
     description: "Archived release v1.1.0, which predates later checks and the sensitivity analyses"
 repository-code: "https://github.com/ProfessorDong/biological-pauli-holes"
