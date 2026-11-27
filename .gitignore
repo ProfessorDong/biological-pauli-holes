@@ -41,6 +41,8 @@
 
 # ---- the numeric results the paper's claims are checked against ----
 !/results/**/*.json
+#  The water-pair SAPT0 scan is written as CSV by scripts/sapt_exch_curvature.py.
+!/results/sapt_demo/sapt_exch_scan.csv
 
 # ---- re-deny: runs the project has formally invalidated ----
 #  Recursive: these directories occur nested (e.g. results/ensemble_fluctuation/

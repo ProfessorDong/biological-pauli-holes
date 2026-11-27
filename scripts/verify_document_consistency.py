@@ -134,7 +134,7 @@ CHECKS = [
     # figure is quoted more easily than the caption that retracts it. The appendix
     # section is retained in full, so the record survives without the artwork.
     ('withdrawn dispersion figure is not reinstated', APP, 'fig4_dispersion.pdf', False),
-    # 2026-10-31: this is a first submission. A reader has no "earlier version" to compare
+    # A reader has no "earlier version" to compare
     # against, so the manuscript states the correct result and carries no correction diary.
     # The withdrawn claims are still guarded by the absence checks throughout this file.
     ('main text carries no earlier-version narrative', MAIN, 'earlier version', False),
@@ -676,7 +676,7 @@ CHECKS = [
 
     # A draft-era convention announced that provisional results were flagged
     # [pending completion of the validation study].  The macro was defined once, used once,
-    # and marked NO result: every run had finished.  It told a referee the paper contained
+    # and marked NO result: every run had finished.  It told a reader the paper contained
     # provisional numbers that do not exist.
     ('no provisional-results convention is announced', APP,
      'Results that depend on the running simulations are marked', False),
@@ -705,7 +705,7 @@ def main():
     for desc, f, text, want in CHECKS:
         if f not in cache:
             # A source this repository does not ship (the cover letter is author-editor
-            # correspondence and names suggested referees, so it is not published).
+            # correspondence, so it is not published).
             # Skip its checks rather than abort: everything else is still checkable.
             cache[f] = flat(f.read_text()) if f.exists() else None
         if cache[f] is None:

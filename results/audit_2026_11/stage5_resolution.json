@@ -1,0 +1,1155 @@
+{
+ "rule": "smaller eigenvalue resolved if |lambda_1| >= 2 se",
+ "half_width_A": 0.15,
+ "variance_factor": [
+  1219.0476190476195,
+  1805.99647266314
+ ],
+ "static_panel_check": {
+  "I538A": {
+   "lambda1": -0.0652854418481981,
+   "se_published_algebra": 0.0019568175831436514,
+   "se_bracket": [
+    0.0018296258541207072,
+    0.002226949671325706
+   ]
+  },
+  "I552A": {
+   "lambda1": -0.01839259610585162,
+   "se_published_algebra": 0.0023052838633960447,
+   "se_bracket": [
+    0.0021342398730385863,
+    0.0025977140479782118
+   ]
+  },
+  "I553A": {
+   "lambda1": -0.06857559653239453,
+   "se_published_algebra": 0.002319059686348799,
+   "se_bracket": [
+    0.001917577645055588,
+    0.002334001182143512
+   ]
+  },
+  "L546A": {
+   "lambda1": -0.03476071792591885,
+   "se_published_algebra": 0.0026360379320418794,
+   "se_bracket": [
+    0.0022297676627431933,
+    0.0027139867708444857
+   ]
+  },
+  "L754A": {
+   "lambda1": 0.09914415900334998,
+   "se_published_algebra": 0.006912337679318182,
+   "se_bracket": [
+    0.006275968429786872,
+    0.007638865509298993
+   ]
+  },
+  "V750A": {
+   "lambda1": 0.0010642272246446927,
+   "se_published_algebra": 0.01110120720211977,
+   "se_bracket": [
+    0.010819203985483526,
+    0.013168715726886939
+   ]
+  },
+  "WT": {
+   "lambda1": -0.13901293210971247,
+   "se_published_algebra": 0.004790576493704836,
+   "se_bracket": [
+    0.004010749038108884,
+    0.004881728268143073
+   ]
+  }
+ },
+ "systems": {
+  "I538A": {
+   "n": 16,
+   "n_negative": 16,
+   "n_resolved_conservative": 16,
+   "n_resolved_negative_conservative": 16,
+   "n_resolved_positive_conservative": 0,
+   "n_resolved_lenient": 16,
+   "min_abs_lambda1_over_se_conservative": 10.63497405921083,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": -0.054901305772376195,
+     "se_bracket": [
+      0.0025287597548548286,
+      0.003077908356100497
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": -0.02707422942257444,
+     "se_bracket": [
+      0.00209156591721595,
+      0.0025457729630403523
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": -0.1196603039125181,
+     "se_bracket": [
+      0.005662981304264361,
+      0.006892761340168038
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 3,
+     "lambda1": -0.12606263482094715,
+     "se_bracket": [
+      0.0028323351450070173,
+      0.0034474085540777983
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 4,
+     "lambda1": -0.1434703897989559,
+     "se_bracket": [
+      0.005322802037809759,
+      0.0064787083227619375
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 5,
+     "lambda1": -0.08805556471326681,
+     "se_bracket": [
+      0.0037838468830268144,
+      0.004605551759954218
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 6,
+     "lambda1": -0.21143361546018205,
+     "se_bracket": [
+      0.008495217899490818,
+      0.010340049943272837
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 7,
+     "lambda1": -0.25505780475776213,
+     "se_bracket": [
+      0.007833527954535728,
+      0.00953466659010338
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 8,
+     "lambda1": -0.11941352592034479,
+     "se_bracket": [
+      0.004442606049149725,
+      0.005407367882729354
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 9,
+     "lambda1": -0.17594912328078885,
+     "se_bracket": [
+      0.005903733254110028,
+      0.007185795281709869
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 10,
+     "lambda1": -0.12119318846845081,
+     "se_bracket": [
+      0.004747964423193917,
+      0.005779038259589584
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 11,
+     "lambda1": -0.0806366837442756,
+     "se_bracket": [
+      0.004283002520879476,
+      0.005213104654527067
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 12,
+     "lambda1": -0.23450351612435674,
+     "se_bracket": [
+      0.00828167798603801,
+      0.010080137437659937
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 13,
+     "lambda1": -0.06159522073649095,
+     "se_bracket": [
+      0.0025509710000100896,
+      0.003104943022771194
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 14,
+     "lambda1": -0.07995729244245299,
+     "se_bracket": [
+      0.005836517734529722,
+      0.007103983156624173
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 15,
+     "lambda1": -0.0410957629960183,
+     "se_bracket": [
+      0.003057086169465192,
+      0.0037209667894514365
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    }
+   ]
+  },
+  "I552A": {
+   "n": 5,
+   "n_negative": 5,
+   "n_resolved_conservative": 3,
+   "n_resolved_negative_conservative": 3,
+   "n_resolved_positive_conservative": 0,
+   "n_resolved_lenient": 3,
+   "min_abs_lambda1_over_se_conservative": 0.3509712874542905,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": -0.20032109041018895,
+     "se_bracket": [
+      0.005008268783575932,
+      0.006095870637363327
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": -0.09771743567998334,
+     "se_bracket": [
+      0.00497669549040507,
+      0.006057440848731314
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": -0.029092433426392755,
+     "se_bracket": [
+      0.0023337707090486585,
+      0.0028405752475350586
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 3,
+     "lambda1": -0.05602943288358109,
+     "se_bracket": [
+      0.13115852509112677,
+      0.159641072892261
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    },
+    {
+     "config": 4,
+     "lambda1": -0.06850229433632798,
+     "se_bracket": [
+      0.06140840143714057,
+      0.07474392597212122
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    }
+   ]
+  },
+  "I553A": {
+   "n": 16,
+   "n_negative": 16,
+   "n_resolved_conservative": 16,
+   "n_resolved_negative_conservative": 16,
+   "n_resolved_positive_conservative": 0,
+   "n_resolved_lenient": 16,
+   "min_abs_lambda1_over_se_conservative": 13.913857371298532,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": -0.05557157420954456,
+     "se_bracket": [
+      0.0012422232045706404,
+      0.0015119859346659874
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": -0.1814501091442292,
+     "se_bracket": [
+      0.007058686645640348,
+      0.008591559782617096
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": -0.11737824248697017,
+     "se_bracket": [
+      0.005020349370038691,
+      0.006110574658948982
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 3,
+     "lambda1": -0.11294148589886834,
+     "se_bracket": [
+      0.0034411679145289,
+      0.004188456202112195
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 4,
+     "lambda1": -0.07558677011327714,
+     "se_bracket": [
+      0.002420260989149666,
+      0.0029458478640156404
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 5,
+     "lambda1": -0.06521291013714145,
+     "se_bracket": [
+      0.0027939024869017173,
+      0.0034006298123241165
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 6,
+     "lambda1": -0.2250053029732211,
+     "se_bracket": [
+      0.010547116062262257,
+      0.012837540853169111
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 7,
+     "lambda1": -0.3021694675975033,
+     "se_bracket": [
+      0.011517970020766578,
+      0.01401922666009356
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 8,
+     "lambda1": -0.08370829795667176,
+     "se_bracket": [
+      0.003200629910057623,
+      0.003895682666587314
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 9,
+     "lambda1": -0.2560036977765233,
+     "se_bracket": [
+      0.009228826041479366,
+      0.011232969338243016
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 10,
+     "lambda1": -0.07948299690037106,
+     "se_bracket": [
+      0.004693302782115211,
+      0.0057125062288139
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 11,
+     "lambda1": -0.16503113128423047,
+     "se_bracket": [
+      0.006013767424375487,
+      0.0073197246087115505
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 12,
+     "lambda1": -0.08749873799894328,
+     "se_bracket": [
+      0.0037161226391805233,
+      0.004523120435410676
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 13,
+     "lambda1": -0.0901709352152556,
+     "se_bracket": [
+      0.00445838441171093,
+      0.00542657269405217
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 14,
+     "lambda1": -0.1807128803036111,
+     "se_bracket": [
+      0.007695813393185529,
+      0.009367045763995751
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 15,
+     "lambda1": -0.11314765066044713,
+     "se_bracket": [
+      0.004608380656429799,
+      0.005609142309104591
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    }
+   ]
+  },
+  "L546A": {
+   "n": 16,
+   "n_negative": 16,
+   "n_resolved_conservative": 16,
+   "n_resolved_negative_conservative": 16,
+   "n_resolved_positive_conservative": 0,
+   "n_resolved_lenient": 16,
+   "min_abs_lambda1_over_se_conservative": 6.190549789145187,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": -0.04253778359488966,
+     "se_bracket": [
+      0.001940834072089903,
+      0.0023623080036849946
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": -0.11226845482088496,
+     "se_bracket": [
+      0.005360324190545115,
+      0.00652437883267151
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": -0.014770612406609977,
+     "se_bracket": [
+      0.0019602938055966455,
+      0.002385993637028732
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 3,
+     "lambda1": -0.07706228894037429,
+     "se_bracket": [
+      0.0052618680895869215,
+      0.006404541882851936
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 4,
+     "lambda1": -0.01047125217668134,
+     "se_bracket": [
+      0.0008165211791585568,
+      0.0009938379300130193
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 5,
+     "lambda1": -0.14196273102016777,
+     "se_bracket": [
+      0.006756815163393274,
+      0.008224133515296559
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 6,
+     "lambda1": -0.09794233639199296,
+     "se_bracket": [
+      0.004030167714059953,
+      0.0049053639278214805
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 7,
+     "lambda1": -0.01665953928367308,
+     "se_bracket": [
+      0.0016087599936550898,
+      0.0019581203069705794
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 8,
+     "lambda1": -0.029251579814091024,
+     "se_bracket": [
+      0.0036972535727815715,
+      0.004500153739175634
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 9,
+     "lambda1": -0.09922144345320999,
+     "se_bracket": [
+      0.004989552484424128,
+      0.006073089883500088
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 10,
+     "lambda1": -0.020076129345520697,
+     "se_bracket": [
+      0.0016750506787400713,
+      0.0020388067593561693
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 11,
+     "lambda1": -0.019631243474617123,
+     "se_bracket": [
+      0.001342652782508587,
+      0.0016342249241711796
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 12,
+     "lambda1": -0.0842620646234709,
+     "se_bracket": [
+      0.004153854925386619,
+      0.005055911207195978
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 13,
+     "lambda1": -0.07283369899321508,
+     "se_bracket": [
+      0.004048449369904041,
+      0.004927615650697823
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 14,
+     "lambda1": -0.06654821790234113,
+     "se_bracket": [
+      0.0042930296764856,
+      0.005225309319667264
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 15,
+     "lambda1": -0.04497227119741651,
+     "se_bracket": [
+      0.003838086777813734,
+      0.0046715704574908905
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    }
+   ]
+  },
+  "L754A": {
+   "n": 16,
+   "n_negative": 0,
+   "n_resolved_conservative": 16,
+   "n_resolved_negative_conservative": 0,
+   "n_resolved_positive_conservative": 16,
+   "n_resolved_lenient": 16,
+   "min_abs_lambda1_over_se_conservative": 5.404899150029176,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": 0.16304875108251474,
+     "se_bracket": [
+      0.01187143567743374,
+      0.014449451356671295
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": 0.32258805771056887,
+     "se_bracket": [
+      0.025448586659710004,
+      0.030975033266996032
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": 0.06808479089897035,
+     "se_bracket": [
+      0.005980669176766667,
+      0.007279438704646567
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 3,
+     "lambda1": 0.0369283230661262,
+     "se_bracket": [
+      0.005613372699298138,
+      0.006832379669087231
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 4,
+     "lambda1": 0.1836714324823503,
+     "se_bracket": [
+      0.01936500053949031,
+      0.023570328047952345
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 5,
+     "lambda1": 0.026320544792631084,
+     "se_bracket": [
+      0.0029900260571725785,
+      0.0036393438200925617
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 6,
+     "lambda1": 0.3462761988612258,
+     "se_bracket": [
+      0.04530159509119322,
+      0.05513934560535962
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 7,
+     "lambda1": 0.17141923432365597,
+     "se_bracket": [
+      0.019611961740863902,
+      0.02387091964977655
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 8,
+     "lambda1": 0.3204757939479861,
+     "se_bracket": [
+      0.03812037184029567,
+      0.04639863901647703
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 9,
+     "lambda1": 0.12312301459720494,
+     "se_bracket": [
+      0.01322996509795331,
+      0.016103000709233494
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 10,
+     "lambda1": 0.004355381186427988,
+     "se_bracket": [
+      0.0005489194884202225,
+      0.0006681235245821149
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 11,
+     "lambda1": 0.468809316652471,
+     "se_bracket": [
+      0.05455763945727937,
+      0.06640544403330181
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 12,
+     "lambda1": 0.17935572129005203,
+     "se_bracket": [
+      0.01602051162707226,
+      0.01949954577982504
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 13,
+     "lambda1": 0.01830171688927454,
+     "se_bracket": [
+      0.0025415111314618056,
+      0.00309342883744913
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 14,
+     "lambda1": 0.1916010956819164,
+     "se_bracket": [
+      0.01940156120867027,
+      0.023614828277346452
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 15,
+     "lambda1": 0.23012777840273801,
+     "se_bracket": [
+      0.021660894971623903,
+      0.026364801759352526
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    }
+   ]
+  },
+  "V750A": {
+   "n": 16,
+   "n_negative": 10,
+   "n_resolved_conservative": 11,
+   "n_resolved_negative_conservative": 8,
+   "n_resolved_positive_conservative": 3,
+   "n_resolved_lenient": 11,
+   "min_abs_lambda1_over_se_conservative": 0.005639050801152526,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": 0.10762390810790083,
+     "se_bracket": [
+      0.022956054684511933,
+      0.027941219960065166
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": 0.050564161345177015,
+     "se_bracket": [
+      0.008025096458644203,
+      0.009767836347898344
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": -0.00040867088573876,
+     "se_bracket": [
+      0.05954147354080932,
+      0.07247157370088501
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    },
+    {
+     "config": 3,
+     "lambda1": -0.14527886718878316,
+     "se_bracket": [
+      0.008130987124766923,
+      0.009896722362264257
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 4,
+     "lambda1": -0.4079879363652983,
+     "se_bracket": [
+      0.1261065400812987,
+      0.1534919925587926
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 5,
+     "lambda1": -0.27615558439326243,
+     "se_bracket": [
+      0.02000156863576524,
+      0.024345134060658788
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 6,
+     "lambda1": 0.0010530435347974915,
+     "se_bracket": [
+      0.005808673308188156,
+      0.0070700920001618
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    },
+    {
+     "config": 7,
+     "lambda1": 0.007816349796573821,
+     "se_bracket": [
+      0.03036805531278392,
+      0.03696281982750302
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    },
+    {
+     "config": 8,
+     "lambda1": 0.12622011401514585,
+     "se_bracket": [
+      0.012570310033297746,
+      0.015300094133490427
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 9,
+     "lambda1": -0.10678016397058235,
+     "se_bracket": [
+      0.016089858773933263,
+      0.01958395243901259
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 10,
+     "lambda1": -0.0297232532962207,
+     "se_bracket": [
+      0.004466324402582187,
+      0.005436236943177886
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 11,
+     "lambda1": 0.021775205852285873,
+     "se_bracket": [
+      0.024493749000546405,
+      0.029812841878819746
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    },
+    {
+     "config": 12,
+     "lambda1": -0.1929912945784785,
+     "se_bracket": [
+      0.007027044018487075,
+      0.008553045603349158
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 13,
+     "lambda1": -0.38832489039258344,
+     "se_bracket": [
+      0.048143886540981964,
+      0.05859887258770042
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 14,
+     "lambda1": -0.010453831462769732,
+     "se_bracket": [
+      0.00684657572649938,
+      0.008333386593491181
+     ],
+     "resolved_conservative": false,
+     "resolved_lenient": false
+    },
+    {
+     "config": 15,
+     "lambda1": -0.15427618365752574,
+     "se_bracket": [
+      0.01343160312368245,
+      0.016348426698439403
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    }
+   ]
+  },
+  "WT": {
+   "n": 16,
+   "n_negative": 16,
+   "n_resolved_conservative": 16,
+   "n_resolved_negative_conservative": 16,
+   "n_resolved_positive_conservative": 0,
+   "n_resolved_lenient": 16,
+   "min_abs_lambda1_over_se_conservative": 16.88958055526297,
+   "configs": [
+    {
+     "config": 0,
+     "lambda1": -0.1152631130870982,
+     "se_bracket": [
+      0.004431527030385628,
+      0.005393882930524645
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 1,
+     "lambda1": -0.059022197249039454,
+     "se_bracket": [
+      0.0020979754074269843,
+      0.0025535743460863352
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 2,
+     "lambda1": -0.10204128311792787,
+     "se_bracket": [
+      0.0041088827712505525,
+      0.005001172844351705
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 3,
+     "lambda1": -0.03181494377148779,
+     "se_bracket": [
+      0.0011486448039186793,
+      0.0013980859325941313
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 4,
+     "lambda1": -0.5897820901509768,
+     "se_bracket": [
+      0.01940304362965879,
+      0.023616632622713407
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 5,
+     "lambda1": -0.12505991189756882,
+     "se_bracket": [
+      0.005314221529046844,
+      0.0064682644600856706
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 6,
+     "lambda1": -0.07130832589991336,
+     "se_bracket": [
+      0.00309589176238525,
+      0.003768199453006278
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 7,
+     "lambda1": -0.07065015570869425,
+     "se_bracket": [
+      0.0025412016997062455,
+      0.0030930522091101777
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 8,
+     "lambda1": -0.07395824696769804,
+     "se_bracket": [
+      0.002315503741485646,
+      0.002818341402665109
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 9,
+     "lambda1": -0.39815419065784685,
+     "se_bracket": [
+      0.016524645575441352,
+      0.0201131580809937
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 10,
+     "lambda1": -0.3430136255932052,
+     "se_bracket": [
+      0.013076285010923625,
+      0.015915947264110126
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 11,
+     "lambda1": -0.126708582456798,
+     "se_bracket": [
+      0.005582571655860275,
+      0.006794889832896977
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 12,
+     "lambda1": -0.16615355685218833,
+     "se_bracket": [
+      0.008082443267305017,
+      0.009837636660574921
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 13,
+     "lambda1": -0.12266081615527068,
+     "se_bracket": [
+      0.003932812778855548,
+      0.004786867274275022
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 14,
+     "lambda1": -0.18479899917928128,
+     "se_bracket": [
+      0.004403361607527573,
+      0.005359601069544581
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    },
+    {
+     "config": 15,
+     "lambda1": -0.13857924715094846,
+     "se_bracket": [
+      0.0052609557225779474,
+      0.006403431385092962
+     ],
+     "resolved_conservative": true,
+     "resolved_lenient": true
+    }
+   ]
+  }
+ }
+}

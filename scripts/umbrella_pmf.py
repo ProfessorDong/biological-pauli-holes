@@ -38,7 +38,10 @@ for k in range(K):
 counts,edges=np.histogram(x_n, bins=45)                   # evaluate only populated bins (robust)
 allc=0.5*(edges[:-1]+edges[1:]); ctr=allc[counts>10]
 fes=FES(u_kn, N_k, verbose=False)
-fes.generate_fes(u_kn, x_n, fes_type='histogram', histogram_parameters={'bin_edges':edges})
+# Target state = the unbiased ensemble, whose reduced potential is zero for every sample.
+# (Through release v1.2.0 this call passed u_kn, which pymbar flattens with kn_to_n into a
+# different target; corrected 2026-11-25, see scripts/audit_gating_pmf.py.)
+fes.generate_fes(np.zeros(N), x_n, fes_type='histogram', histogram_parameters={'bin_edges':edges})
 res=fes.get_fes(ctr, reference_point='from-lowest', uncertainty_method='analytical')
 W=res['f_i']*kT; dW=res['df_i']*kT                        # kcal/mol
 good=np.isfinite(W)

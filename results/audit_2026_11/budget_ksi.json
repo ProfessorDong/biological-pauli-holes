@@ -1,0 +1,685 @@
+{
+ "source": "pauli_data/ksi/2PZV.pdb",
+ "placement_rule": "hydrogen on the donor-acceptor axis, 0.97 A from Asp103 OD2 toward IPH O1; budget() of scripts/confinement_budget_pdb.py unchanged",
+ "chains": {
+  "A": {
+   "r_DA_A": 2.603810092921525,
+   "published_phenol_H": {
+    "bonding_shell_percent": 98.38184181911399,
+    "protein_percent": 1.6181581808845942,
+    "water_percent": 1.4256666349213505e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.19853823410443,
+    "within_2p5A_percent": 96.15054762734052,
+    "fraction_beyond_8A": 3.0744497802839643e-10,
+    "categories": {
+     "protein": {
+      "percent": 1.6181581808845942,
+      "d_min_A": 2.7992984258089697
+     },
+     "acceptor group": {
+      "percent": 87.01855454986959,
+      "d_min_A": 1.633810092921525
+     },
+     "donor framework": {
+      "percent": 11.363287269244394,
+      "d_min_A": 2.182948330405853
+     },
+     "water": {
+      "percent": 1.4256666349213505e-12,
+      "d_min_A": 10.059891260190174
+     }
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.633810092921525,
+      "fraction": 0.8257786071784701,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH401:C1",
+      "d_A": 2.182948330405853,
+      "fraction": 0.10363602082275152,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.4931292758151145,
+      "fraction": 0.032090848272183635,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.750180428269282,
+      "fraction": 0.012146709773961059,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.7992984258089697,
+      "fraction": 0.010088732492804531,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH401:C2",
+      "d_A": 2.852712855301258,
+      "fraction": 0.008244463800873687,
+      "category": "donor framework"
+     },
+     {
+      "atom": "MET116:CE",
+      "d_A": 3.263718179668709,
+      "fraction": 0.001743974882268872,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH401:C6",
+      "d_A": 3.273213929830374,
+      "fraction": 0.001682495635887905,
+      "category": "donor framework"
+     }
+    ]
+   },
+   "asp103_H": {
+    "bonding_shell_percent": 99.33933715574597,
+    "protein_percent": 0.6606628442486505,
+    "water_percent": 5.377414372438547e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.04944299129978,
+    "within_2p5A_percent": 98.19386352503892,
+    "fraction_beyond_8A": 2.4593303454418235e-10,
+    "categories": {
+     "protein": {
+      "percent": 0.6606628442486505,
+      "d_min_A": 3.188340593944704
+     },
+     "donor framework": {
+      "percent": 28.372698900518117,
+      "d_min_A": 1.9137078757756754
+     },
+     "acceptor group": {
+      "percent": 70.96663825522785,
+      "d_min_A": 1.633810092921525
+     },
+     "water": {
+      "percent": 5.377414372438547e-12,
+      "d_min_A": 9.632457591543375
+     }
+    },
+    "top": [
+     {
+      "atom": "IPH401:O1",
+      "d_A": 1.633810092921525,
+      "fraction": 0.6998119930409749,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 1.9137078757756754,
+      "fraction": 0.2429732640083256,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.396705036439994,
+      "fraction": 0.039153378201088704,
+      "category": "donor framework"
+     },
+     {
+      "atom": "IPH401:C1",
+      "d_A": 2.799112003209329,
+      "fraction": 0.008555794662608678,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 3.188340593944704,
+      "fraction": 0.001965089750782727,
+      "category": "protein"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.233984078142984,
+      "fraction": 0.0016537253816551322,
+      "category": "protein"
+     },
+     {
+      "atom": "ASP103:CB",
+      "d_A": 3.245697036933019,
+      "fraction": 0.0015821140855664302,
+      "category": "donor framework"
+     },
+     {
+      "atom": "TYR16:CE2",
+      "d_A": 3.325984299870433,
+      "fraction": 0.001168031794110352,
+      "category": "protein"
+     }
+    ]
+   }
+  },
+  "B": {
+   "r_DA_A": 2.5688913951352634,
+   "published_phenol_H": {
+    "bonding_shell_percent": 98.75838652324495,
+    "protein_percent": 1.2416134767538727,
+    "water_percent": 1.1806232982350134e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.37212289498284,
+    "within_2p5A_percent": 96.87097824314456,
+    "fraction_beyond_8A": 2.66801101773082e-10,
+    "categories": {
+     "protein": {
+      "percent": 1.2416134767538727,
+      "d_min_A": 2.831827053116906
+     },
+     "acceptor group": {
+      "percent": 88.55315149100069,
+      "d_min_A": 1.5988913951352635
+     },
+     "donor framework": {
+      "percent": 10.20523503224425,
+      "d_min_A": 2.180181135439341
+     },
+     "water": {
+      "percent": 1.1806232982350134e-12,
+      "d_min_A": 10.111760640045427
+     }
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.5988913951352635,
+      "fraction": 0.8461776921914056,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH402:C1",
+      "d_A": 2.180181135439341,
+      "fraction": 0.09404492175654594,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.496184281698996,
+      "fraction": 0.028487168483493974,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.7550341539998677,
+      "fraction": 0.010709626663364114,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.831827053116906,
+      "fraction": 0.00801173971083611,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH402:C2",
+      "d_A": 2.895840063932093,
+      "fraction": 0.006290080144182691,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.2332296841272985,
+      "fraction": 0.0017573831451283466,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH402:C6",
+      "d_A": 3.2482810575919796,
+      "fraction": 0.0016602030363418163,
+      "category": "donor framework"
+     }
+    ]
+   },
+   "asp103_H": {
+    "bonding_shell_percent": 99.4114085440575,
+    "protein_percent": 0.5885914559385751,
+    "water_percent": 3.943634439390374e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.16043473805158,
+    "within_2p5A_percent": 98.26045750637893,
+    "fraction_beyond_8A": 2.327631638440639e-10,
+    "categories": {
+     "protein": {
+      "percent": 0.5885914559385751,
+      "d_min_A": 3.1832400529449223
+     },
+     "donor framework": {
+      "percent": 23.56667381850238,
+      "d_min_A": 1.9475527528764065
+     },
+     "acceptor group": {
+      "percent": 75.84473472555511,
+      "d_min_A": 1.598891395135263
+     },
+     "water": {
+      "percent": 3.943634439390374e-12,
+      "d_min_A": 9.708223444681613
+     }
+    },
+    "top": [
+     {
+      "atom": "IPH402:O1",
+      "d_A": 1.598891395135263,
+      "fraction": 0.7482963227102165,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 1.9475527528764065,
+      "fraction": 0.20034684712854772,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.4171513199905,
+      "fraction": 0.03396140522502504,
+      "category": "donor framework"
+     },
+     {
+      "atom": "IPH402:C1",
+      "d_A": 2.7685317245991627,
+      "fraction": 0.008999772316726442,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 3.1832400529449223,
+      "fraction": 0.0018772894499355587,
+      "category": "protein"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.186783253237608,
+      "fraction": 0.0018523175748219203,
+      "category": "protein"
+     },
+     {
+      "atom": "ASP103:CB",
+      "d_A": 3.2716507991549992,
+      "fraction": 0.0013440463940710783,
+      "category": "donor framework"
+     },
+     {
+      "atom": "IPH402:C2",
+      "d_A": 3.35322650853821,
+      "fraction": 0.0009874526453729862,
+      "category": "acceptor group"
+     }
+    ]
+   }
+  },
+  "C": {
+   "r_DA_A": 2.636759753940429,
+   "published_phenol_H": {
+    "bonding_shell_percent": 98.38727853339351,
+    "protein_percent": 1.612721466605432,
+    "water_percent": 1.0519549950981073e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.1770626382023,
+    "within_2p5A_percent": 92.828381978575,
+    "fraction_beyond_8A": 4.5901446497222083e-10,
+    "categories": {
+     "protein": {
+      "percent": 1.612721466605432,
+      "d_min_A": 2.8317578665217367
+     },
+     "acceptor group": {
+      "percent": 86.40420794025854,
+      "d_min_A": 1.666759753940432
+     },
+     "donor framework": {
+      "percent": 11.983070593134979,
+      "d_min_A": 2.195088124049487
+     },
+     "water": {
+      "percent": 1.0519549950981073e-12,
+      "d_min_A": 10.196336046540246
+     }
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.666759753940432,
+      "fraction": 0.817316614861376,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH403:C1",
+      "d_A": 2.195088124049487,
+      "fraction": 0.11096720492437392,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.5105341251162234,
+      "fraction": 0.03368395490084108,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.7655826890801163,
+      "fraction": 0.0128465814321087,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.8317578665217367,
+      "fraction": 0.010003867981021947,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH403:C6",
+      "d_A": 2.928037575942261,
+      "fraction": 0.006952402282301331,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.2721705466795243,
+      "fraction": 0.0018935495219744838,
+      "category": "protein"
+     },
+     {
+      "atom": "IPH403:C2",
+      "d_A": 3.278772591432877,
+      "fraction": 0.001846886057611421,
+      "category": "donor framework"
+     }
+    ]
+   },
+   "asp103_H": {
+    "bonding_shell_percent": 99.34047371648658,
+    "protein_percent": 0.6595262835096034,
+    "water_percent": 3.8093448609262545e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.04643611367422,
+    "within_2p5A_percent": 98.27022912014745,
+    "fraction_beyond_8A": 2.3259668083773769e-10,
+    "categories": {
+     "protein": {
+      "percent": 0.6595262835096034,
+      "d_min_A": 3.227854704102803
+     },
+     "donor framework": {
+      "percent": 31.410698988744123,
+      "d_min_A": 1.9068871188359533
+     },
+     "acceptor group": {
+      "percent": 67.92977472774247,
+      "d_min_A": 1.666759753940432
+     },
+     "water": {
+      "percent": 3.8093448609262545e-12,
+      "d_min_A": 9.750144168338212
+     }
+    },
+    "top": [
+     {
+      "atom": "IPH403:O1",
+      "d_A": 1.666759753940432,
+      "fraction": 0.6705720422608225,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 1.9068871188359533,
+      "fraction": 0.27058363391179574,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.4026640354439825,
+      "fraction": 0.041546615028856204,
+      "category": "donor framework"
+     },
+     {
+      "atom": "IPH403:C1",
+      "d_A": 2.8465291505643204,
+      "fraction": 0.0077620699352676835,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:CB",
+      "d_A": 3.211403319373931,
+      "fraction": 0.0019546761838508627,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.227854704102803,
+      "fraction": 0.00183684113504468,
+      "category": "protein"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 3.2281953879447607,
+      "fraction": 0.0018344775435031593,
+      "category": "protein"
+     },
+     {
+      "atom": "TYR16:CE2",
+      "d_A": 3.337156713434842,
+      "fraction": 0.0012152448715118296,
+      "category": "protein"
+     }
+    ]
+   }
+  },
+  "D": {
+   "r_DA_A": 2.6247291288816834,
+   "published_phenol_H": {
+    "bonding_shell_percent": 98.29395316161134,
+    "protein_percent": 1.7060468383876943,
+    "water_percent": 9.791785801644243e-13,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 99.22478353931528,
+    "within_2p5A_percent": 93.00879756916088,
+    "fraction_beyond_8A": 3.479641232691746e-10,
+    "categories": {
+     "protein": {
+      "percent": 1.7060468383876943,
+      "d_min_A": 2.7910260548836896
+     },
+     "acceptor group": {
+      "percent": 85.69036175900303,
+      "d_min_A": 1.6547291288816834
+     },
+     "donor framework": {
+      "percent": 12.603591402608302,
+      "d_min_A": 2.1724908291087504
+     },
+     "water": {
+      "percent": 9.791785801644243e-13,
+      "d_min_A": 10.24186427002154
+     }
+    },
+    "top": [
+     {
+      "atom": "ASP103:OD2",
+      "d_A": 1.6547291288816834,
+      "fraction": 0.8149358813084072,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH404:C1",
+      "d_A": 2.1724908291087504,
+      "fraction": 0.11515209438320151,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 2.517430827162905,
+      "fraction": 0.031267198065647525,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 2.7910260548836896,
+      "fraction": 0.0111176002881528,
+      "category": "protein"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.805311003333565,
+      "fraction": 0.010533284370666687,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "IPH404:C6",
+      "d_A": 2.8399207812147966,
+      "fraction": 0.009241776977077199,
+      "category": "donor framework"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.2404815603821695,
+      "fraction": 0.002033653324662371,
+      "category": "protein"
+     },
+     {
+      "atom": "TYR16:CE2",
+      "d_A": 3.3079022493639414,
+      "fraction": 0.0015762058025679069,
+      "category": "protein"
+     }
+    ]
+   },
+   "asp103_H": {
+    "bonding_shell_percent": 99.28365312142348,
+    "protein_percent": 0.71634687857319,
+    "water_percent": 3.3228969024502452e-12,
+    "other_ligand_percent": 0.0,
+    "within_3A_percent": 98.96891868994516,
+    "within_2p5A_percent": 98.0784014963325,
+    "fraction_beyond_8A": 2.674198086153673e-10,
+    "categories": {
+     "protein": {
+      "percent": 0.71634687857319,
+      "d_min_A": 3.1866951612807153
+     },
+     "donor framework": {
+      "percent": 28.6487364051725,
+      "d_min_A": 1.9257337615619214
+     },
+     "acceptor group": {
+      "percent": 70.634916716251,
+      "d_min_A": 1.6547291288816859
+     },
+     "water": {
+      "percent": 3.3228969024502452e-12,
+      "d_min_A": 9.795844668247124
+     }
+    },
+    "top": [
+     {
+      "atom": "IPH404:O1",
+      "d_A": 1.6547291288816859,
+      "fraction": 0.6960009403742611,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "ASP103:CG",
+      "d_A": 1.9257337615619214,
+      "fraction": 0.2499102723666504,
+      "category": "donor framework"
+     },
+     {
+      "atom": "ASP103:OD1",
+      "d_A": 2.446813165026126,
+      "fraction": 0.0348728022224135,
+      "category": "donor framework"
+     },
+     {
+      "atom": "IPH404:C1",
+      "d_A": 2.807996454308288,
+      "fraction": 0.008905171936126773,
+      "category": "acceptor group"
+     },
+     {
+      "atom": "TYR16:OH",
+      "d_A": 3.1866951612807153,
+      "fraction": 0.002128374503577467,
+      "category": "protein"
+     },
+     {
+      "atom": "PHE86:CZ",
+      "d_A": 3.19391855669375,
+      "fraction": 0.0020710548492228714,
+      "category": "protein"
+     },
+     {
+      "atom": "ASP103:CB",
+      "d_A": 3.2484661045818686,
+      "fraction": 0.0016852235302711664,
+      "category": "donor framework"
+     },
+     {
+      "atom": "TYR16:CE2",
+      "d_A": 3.3125783309414025,
+      "fraction": 0.0013225862708789054,
+      "category": "protein"
+     }
+    ]
+   }
+  }
+ },
+ "check": {
+  "published_placement_reproduced": true,
+  "max_abs_deviation": 0.0
+ },
+ "ranges_asp103_H": {
+  "bonding_shell_percent": [
+   99.28365312142348,
+   99.4114085440575
+  ],
+  "protein_percent": [
+   0.5885914559385751,
+   0.71634687857319
+  ],
+  "within_3A_percent": [
+   98.96891868994516,
+   99.16043473805158
+  ],
+  "fraction_beyond_8A": [
+   2.3259668083773769e-10,
+   2.674198086153673e-10
+  ]
+ },
+ "ranges_published_phenol_H": {
+  "bonding_shell_percent": [
+   98.29395316161134,
+   98.75838652324495
+  ],
+  "protein_percent": [
+   1.2416134767538727,
+   1.7060468383876943
+  ],
+  "within_3A_percent": [
+   99.1770626382023,
+   99.37212289498284
+  ],
+  "fraction_beyond_8A": [
+   2.66801101773082e-10,
+   4.5901446497222083e-10
+  ]
+ },
+ "r_DA_A": {
+  "per_chain": [
+   2.603810092921525,
+   2.5688913951352634,
+   2.636759753940429,
+   2.6247291288816834
+  ],
+  "mean": 2.608547592719725,
+  "min": 2.5688913951352634,
+  "max": 2.636759753940429
+ }
+}

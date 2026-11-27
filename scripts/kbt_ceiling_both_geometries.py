@@ -2,13 +2,12 @@
 """The confinement energy at the biological wall distances, in BOTH solved geometries.
 
 WHY THIS EXISTS
-  The manuscript reported the permitted confinement energy as 0.14 to 1.02 k_BT and
-  presented it as a ceiling. That number is the PARABOLOID alone. The paper solves a
-  second geometry, a hydrogen atom centered in a hard sphere, and at the same wall
-  distances the sphere gives roughly eight times as much. A ceiling quoted from one of
-  two solved geometries is not a ceiling, and a referee reproduced the discrepancy
-  independently. This computes both, exactly, from the same solver that produced
-  confinement_universality.json, so the manuscript can report the range honestly.
+  A permitted confinement energy of 0.14 to 1.02 k_BT comes from the PARABOLOID alone.
+  The paper solves a second geometry, a hydrogen atom centered in a hard sphere, and at
+  the same wall distances the sphere gives roughly eight times as much. A ceiling quoted
+  from one of two solved geometries is not a ceiling. This computes both, exactly, from
+  the same solver that produced confinement_universality.json, so the manuscript can
+  report the range for both geometries.
 
 WHAT IS AND IS NOT GEOMETRY-DEPENDENT HERE
   ENERGY: both geometries raise the ground state, and by different amounts. Both are
